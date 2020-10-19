@@ -1,0 +1,20 @@
+.PROGRAM robotcalibrate () ; 
+  ; *******************************************************************
+  ;
+  ; Program:      test8
+  ; Comment:      
+  ; Author:       User
+  ;
+  ; Date:         10/15/2020
+  ;
+  ; *******************************************************************
+  ;
+  POINT #neutral = #[0, 100, 100, 0, 0, 0]
+  
+  ;FOR i = 0 TO 2
+  ;  print i
+  ;END
+    
+  SPEED 10
+  JMOVE #neutral
+.END
