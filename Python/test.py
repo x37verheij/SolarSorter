@@ -1,37 +1,56 @@
-class HMImessage:
-    def __init__(self):
-        self.air, self.light, self.excel, self.grade = 0, 0, 0, 100
-        self.outputTray, self.trays, self.halt, self.done = 100, 0, 0, 0
-        self.connRobot, self.connQRcam, self.connINcam = 0, 0, 0
-    
-    # Decodes and stores the received message
-    def decode(self, msg):
-        (self.air, self.light, self.excel, self.grade, self.outputTray, self.trays, self.halt,
-            self.done, self.connRobot, self.connQRcam, self.connINcam) = [ord(i) for i in msg]
-    
-    # Concatenate the properties of this object into a string (without encoding)
-    def encode(self):
-        return (chr(self.air) + chr(self.light) + chr(self.excel) + chr(self.grade) +
-            chr(self.outputTray) + chr(self.trays) + chr(self.halt) + chr(self.done) +
-                chr(self.connRobot) + chr(self.connQRcam) + chr(self.connINcam))
+import cv2
+import numpy as np
 
-    def print(self):
-        print(self.air, self.light, self.excel, self.grade, self.outputTray, self.trays,
-            self.halt, self.done, self.connRobot, self.connQRcam, self.connINcam)
+# def nothing():
+#     pass
+#     """
+# from ftplib import FTP
+# ftp = FTP(host="192.168.0.11", user="admin", timeout=3)
 
-msg = "\x02\x03\x02\x03\x02\x03\x04\x03\x02\x03\x02"
-h = HMImessage()
+# with open('image.jpg', 'wb') as imageBuffer:
+#     ftp.retrbinary('RETR image.jpg', imageBuffer.write)
+#     imageBuffer.close()
 
-print(type(h.air))
-h.print()
-h.decode(h.encode())
-print(type(h.air))
-h.print()
-h.decode(msg)
-print(type(h.air))
-h.print()
+# ftp.quit()
 
-msg = "\x01\x01\x00\x64\x64\x00\x03\x04\x05\x06\x07"
-h.decode(msg)
-print(type(h.air))
-h.print()
+img = cv2.imread("image.jpg")
+
+# Bijsnijden/crop. vanaf y = 150 tot y = 500
+crop = img[150:500, 0:800]
+
+
+gray = cv2.cvtColor(crop, cv2.COLOR_BGR2GRAY)
+bw = cv2.threshold(gray, 64, 255, cv2.THRESH_BINARY)[1]
+
+# Setup SimpleBlobDetector parameters.
+params = cv2.SimpleBlobDetector_Params()
+# params.minThreshold = 0
+# params.maxThreshold = 64
+params.blobColor = 0
+params.filterByArea = True
+params.minArea = 10000  # generally 19k+
+detector = cv2.SimpleBlobDetector_create(params)
+
+kernel = np.ones((3, 3), np.uint8)
+blobs = cv2.erode(bw, kernel, iterations = 10)
+# print("hi")
+# detector = cv2.SimpleBlobDetector()
+print("hi")
+keypoints = detector.detect(crop)
+print(keypoints, flush=True)
+# Draw red outlines
+im_with_keypoints = cv2.drawKeypoints(crop, keypoints, np.array([]), (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
+
+
+# cv2.imshow("Original", crop)
+# cv2.imshow("Grayscale", gray)
+# cv2.imshow("Black & white", bw)
+# cv2.imshow("Blobs", blobs)
+# cv2.imwrite('blobs.png', blobs)
+# cv2.imshow("Keypoints", im_with_keypoints)
+# cv2.imshow("BW 63", bw1)
+# cv2.imshow("BW 127", bw2)
+# cv2.imshow("BW 191", bw3)
+cv2.waitKey()
+# """
