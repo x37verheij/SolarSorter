@@ -982,8 +982,8 @@ DCOLHJID9         0
   ;h = input
   ;CALL testmeee (t, c, h)
   ;JMOVE #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  POINT T7c1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  POINT T7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
+  POINT t7c1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
+  POINT t7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
   POINT t7c2l = t7c2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
   POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
   POINT t7c3l = t7c3h + TRANS (0, 0, 26.979, 0, 0, 0)
@@ -1084,554 +1084,555 @@ DCOLHJID9         0
   
   CALL setup
   WHILE 1 DO
-  CALL receive (.length)
-  IF $data[0]=="neutral" THEN
-    JMOVE #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385] 
-    GOTO reply
-  END
-  
-  IF $data[0]=="refresh" THEN 
-    GOTO reply
-  END
-  
-  IF $data[0]=="scan" THEN 
-    JMOVE #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-    GOTO reply
-  END
-  
-  IF $data[0]=="disconnect" THEN 
-    BREAK
-  END
-  
-  $instruction = $LEFT($data[0],1)
-  $number1 = $MID($data[0],3,2)
-  $number2 = $MID($data[0],6,2)
-  
-  SCASE $instruction OF
-    SVALUE "I":
-    IF $number1 == 01 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-    IF $number1 == 02 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 03 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 04 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 05 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 06 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
- 
-    SVALUE "Q":
-  IF $number1 == 07 THEN
-      IF $number2 == 01 THEN
-      JMOVE o7
-      LMOVE t7c1l
-      send(.length)
-      LMOVE o7
+    CALL receive (.length)
+    IF $data[0]=="neutral" THEN
+      JMOVE #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385] 
       GOTO reply
-      END
-      IF $number2 == 02 THEN
-      JMOVE t7c2h
-      LMOVE t7c2l
-      send(.length)
-      LMOVE t7c2h
-      GOTO reply
-      END
-      IF $number2 == 03 THEN
-      JMOVE t7c3h
-      LMOVE t7c3l
-      send(.length)
-      LMOVE t7c3h
-  
-      GOTO reply
-      END
-      IF $number2 == 04 THEN
-      JMOVE t7c4h
-      LMOVE t7c4l
-      send(.length)
-      LMOVE t7c4h
-      GOTO reply
-      END
-      IF $number2 == 05 THEN
-      JMOVE t7c5h
-      LMOVE t7c5l
-      send(.length)
-      LMOVE t7c5h
-      GOTO reply
-      END
-      IF $number2 == 06 THEN
-      JMOVE t7c6h
-      LMOVE t7c6l
-      send(.length)
-      LMOVE t7c6h
-      GOTO reply
-      END
-      IF $number2 == 07 THEN
-      JMOVE t7c7h
-      LMOVE t7c7l
-      send(.length)
-      LMOVE t7c7h
-      GOTO reply
-      END
-      IF $number2 == 08 THEN
-      JMOVE t7c8h
-      LMOVE t7c8l
-      send(.length)
-      LMOVE t7c8h
-      GOTO reply
-      END
-      IF $number2 == 09 THEN
-      JMOVE t7c9h
-      LMOVE t7c9l
-      send(.length)
-      LMOVE t7c9h
-      GOTO reply
-      END
-      IF $number2 == 10 THEN
-      JMOVE t7c10h
-      LMOVE t7c10l
-      send(.length)
-      LMOVE t7c10h
-      GOTO reply
-      END
-      IF $number2 == 11 THEN
-      JMOVE t7c11h
-      LMOVE t7c12l
-      send(.length)
-      LMOVE t7c12h
-      GOTO reply
-      END
-      IF $number2 == 12 THEN
-      JMOVE t7c12h
-      LMOVE t7c12l
-      send(.length)
-      LMOVE t7c12h
-      GOTO reply
-      END
     END
-  IF $number1 == 08 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 09 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 10 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-      IF $number2 == 07 THEN
-      JMOVE
-      END
-      IF $number2 == 08 THEN
-      JMOVE
-      END
-      IF $number2 == 09 THEN
-      JMOVE
-      END
-      IF $number2 == 10 THEN
-      JMOVE
-      END
-      IF $number2 == 11 THEN
-      JMOVE
-      END
-      IF $number2 == 12 THEN
-      JMOVE
-      END
-    END
-    SVALUE "D":
-  IF $number1 == 01 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-      IF $number2 == 06 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 02 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-      IF $number2 == 05 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 03 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-      IF $number2 == 04 THEN
-      JMOVE
-      END
-    END
-   IF $number1 == 04 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-      IF $number2 == 03 THEN
-      JMOVE
-      END
-    END
-    IF $number1 == 05 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-      IF $number2 == 02 THEN
-      JMOVE
-      END
-    END
-  IF $number1 == 06 THEN
-      IF $number2 == 01 THEN
-      JMOVE 
-      END
-    END
-    SVALUE "C":
-  PRINT "FRITS IS EEN SLETJE"
-  END
-  
-
-  
-  
-  
-  ; IF expr THEN ... [ELSE ...] END
-  ; WHILE expr DO ... END
-  ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
     
+    IF $data[0]=="refresh" THEN 
+      GOTO reply
+    END
+    
+    IF $data[0]=="scan" THEN 
+      JMOVE #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
+      GOTO reply
+    END
+    
+    IF $data[0]=="disconnect" THEN 
+      BREAK
+    END
+    
+    $instruction = $LEFT($data[0],1)
+    $number1 = $MID($data[0],3,2)
+    $number2 = $MID($data[0],6,2)
+    
+    SCASE $instruction OF
+      SVALUE "I":
+        IF $number1 == 01 THEN
+          IF $number2 == 01 THEN
+          JMOVE 
+          END
+          IF $number2 == 02 THEN
+          JMOVE
+          END
+          IF $number2 == 03 THEN
+          JMOVE
+          END
+          IF $number2 == 04 THEN
+          JMOVE
+          END
+          IF $number2 == 05 THEN
+          JMOVE
+          END
+          IF $number2 == 06 THEN
+          JMOVE
+          END
+          IF $number2 == 07 THEN
+          JMOVE
+          END
+          IF $number2 == 08 THEN
+          JMOVE
+          END
+          IF $number2 == 09 THEN
+          JMOVE
+          END
+          IF $number2 == 10 THEN
+          JMOVE
+          END
+          IF $number2 == 11 THEN
+          JMOVE
+          END
+          IF $number2 == 12 THEN
+          JMOVE
+          END
+        END
+        IF $number1 == 02 THEN
+          IF $number2 == 01 THEN
+          JMOVE 
+          END
+          IF $number2 == 02 THEN
+          JMOVE
+          END
+          IF $number2 == 03 THEN
+          JMOVE
+          END
+          IF $number2 == 04 THEN
+          JMOVE
+          END
+          IF $number2 == 05 THEN
+          JMOVE
+          END
+          IF $number2 == 06 THEN
+          JMOVE
+          END
+          IF $number2 == 07 THEN
+          JMOVE
+          END
+          IF $number2 == 08 THEN
+          JMOVE
+          END
+          IF $number2 == 09 THEN
+          JMOVE
+          END
+          IF $number2 == 10 THEN
+          JMOVE
+          END
+          IF $number2 == 11 THEN
+          JMOVE
+          END
+          IF $number2 == 12 THEN
+          JMOVE
+          END
+        END
+        IF $number1 == 03 THEN
+          IF $number2 == 01 THEN
+          JMOVE 
+          END
+          IF $number2 == 02 THEN
+          JMOVE
+          END
+          IF $number2 == 03 THEN
+          JMOVE
+          END
+          IF $number2 == 04 THEN
+          JMOVE
+          END
+          IF $number2 == 05 THEN
+          JMOVE
+          END
+          IF $number2 == 06 THEN
+          JMOVE
+          END
+          IF $number2 == 07 THEN
+          JMOVE
+          END
+          IF $number2 == 08 THEN
+          JMOVE
+          END
+          IF $number2 == 09 THEN
+          JMOVE
+          END
+          IF $number2 == 10 THEN
+          JMOVE
+          END
+          IF $number2 == 11 THEN
+          JMOVE
+          END
+          IF $number2 == 12 THEN
+          JMOVE
+          END
+        END
+        IF $number1 == 04 THEN
+          IF $number2 == 01 THEN
+          JMOVE 
+          END
+          IF $number2 == 02 THEN
+          JMOVE
+          END
+          IF $number2 == 03 THEN
+          JMOVE
+          END
+          IF $number2 == 04 THEN
+          JMOVE
+          END
+          IF $number2 == 05 THEN
+          JMOVE
+          END
+          IF $number2 == 06 THEN
+          JMOVE
+          END
+          IF $number2 == 07 THEN
+          JMOVE
+          END
+          IF $number2 == 08 THEN
+          JMOVE
+          END
+          IF $number2 == 09 THEN
+          JMOVE
+          END
+          IF $number2 == 10 THEN
+          JMOVE
+          END
+          IF $number2 == 11 THEN
+          JMOVE
+          END
+          IF $number2 == 12 THEN
+          JMOVE
+          END
+        END
+        IF $number1 == 05 THEN
+          IF $number2 == 01 THEN
+          JMOVE 
+          END
+          IF $number2 == 02 THEN
+          JMOVE
+          END
+          IF $number2 == 03 THEN
+          JMOVE
+          END
+          IF $number2 == 04 THEN
+          JMOVE
+          END
+          IF $number2 == 05 THEN
+          JMOVE
+          END
+          IF $number2 == 06 THEN
+          JMOVE
+          END
+          IF $number2 == 07 THEN
+          JMOVE
+          END
+          IF $number2 == 08 THEN
+          JMOVE
+          END
+          IF $number2 == 09 THEN
+          JMOVE
+          END
+          IF $number2 == 10 THEN
+          JMOVE
+          END
+          IF $number2 == 11 THEN
+          JMOVE
+          END
+          IF $number2 == 12 THEN
+          JMOVE
+          END
+        END
+        IF $number1 == 06 THEN
+          IF $number2 == 01 THEN
+          JMOVE 
+          END
+          IF $number2 == 02 THEN
+          JMOVE
+          END
+          IF $number2 == 03 THEN
+          JMOVE
+          END
+          IF $number2 == 04 THEN
+          JMOVE
+          END
+          IF $number2 == 05 THEN
+          JMOVE
+          END
+          IF $number2 == 06 THEN
+          JMOVE
+          END
+          IF $number2 == 07 THEN
+          JMOVE
+          END
+          IF $number2 == 08 THEN
+          JMOVE
+          END
+          IF $number2 == 09 THEN
+          JMOVE
+          END
+          IF $number2 == 10 THEN
+          JMOVE
+          END
+          IF $number2 == 11 THEN
+          JMOVE
+          END
+          IF $number2 == 12 THEN
+          JMOVE
+          END
+        END
+   
+      SVALUE "Q":
+        IF $number1 == "07" THEN
+          IF $number2 == 01 THEN
+            JMOVE o7
+            LMOVE t7c1l
+            send(.length)
+            TWAIT 0.1
+            LMOVE o7
+            CONTINUE
+          END
+        IF $number2 == 02 THEN
+        JMOVE t7c2h
+        LMOVE t7c2l
+        send(.length)
+        LMOVE t7c2h
+        GOTO reply
+        END
+        IF $number2 == 03 THEN
+        JMOVE t7c3h
+        LMOVE t7c3l
+        send(.length)
+        LMOVE t7c3h
+    
+        GOTO reply
+        END
+        IF $number2 == 04 THEN
+        JMOVE t7c4h
+        LMOVE t7c4l
+        send(.length)
+        LMOVE t7c4h
+        GOTO reply
+        END
+        IF $number2 == 05 THEN
+        JMOVE t7c5h
+        LMOVE t7c5l
+        send(.length)
+        LMOVE t7c5h
+        GOTO reply
+        END
+        IF $number2 == 06 THEN
+        JMOVE t7c6h
+        LMOVE t7c6l
+        send(.length)
+        LMOVE t7c6h
+        GOTO reply
+        END
+        IF $number2 == 07 THEN
+        JMOVE t7c7h
+        LMOVE t7c7l
+        send(.length)
+        LMOVE t7c7h
+        GOTO reply
+        END
+        IF $number2 == 08 THEN
+        JMOVE t7c8h
+        LMOVE t7c8l
+        send(.length)
+        LMOVE t7c8h
+        GOTO reply
+        END
+        IF $number2 == 09 THEN
+        JMOVE t7c9h
+        LMOVE t7c9l
+        send(.length)
+        LMOVE t7c9h
+        GOTO reply
+        END
+        IF $number2 == 10 THEN
+        JMOVE t7c10h
+        LMOVE t7c10l
+        send(.length)
+        LMOVE t7c10h
+        GOTO reply
+        END
+        IF $number2 == 11 THEN
+        JMOVE t7c11h
+        LMOVE t7c12l
+        send(.length)
+        LMOVE t7c12h
+        GOTO reply
+        END
+        IF $number2 == 12 THEN
+        JMOVE t7c12h
+        LMOVE t7c12l
+        send(.length)
+        LMOVE t7c12h
+        GOTO reply
+        END
+      END
+    IF $number1 == 08 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+        IF $number2 == 04 THEN
+        JMOVE
+        END
+        IF $number2 == 05 THEN
+        JMOVE
+        END
+        IF $number2 == 06 THEN
+        JMOVE
+        END
+        IF $number2 == 07 THEN
+        JMOVE
+        END
+        IF $number2 == 08 THEN
+        JMOVE
+        END
+        IF $number2 == 09 THEN
+        JMOVE
+        END
+        IF $number2 == 10 THEN
+        JMOVE
+        END
+        IF $number2 == 11 THEN
+        JMOVE
+        END
+        IF $number2 == 12 THEN
+        JMOVE
+        END
+      END
+    IF $number1 == 09 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+        IF $number2 == 04 THEN
+        JMOVE
+        END
+        IF $number2 == 05 THEN
+        JMOVE
+        END
+        IF $number2 == 06 THEN
+        JMOVE
+        END
+        IF $number2 == 07 THEN
+        JMOVE
+        END
+        IF $number2 == 08 THEN
+        JMOVE
+        END
+        IF $number2 == 09 THEN
+        JMOVE
+        END
+        IF $number2 == 10 THEN
+        JMOVE
+        END
+        IF $number2 == 11 THEN
+        JMOVE
+        END
+        IF $number2 == 12 THEN
+        JMOVE
+        END
+      END
+    IF $number1 == 10 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+        IF $number2 == 04 THEN
+        JMOVE
+        END
+        IF $number2 == 05 THEN
+        JMOVE
+        END
+        IF $number2 == 06 THEN
+        JMOVE
+        END
+        IF $number2 == 07 THEN
+        JMOVE
+        END
+        IF $number2 == 08 THEN
+        JMOVE
+        END
+        IF $number2 == 09 THEN
+        JMOVE
+        END
+        IF $number2 == 10 THEN
+        JMOVE
+        END
+        IF $number2 == 11 THEN
+        JMOVE
+        END
+        IF $number2 == 12 THEN
+        JMOVE
+        END
+      END
+      SVALUE "D":
+    IF $number1 == 01 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+        IF $number2 == 04 THEN
+        JMOVE
+        END
+        IF $number2 == 05 THEN
+        JMOVE
+        END
+        IF $number2 == 06 THEN
+        JMOVE
+        END
+      END
+    IF $number1 == 02 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+        IF $number2 == 04 THEN
+        JMOVE
+        END
+        IF $number2 == 05 THEN
+        JMOVE
+        END
+      END
+    IF $number1 == 03 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+        IF $number2 == 04 THEN
+        JMOVE
+        END
+      END
+     IF $number1 == 04 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+        IF $number2 == 03 THEN
+        JMOVE
+        END
+      END
+      IF $number1 == 05 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+        IF $number2 == 02 THEN
+        JMOVE
+        END
+      END
+    IF $number1 == 06 THEN
+        IF $number2 == 01 THEN
+        JMOVE 
+        END
+      END
+    SVALUE "C":
+      PRINT "FRITS IS EEN SLETJE"
+    END
+    
+
+    
+    
+    PRINT $data[0]
+    reply:
+    CALL send (.length)
+    ; IF expr THEN ... [ELSE ...] END
+    ; WHILE expr DO ... END
+    ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
+      
   END
-  PRINT $data[0]
-  reply:
-  CALL send (.length)
+  
   CALL disconnect
 .END
 .PROGRAM robotcalibrate () ;
@@ -2453,6 +2454,7 @@ exit:
   TCP_SEND .err, sock_id1, $data[0], .length, .timeout
     IF .err < 0 THEN
       PRINT "ERR IN TCP_SEND: ", .err
+      CALL disconnect
       STOP
     END
 .END
@@ -2476,10 +2478,12 @@ exit:
   TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
     IF .err < 0 THEN
       PRINT "ERR IN TCP_RECV: ", .err
+      CALL disconnect
       STOP
     ELSE
       IF .length < 1 THEN
         PRINT "EMPTY MESSAGE IN TCP_RECV"
+        CALL disconnect
         STOP
       END
     END
@@ -2591,12 +2595,10 @@ exit:
 	; 0:INPUT.tray
 	; .i 
 	; 0:send
-	; .$data[] 
 	; .length 
 	; .err 
 	; .timeout 
 	; 0:receive
-	; .$data[] 
 	; .length 
 	; .err 
 	; .timeout 
