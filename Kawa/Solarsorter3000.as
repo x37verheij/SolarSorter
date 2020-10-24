@@ -428,22 +428,22 @@ ZSWITCH ZSAFE_HOLD_FORD OFF  -521
 .END
 .OPE_INFO1
 OPEINFO  10 63 6 149  1176300284  ;(07/4/11 14:04:44) FW003N-E001 
-CONT_TIM  2044.3 
-SERV_TIM  341.4 
-MTON_CNT  16551 
-ESTP_CNT  917 
-BRKE_CNT  24030 
-MOVE_TJT  148.6 160.0 147.8 135.3 168.5 159.8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
-DIST_DJT  10287.104 6760.056 8885.080 21343.944 9204.176 24587.312 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+CONT_TIM  2050.6 
+SERV_TIM  342.2 
+MTON_CNT  16606 
+ESTP_CNT  921 
+BRKE_CNT  24082 
+MOVE_TJT  148.9 160.5 148.3 135.5 168.9 160.1 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+DIST_DJT  10297.216 6767.568 8895.968 21359.880 9208.984 24607.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
 M_OPEINFO  10 63 6 149  760023144  ;(94/1/31 13:32:24) FW003N-E001 
-M_CONT_TIM  3149.8 
-M_SERV_TIM  349.4 
-M_MTON_CNT  28205 
-M_ESTP_CNT  704 
-M_BRKE_CNT  38333 
-M_MOVE_TJT  151.8 161.2 148.9 136.4 170.1 162.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
-M_DIST_DJT  11543.112 6968.480 9162.328 22029.280 9423.864 25287.640 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
-HOUR_MTR  2056.6 
+M_CONT_TIM  3156.1 
+M_SERV_TIM  350.2 
+M_MTON_CNT  28260 
+M_ESTP_CNT  708 
+M_BRKE_CNT  38385 
+M_MOVE_TJT  152.1 161.7 149.4 136.7 170.5 162.3 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+M_DIST_DJT  11553.224 6975.992 9173.216 22045.216 9428.672 25307.328 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+HOUR_MTR  2062.9 
 .END
 .SYSDATA
 REG_POINT       0
@@ -959,24 +959,680 @@ DCOLHJID9         0
   ;
   IF .traynr == 7 THEN
      IF .celnr == 1 THEN
-       
+        JMOVE o7
+        LMOVE #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
+        LMOVE o7
+     END
+  END
 .END
-.PROGRAM test ()
-	; *******************************************************************
-	;
-	; Program:      test
-	; Comment:
-	; Author:       User
-	;
-	; Date:         10/19/2020
-	;
-	; *******************************************************************
-	;
-	;POINT HALLO=[100,100,100,100,100,100]
-	t = input
-	c = input
-	h = input
-	CALL testmeee (t, c, h)
+.PROGRAM Eindcode () ; 
+  ; *******************************************************************
+  ;
+  ; Program:      test
+  ; Comment:
+  ; Author:       User
+  ;
+  ; Date:         10/19/2020
+  ;
+  ; *******************************************************************
+  ;
+  ;POINT HALLO=[100,100,100,100,100,100]
+  ;t = input
+  ;c = input
+  ;h = input
+  ;CALL testmeee (t, c, h)
+  ;JMOVE #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
+  POINT T7c1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
+  POINT T7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
+  POINT t7c2l = t7c2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
+  POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
+  POINT t7c3l = t7c3h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
+  POINT t7c4l = t7c4h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c5h = o7 + TRANS (0, -47.5, 0, 0, 0, 0)
+  POINT t7c5l = t7c5h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
+  POINT t7c6l = t7c6h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c7h = o7 + TRANS (-183, -44.5, 0, 0, 0, 0)
+  POINT t7c7l = t7c7h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c8h = o7 + TRANS (-274.5, -40.2, 0, 0, 0, 0)
+  POINT t7c8l = t7c8h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c9h = o7 + TRANS (0, -96.2, 0, 0, 0, 0)
+  POINT t7c9l = t7c9h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c10h = o7 + TRANS (-91, -94.2, 0, 0, 0, 0)
+  POINT t7c10l = t7c10h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c11h = o7 + TRANS (-181.5, -91, 0, 0, 0, 0)
+  POINT t7c11l = t7c11h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c12h = o7 + TRANS (-274.0, -89.2, 0, 0, 0, 0)
+  POINT t7c12l = t7c12h + TRANS (0, 0, 26.979, 0, 0, 0)
+  
+  POINT t8c1l = #[74.884,70.401,22.007,0.003,48.399,-285.113]
+  POINT t8c2h = o8 + TRANS (-91.5, 1.5, 0, 0, 0, 0)
+  POINT t8c2l = t8c2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
+  POINT t8c3h = o8 + TRANS (-183, 3, 0, 0, 0, 0)
+  POINT t8c3l = t8c3h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c4h = o8 + TRANS (-274.5, 6.5, 0, 0, 0, 0)
+  POINT t8c4l = t8c4h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c5h = o8 + TRANS (0, -48.0, 0, 0, 0, 0)
+  POINT t8c5l = t8c5h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c6h = o8 + TRANS (-91, -47.5, 0, 0, 0, 0)
+  POINT t8c6l = t8c6h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c7h = o8 + TRANS (-181, -45, 0, 0, 0, 0)
+  POINT t8c7l = t8c7h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c8h = o8 + TRANS (-273.5, -42.2, 0, 0, 0, 0)
+  POINT t8c8l = t8c8h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c9h = o8 + TRANS (0, -97.7, 0, 0, 0, 0)
+  POINT t8c9l = t8c9h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c10h = o8 + TRANS (-91, -96.2, 0, 0, 0, 0)
+  POINT t8c10l = t8c10h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c11h = o8 + TRANS (-180.5, -93.5, 0, 0, 0, 0)
+  POINT t8c11l = t8c11h + TRANS (0, 0, 27.962, 0, 0, 0)
+  POINT t8c12h = o8 + TRANS (-274.0, -92.2, 0, 0, 0, 0)
+  POINT t8c12l = t8c12h + TRANS (0, 0, 27.962, 0, 0, 0)
+  
+  POINT t9c1l = #[94.470,77.081,37.553,0.003,39.537,-265.526]
+  POINT t9c2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
+  POINT t9c2l = t9c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
+  POINT t9c3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
+  POINT t9c3l = t9c3h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c4h = o9 + TRANS (-272.5, 4.0, 0, 0, 0, 0)
+  POINT t9c4l = t9c4h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c5h = o9 + TRANS (-1, -49.0, 0, 0, 0, 0)
+  POINT t9c5l = t9c5h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c6h = o9 + TRANS (-92, -47.5, 0, 0, 0, 0)
+  POINT t9c6l = t9c6h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c7h = o9 + TRANS (-181, -47, 0, 0, 0, 0)
+  POINT t9c7l = t9c7h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c8h = o9 + TRANS (-273.5, -45.2, 0, 0, 0, 0)
+  POINT t9c8l = t9c8h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c9h = o9 + TRANS (-1, -97.7, 0, 0, 0, 0)
+  POINT t9c9l = t9c9h + TRANS (0, 0, 29.936, 0, 0, 0)
+  POINT t9c10h = o9 + TRANS (-92, -96.2, 0, 0, 0, 0)
+  POINT t9c10l = t9c10h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c11h = o9 + TRANS (-181.5, -96, 0, 0, 0, 0)
+  POINT t9c11l = t9c11h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t9c12h = o9 + TRANS (-274.0, -94.7, 0, 0, 0, 0)
+  POINT t9c12l = t9c12h + TRANS (0, 0, 28.695, 0, 0, 0)
+  
+  POINT t10c1l = #[117.052,83.246,54.375,0.015,28.887,-242.956]
+  POINT t10c2h = o10 + TRANS (-91.5, 1, 0, 0, 0, 0)
+  POINT t10c2l = t10c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
+  POINT t10c3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
+  POINT t10c3l = t10c3h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c4h = o10 + TRANS (-272.0, 2.5, 0, 0, 0, 0)
+  POINT t10c4l = t10c4h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c5h = o10 + TRANS (-2, -49.0, 0, 0, 0, 0)
+  POINT t10c5l = t10c5h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c6h = o10 + TRANS (-93, -47.5, 0, 0, 0, 0)
+  POINT t10c6l = t10c6h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c7h = o10 + TRANS (-183, -47, -60, 0, 0, 0)
+  POINT t10c7l = t10c7h + TRANS (0, 0, 88.695, 0, 0, 0)
+  POINT t10c8h = o10 + TRANS (-274.5, -45.2, 0, 0, 0, 0)
+  POINT t10c8l = t10c8h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c9h = o10 + TRANS (-2.5, -97.7, 0, 0, 0, 0)
+  POINT t10c9l = t10c9h + TRANS (0, 0, 29.936, 0, 0, 0)
+  POINT t10c10h = o10 + TRANS (-95, -96.2, 0, 0, 0, 0)
+  POINT t10c10l = t10c10h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c11h = o10 + TRANS (-186, -94, 0, 0, 0, 0)
+  POINT t10c11l = t10c11h + TRANS (0, 0, 28.695, 0, 0, 0)
+  POINT t10c12h = o10 + TRANS (-275, -94.7, 0, 0, 0, 0)
+  POINT t10c12l = t10c12h + TRANS (0, 0, 28.695, 0, 0, 0)
+
+
+
+
+  
+  CALL setup
+  WHILE 1 DO
+  CALL receive (.length)
+  IF $data[0]=="neutral" THEN
+    JMOVE #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385] 
+    GOTO reply
+  END
+  
+  IF $data[0]=="refresh" THEN 
+    GOTO reply
+  END
+  
+  IF $data[0]=="scan" THEN 
+    JMOVE #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
+    GOTO reply
+  END
+  
+  IF $data[0]=="disconnect" THEN 
+    BREAK
+  END
+  
+  $instruction = $LEFT($data[0],1)
+  $number1 = $MID($data[0],3,2)
+  $number2 = $MID($data[0],6,2)
+  
+  SCASE $instruction OF
+    SVALUE "I":
+    IF $number1 == 01 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+    IF $number1 == 02 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 03 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 04 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 05 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 06 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+ 
+    SVALUE "Q":
+  IF $number1 == 07 THEN
+      IF $number2 == 01 THEN
+      JMOVE o7
+      LMOVE t7c1l
+      send(.length)
+      LMOVE o7
+      GOTO reply
+      END
+      IF $number2 == 02 THEN
+      JMOVE t7c2h
+      LMOVE t7c2l
+      send(.length)
+      LMOVE t7c2h
+      GOTO reply
+      END
+      IF $number2 == 03 THEN
+      JMOVE t7c3h
+      LMOVE t7c3l
+      send(.length)
+      LMOVE t7c3h
+  
+      GOTO reply
+      END
+      IF $number2 == 04 THEN
+      JMOVE t7c4h
+      LMOVE t7c4l
+      send(.length)
+      LMOVE t7c4h
+      GOTO reply
+      END
+      IF $number2 == 05 THEN
+      JMOVE t7c5h
+      LMOVE t7c5l
+      send(.length)
+      LMOVE t7c5h
+      GOTO reply
+      END
+      IF $number2 == 06 THEN
+      JMOVE t7c6h
+      LMOVE t7c6l
+      send(.length)
+      LMOVE t7c6h
+      GOTO reply
+      END
+      IF $number2 == 07 THEN
+      JMOVE t7c7h
+      LMOVE t7c7l
+      send(.length)
+      LMOVE t7c7h
+      GOTO reply
+      END
+      IF $number2 == 08 THEN
+      JMOVE t7c8h
+      LMOVE t7c8l
+      send(.length)
+      LMOVE t7c8h
+      GOTO reply
+      END
+      IF $number2 == 09 THEN
+      JMOVE t7c9h
+      LMOVE t7c9l
+      send(.length)
+      LMOVE t7c9h
+      GOTO reply
+      END
+      IF $number2 == 10 THEN
+      JMOVE t7c10h
+      LMOVE t7c10l
+      send(.length)
+      LMOVE t7c10h
+      GOTO reply
+      END
+      IF $number2 == 11 THEN
+      JMOVE t7c11h
+      LMOVE t7c12l
+      send(.length)
+      LMOVE t7c12h
+      GOTO reply
+      END
+      IF $number2 == 12 THEN
+      JMOVE t7c12h
+      LMOVE t7c12l
+      send(.length)
+      LMOVE t7c12h
+      GOTO reply
+      END
+    END
+  IF $number1 == 08 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 09 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 10 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+      IF $number2 == 07 THEN
+      JMOVE
+      END
+      IF $number2 == 08 THEN
+      JMOVE
+      END
+      IF $number2 == 09 THEN
+      JMOVE
+      END
+      IF $number2 == 10 THEN
+      JMOVE
+      END
+      IF $number2 == 11 THEN
+      JMOVE
+      END
+      IF $number2 == 12 THEN
+      JMOVE
+      END
+    END
+    SVALUE "D":
+  IF $number1 == 01 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+      IF $number2 == 06 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 02 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+      IF $number2 == 05 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 03 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+      IF $number2 == 04 THEN
+      JMOVE
+      END
+    END
+   IF $number1 == 04 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+      IF $number2 == 03 THEN
+      JMOVE
+      END
+    END
+    IF $number1 == 05 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+      IF $number2 == 02 THEN
+      JMOVE
+      END
+    END
+  IF $number1 == 06 THEN
+      IF $number2 == 01 THEN
+      JMOVE 
+      END
+    END
+    SVALUE "C":
+  PRINT "FRITS IS EEN SLETJE"
+  END
+  
+
+  
+  
+  
+  ; IF expr THEN ... [ELSE ...] END
+  ; WHILE expr DO ... END
+  ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
+    
+  END
+  PRINT $data[0]
+  reply:
+  CALL send (.length)
+  CALL disconnect
 .END
 .PROGRAM robotcalibrate () ;
 	; *******************************************************************
@@ -997,125 +1653,125 @@ DCOLHJID9         0
 	JMOVE t
 .END
 .PROGRAM solarsorter () ; Project bij GTM | Q1 '20'21 | Sorteren van zonnecellen
-	; *******************************************************************
-	;
-	; Program:      solarSorter
-	; Comment:      Voor het eerste bedrijfsproject in de minor heeft GTM gevraagd of wij een systeem kunnen bouwen die trays met zonnecellen en een excelsheet accepteert en dat omzet naar gesorteerde trays met ieder een bepaalde klasse cellen.
-	;     De robot zal initieel verbinding maken met de TCP server van de python pc en reageren op elk bericht dat de pc stuurt.
-	;     Gedurende het programma zal de robot vanuit de rustpositie wachten tot de pc uit de invoercamera beeld heeft ontvangen en de robot vertelt waar de ongesorteerde cellen liggen. De robot pakt dan een voor een elke ongesorteerde cel op en verplaatst deze boven de qrcamera. De robot zal de pc een bericht sturen dat deze op locatie is.
-	;     De pc zal het serienummer laten scannen door de qrcamera en koppelen aan deze cel in de eerste foto. Vervolgens wordt de klasse opgezocht in de excelsheet en stuurt de pc de klasse naar de robot. De robot verplaatst de cel dan naar de uitvoertray met cellen van die klasse. De robot verplaatst zich dan weer naar de rustpositie.
-	;     Mocht een uitvoertray vol zitten, laat de robot dit via de pc weten en stopt met verdergaan totdat hij expliciet te horen krijgt dat de uitvoertray is verwijderd. Dit gaat via de hmi. Vervolgens plaatst de robot een lege tray op de geleegde plek en vervolgt hij zijn programma.
-	;     Mocht de invoertray leeg zijn, dan vertelt de pc niet welke cel de robot moet pakken, maar dat de tray leeg is en vervangen moet worden. De robot verplaatst dan de lege tray en gaat terug naar de rustpositie. De robot laat vervolgens de pc vertellen waar de volgende cellen liggen en gaat deze een na een af.
-	; Author:       User
-	;
-	; Date:         october 12th, 2020
-	;
-	; *******************************************************************
-	;
-	; AS Programming Language: variables
-	; var1      : Global variables are saved in memory and can be used in any program
-	; .var2     : Local variables are not saved
-	; $var3     : String variable
-	; var4[5]   : Element located directly to the right of var4[4], index must be in [0-9999]
-	; var5[1,2] : Element in 2D array var5
-	; pose1     : Transformation pose (consists of the values x, y, z, rx, ry, rz)
-	; #pose2    : Joint pose (consists of the values JT1, JT2, JT3, JT4, JT5, JT6)
-	;
-	; Variable name can only consist of: [0-9a-zA-Z._] and are case insensitive
-	; Variable names start with [a-zA-Z] and have a length of max 15 characters
-	;
-	; *Invalid* variable names: (See AS programming reference page 41 or 3-12)
-	; 3p        : Does not start with [a-zA-Z]
-	; part#2    : # prefix is reserved for joint poses and cannot be used in variable names
-	; random    : Keyword
-	; TCP_SEND  : Keyword
-	; .arr[1]   : Arrays can't be defined local variables.
-	;
-	; For defining/accessing arrays:
-	; arr[1] = 6    ; Cannot assign multiple variables on the same line
-	; arr[3] = 7    ;   e.g. var1 = 6, var2 = 7 is a syntax error
-	; PRINT arr[2]  ; Gives runtime error E0102: Variable is not defined.
-	;
-	; For operators: many are valid, see AS programming reference page 50 or 3-21
-	;
-	; For comparing strings: (See AS programming reference page 53 or 3-24)
-	; "AAA"  < "AAB"
-	; "ABC" == "ABC"
-	; "DEF." > "DEF"
-	; "xyz"  > "XYZ"
-	;
-	; Loops / other structure instructions:
-	; IF expr THEN ... [ELSE ...] END     ; ELSEIF does not exist in the AS programming reference and appears to be an invalid statement
-	; WHILE expr DO ... END
-	; DO ... UNTIL expr
-	; FOR var = x TO y [STEP z] ... END
-	; CASE var OF VALUE x,y,z: ... [VALUE n: ...]+ [ANY ...] END
-	; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
-	;
-	;
-	; AS Programming Language: poses
-	; HERE #pose1         : Define a joint pose variable using the current pose of the robot
-	; HERE pose2          : Define a transformation pose variable using the current pose of the robot
-	; POINT #pose3        : Type in the joint values or copy them using 'POINT pose3 = pose1'
-	; POINT pose4         : Type in the transformation values or copy them using 'POINT pose4 = pose2'
-	; HERE pose4 + pose5  : Pose5 relative to pose4, since we defined pose4 earlier
-	;
-	;
-	; AS Programming Language: moves
-	; JMOVE pose1         : Joint move: during the move, every joint moves at linear speed
-	; LMOVE pose1         : Linear move: during the move, the tool moves at linear speed
-	; JAPPRO pose1, 100   : Joint move: approach 100 mm above the target pose
-	;
-	; *******************************************************************
-	; Variables
-	.err = -1             ; Error variable
-	.port = 10000         ; Outgoing port
-	sock_id1 = -1         ; Positive socket id if connected with pc
-	.timeout = 60         ; Timeout in seconds to wait for a connection
-	ip[0] = 0             ; The ip of the connecting pc (ip[1-4])
-	$data[0] = ""         ; "Character string variable array"
-	max_tcp_length = 255  ; Maximum length of data received/sent
-	; Listen for devices that would like to connect
-	TCP_LISTEN .err, .port
-	IF .err < 0 THEN
-		PRINT "ERR IN TCP_LISTEN: ", .err
-		GOTO exit
-	END
-	; Accept connection from the pc. Note that the sock_id param is also the err param
-	TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
-	IF sock_id1 < 0 THEN
-		PRINT "ERR IN TCP_ACCEPT: ", sock_id1
-		GOTO exit
-	END
-	; Stop listening for more devices
-	TCP_END_LISTEN .err, .port
-	.timeout = 1
-	; Loop 2 times and echo messages
-	FOR i = 0 TO 1    ; In AS Language 'TO' means: To and including
-		; Receive a message
-		TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
-		IF .err < 0 THEN
-			PRINT "ERR IN TCP_RECV: ", .err
-			GOTO exit
-		ELSE
-			IF .length < 1 THEN
-				PRINT "EMPTY MESSAGE IN TCP_RECV"
-				GOTO exit
-			END
-		END
-		; Send/echo the message
-		TCP_SEND .err, sock_id1, $data[0], .length, .timeout
-		IF .err < 0 THEN
-			PRINT "ERR IN TCP_SEND: ", .err
-			GOTO exit
-		END
-	END
-	; Close connection
-	TCP_CLOSE .err, sock_id1
-	PRINT "Succesfully disconnected socket ", sock_id1
-	sock_id1 = -1
-	; Bedenk of je de TCP parallel wil laten lopen op de achtergrond
-	; Uitzoeken. Heet dit subroutine?
+  ; *******************************************************************
+  ;
+  ; Program:      solarSorter
+  ; Comment:      Voor het eerste bedrijfsproject in de minor heeft GTM gevraagd of wij een systeem kunnen bouwen die trays met zonnecellen en een excelsheet accepteert en dat omzet naar gesorteerde trays met ieder een bepaalde klasse cellen.
+  ;     De robot zal initieel verbinding maken met de TCP server van de python pc en reageren op elk bericht dat de pc stuurt.
+  ;     Gedurende het programma zal de robot vanuit de rustpositie wachten tot de pc uit de invoercamera beeld heeft ontvangen en de robot vertelt waar de ongesorteerde cellen liggen. De robot pakt dan een voor een elke ongesorteerde cel op en verplaatst deze boven de qrcamera. De robot zal de pc een bericht sturen dat deze op locatie is.
+  ;     De pc zal het serienummer laten scannen door de qrcamera en koppelen aan deze cel in de eerste foto. Vervolgens wordt de klasse opgezocht in de excelsheet en stuurt de pc de klasse naar de robot. De robot verplaatst de cel dan naar de uitvoertray met cellen van die klasse. De robot verplaatst zich dan weer naar de rustpositie.
+  ;     Mocht een uitvoertray vol zitten, laat de robot dit via de pc weten en stopt met verdergaan totdat hij expliciet te horen krijgt dat de uitvoertray is verwijderd. Dit gaat via de hmi. Vervolgens plaatst de robot een lege tray op de geleegde plek en vervolgt hij zijn programma.
+  ;     Mocht de invoertray leeg zijn, dan vertelt de pc niet welke cel de robot moet pakken, maar dat de tray leeg is en vervangen moet worden. De robot verplaatst dan de lege tray en gaat terug naar de rustpositie. De robot laat vervolgens de pc vertellen waar de volgende cellen liggen en gaat deze een na een af.
+  ; Author:       User
+  ;
+  ; Date:         october 12th, 2020
+  ;
+  ; *******************************************************************
+  ;
+  ; AS Programming Language: variables
+  ; var1      : Global variables are saved in memory and can be used in any program
+  ; .var2     : Local variables are not saved
+  ; $var3     : String variable
+  ; var4[5]   : Element located directly to the right of var4[4], index must be in [0-9999]
+  ; var5[1,2] : Element in 2D array var5
+  ; pose1     : Transformation pose (consists of the values x, y, z, rx, ry, rz)
+  ; #pose2    : Joint pose (consists of the values JT1, JT2, JT3, JT4, JT5, JT6)
+  ;
+  ; Variable name can only consist of: [0-9a-zA-Z._] and are case insensitive
+  ; Variable names start with [a-zA-Z] and have a length of max 15 characters
+  ;
+  ; *Invalid* variable names: (See AS programming reference page 41 or 3-12)
+  ; 3p        : Does not start with [a-zA-Z]
+  ; part#2    : # prefix is reserved for joint poses and cannot be used in variable names
+  ; random    : Keyword
+  ; TCP_SEND  : Keyword
+  ; .arr[1]   : Arrays can't be defined local variables.
+  ;
+  ; For defining/accessing arrays:
+  ; arr[1] = 6    ; Cannot assign multiple variables on the same line
+  ; arr[3] = 7    ;   e.g. var1 = 6, var2 = 7 is a syntax error
+  ; PRINT arr[2]  ; Gives runtime error E0102: Variable is not defined.
+  ;
+  ; For operators: many are valid, see AS programming reference page 50 or 3-21
+  ;
+  ; For comparing strings: (See AS programming reference page 53 or 3-24)
+  ; "AAA"  < "AAB"
+  ; "ABC" == "ABC"
+  ; "DEF." > "DEF"
+  ; "xyz"  > "XYZ"
+  ;
+  ; Loops / other structure instructions:
+  ; IF expr THEN ... [ELSE ...] END     ; ELSEIF does not exist in the AS programming reference and appears to be an invalid statement
+  ; WHILE expr DO ... END
+  ; DO ... UNTIL expr
+  ; FOR var = x TO y [STEP z] ... END
+  ; CASE var OF VALUE x,y,z: ... [VALUE n: ...]+ [ANY ...] END
+  ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
+  ;
+  ;
+  ; AS Programming Language: poses
+  ; HERE #pose1         : Define a joint pose variable using the current pose of the robot
+  ; HERE pose2          : Define a transformation pose variable using the current pose of the robot
+  ; POINT #pose3        : Type in the joint values or copy them using 'POINT pose3 = pose1'
+  ; POINT pose4         : Type in the transformation values or copy them using 'POINT pose4 = pose2'
+  ; HERE pose4 + pose5  : Pose5 relative to pose4, since we defined pose4 earlier
+  ;
+  ;
+  ; AS Programming Language: moves
+  ; JMOVE pose1         : Joint move: during the move, every joint moves at linear speed
+  ; LMOVE pose1         : Linear move: during the move, the tool moves at linear speed
+  ; JAPPRO pose1, 100   : Joint move: approach 100 mm above the target pose
+  ;
+  ; *******************************************************************
+  ; Variables
+  .err = -1             ; Error variable
+  .port = 10000         ; Outgoing port
+  sock_id1 = -1         ; Positive socket id if connected with pc
+  .timeout = 60         ; Timeout in seconds to wait for a connection
+  ip[0] = 0             ; The ip of the connecting pc (ip[1-4])
+  $data[0] = ""         ; "Character string variable array"
+  max_tcp_length = 255  ; Maximum length of data received/sent
+  ; Listen for devices that would like to connect
+  TCP_LISTEN .err, .port
+  IF .err < 0 THEN
+    PRINT "ERR IN TCP_LISTEN: ", .err
+    GOTO exit
+  END
+  ; Accept connection from the pc. Note that the sock_id param is also the err param
+  TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
+  IF sock_id1 < 0 THEN
+    PRINT "ERR IN TCP_ACCEPT: ", sock_id1
+    GOTO exit
+  END
+  ; Stop listening for more devices
+  TCP_END_LISTEN .err, .port
+  .timeout = 1
+  ; Loop 2 times and echo messages
+  FOR i = 0 TO 1    ; In AS Language 'TO' means: To and including
+    ; Receive a message
+    TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
+    IF .err < 0 THEN
+      PRINT "ERR IN TCP_RECV: ", .err
+      GOTO exit
+    ELSE
+      IF .length < 1 THEN
+        PRINT "EMPTY MESSAGE IN TCP_RECV"
+        GOTO exit
+      END
+    END
+    ; Send/echo the message
+    TCP_SEND .err, sock_id1, $data[0], .length, .timeout
+    IF .err < 0 THEN
+      PRINT "ERR IN TCP_SEND: ", .err
+      GOTO exit
+    END
+  END
+  ; Close connection
+  TCP_CLOSE .err, sock_id1
+  PRINT "Succesfully disconnected socket ", sock_id1
+  sock_id1 = -1
+  ; Bedenk of je de TCP parallel wil laten lopen op de achtergrond
+  ; Uitzoeken. Heet dit subroutine?
 exit:
 .END
 .PROGRAM IT.to.LT ()
@@ -1176,9 +1832,9 @@ exit:
   ;
   POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
   POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
+  POINT T7c1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
   POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
+  POINT T7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
   POINT itc2l = itc2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
   POINT itc3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
   POINT itc3l = itc3h + TRANS (0, 0, 26.979, 0, 0, 0)
@@ -1781,19 +2437,114 @@ exit:
     TWAIT 1
   END
 .END
+.PROGRAM send (.length) ; Sends data to the connected tcp connection
+  ; *******************************************************************
+  ;
+  ; Program:      send
+  ; Comment:      Sends data to the connected tcp connection
+  ; Author:       User
+  ;
+  ; Date:         10/22/2020
+  ;
+  ; *******************************************************************
+  ;
+  .err = -2
+  .timeout = 60
+  TCP_SEND .err, sock_id1, $data[0], .length, .timeout
+    IF .err < 0 THEN
+      PRINT "ERR IN TCP_SEND: ", .err
+      STOP
+    END
+.END
+.PROGRAM receive (.length) ; Receives data from the connected tcp connection
+  ; *******************************************************************
+  ;
+  ; Program:      receive
+  ; Comment:      Receives data from the connected tcp connection
+  ; Author:       User
+  ;
+  ; Date:         10/22/2020
+  ;
+  ; *******************************************************************
+  ;
+  .err = -2
+  .timeout = 60
+  max_tcp_length = 255
+  
+  PRINT "Hallo"
+  
+  TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
+    IF .err < 0 THEN
+      PRINT "ERR IN TCP_RECV: ", .err
+      STOP
+    ELSE
+      IF .length < 1 THEN
+        PRINT "EMPTY MESSAGE IN TCP_RECV"
+        STOP
+      END
+    END
+.END
+.PROGRAM setup() ; Setup the TCP connection server
+  ; *******************************************************************
+  ;
+  ; Program:      setup
+  ; Comment:      Setup the TCP connection server
+  ; Author:       User
+  ;
+  ; Date:         10/22/2020
+  ;
+  ; *******************************************************************
+  ;
+  .err = -2
+  .port = 10000
+  .timeout = 60
+  ip[0] = 0
+  
+  ; Listen for devices that would like to connect
+  TCP_LISTEN .err, .port
+  IF .err < 0 THEN
+    PRINT "ERR IN TCP_LISTEN: ", .err
+    STOP
+  END
+  ; Accept connection from the pc. Note that the sock_id param is also the err param
+  TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
+  IF sock_id1 < 0 THEN
+    PRINT "ERR IN TCP_ACCEPT: ", sock_id1
+    STOP
+  END
+  ; Stop listening for more devices
+  TCP_END_LISTEN .err, .port
+.END
+.PROGRAM disconnect()
+  ; *******************************************************************
+  ;
+  ; Program:      disconnect
+  ; Comment:      
+  ; Author:       User
+  ;
+  ; Date:         10/22/2020
+  ;
+  ; *******************************************************************
+  ;
+  .err = -1
+  TCP_CLOSE .err, sock_id1
+  PRINT "Succesfully disconnected socket ", sock_id1
+  sock_id1 = -1
+.END
 .PROGRAM autostart.pc () ; Resets connection boolean with Cognex Camera
-	; *******************************************************************
-	;
-	; Program:      autostart.pc
-	; Comment:      The variable sock_id1 holds a positive value when the Cognex camera is connected. This autostart resets the boolean so that a new connection with the camera can be made.
-	; Author:       User
-	;
-	; Date:         9/30/2020
-	;
-	; *******************************************************************
-	;
-	SIGNAL -2254, -2245
-	sock_id1 = -2
+  ; *******************************************************************
+  ;
+  ; Program:      autostart.pc
+  ; Comment:      The variable sock_id1 holds a positive value when the Cognex camera is connected. This autostart resets the boolean so that a new connection with the camera can be made.
+  ; Author:       User
+  ;
+  ; Date:         9/30/2020
+  ;
+  ; *******************************************************************
+  ;
+  SIGNAL -2254, -2245
+  sock_id1 = -2
+  $data[0] = ""
 .END
 .PROGRAM Comment___ () ; Comments for IDE. Do not use.
 	; @@@ PROJECT @@@
@@ -1805,6 +2556,8 @@ exit:
 	; 19.10.2020 10:15:18
 	; 
 	; 22.10.2020 10:32:13
+	; 
+	; 23.10.2020 11:25:21
 	; 
 	; @@@ INSPECTION @@@
 	; @@@ CONNECTION @@@
@@ -1818,7 +2571,8 @@ exit:
 	; .traynr 
 	; .celnr 
 	; .hoogte 
-	; 0:test
+	; 0:Eindcode
+	; .length 
 	; 0:robotcalibrate
 	; 0:solarsorter
 	; .err 
@@ -1833,7 +2587,25 @@ exit:
 	; 0:tray.9
 	; .i 
 	; 0:tray.10
+	; .i 
 	; 0:INPUT.tray
+	; .i 
+	; 0:send
+	; .$data[] 
+	; .length 
+	; .err 
+	; .timeout 
+	; 0:receive
+	; .$data[] 
+	; .length 
+	; .err 
+	; .timeout 
+	; 0:setup
+	; .err 
+	; .port 
+	; .timeout 
+	; 0:disconnect
+	; .err 
 	; 0:autostart.pc
 	; @@@ TRANS @@@
 	; @@@ JOINTS @@@
@@ -1847,18 +2619,18 @@ exit:
 	; @@@ BOOL @@@
 .END
 .TRANS
-aaa -475.751953 119.889572 272.059326 104.793167 0.714860 -14.754286
+aaa -475.751953 119.889572 272.059326 104.793175 0.714860 -14.754285
 abovecamera -213.004364 351.273590 258.908264 -57.103226 2.374821 -119.657112
-abovetray 351.525970 342.753815 242.881516 101.342583 3.348985 54.919796
+abovetray 351.525970 342.753815 242.881516 101.342590 3.348985 54.919796
 c1leg 207.598709 129.797806 331.458252 -7.358470 1.390509 11.144266
-c1legboven 206.804810 129.904053 298.146271 -7.363803 1.393392 11.147394
+c1legboven 206.804810 129.904053 298.146271 -7.363804 1.393392 11.147394
 c1pak -469.931061 23.211721 329.083832 -179.718674 0.458686 -86.778099
 c1pakboven -469.489044 23.205919 274.235291 -179.693863 0.459707 -86.799797
 c2leg 220.732025 -68.717384 331.254364 -7.461430 1.390026 11.241684
-c2legboven 220.109863 -68.628914 305.175568 -7.516114 1.390953 11.294303
-c2pak -423.544556 -66.067787 330.475342 -32.645111 0.461307 124.828865
+c2legboven 220.109863 -68.628914 305.175568 -7.516114 1.390953 11.294302
+c2pak -423.544556 -66.067787 330.475342 -32.645107 0.461307 124.828865
 c2pakboven -423.765503 -65.935059 297.974243 -32.721210 0.460463 124.903778
-c3leg 170.011383 323.615326 330.417175 -7.424343 1.391889 11.208733
+c3leg 170.011383 323.615326 330.417175 -7.424342 1.391889 11.208733
 c3legboven 168.954391 323.746765 286.129517 -7.384701 1.392322 11.171907
 c3pak -374.246643 117.188759 330.773193 -36.702805 0.355732 128.786148
 c3pakboven -374.441833 117.336517 291.630188 -36.711662 0.354817 128.795685
@@ -1872,33 +2644,33 @@ down 0.000000 0.000000 5.000000 0.000000 0.000000 0.000000
 firstloc 517.627563 -282.391418 43.427887 51.672680 80.748543 131.110779
 hier1 179.246887 -22.863419 339.750092 -25.087641 62.191101 63.877506
 homeloc 361.445984 351.522034 73.260376 51.671879 80.749184 131.112030
-inputtray -469.109000 130.529000 232.585000 104.076000 0.713000 -14.034000
-itc10h 432.680786 45.238869 300.227173 -144.985001 0.007000 144.992004
-itc10l 432.677979 45.236908 328.189178 -144.985001 0.007000 144.992004
-itc11h 343.180420 47.927925 300.218384 -144.985001 0.007000 144.992004
-itc11l 343.177612 47.925964 328.180389 -144.985001 0.007000 144.992004
-itc12h 249.680298 49.216492 300.209137 -144.985001 0.007000 144.992004
-itc12l 249.677505 49.214531 328.171143 -144.985001 0.007000 144.992004
-itc1h -471.787567 203.697357 271.065613 104.698547 0.713624 -14.661071
-itc1l 523.673279 141.451538 329.859924 -140.694702 0.005475 140.699692
-itc2h 432.168823 142.938812 300.233948 -144.985001 0.007000 144.992004
-itc2l 432.166016 142.936859 328.195953 -144.985001 0.007000 144.992004
-itc3h 340.668640 144.427612 300.224915 -144.985001 0.007000 144.992004
-itc3l 340.665833 144.425659 328.186920 -144.985001 0.007000 144.992004
-itc4h 249.168213 147.916428 300.216003 -144.985001 0.007000 144.992004
-itc4l 249.165421 147.914474 328.178009 -144.985001 0.007000 144.992004
-itc5h 523.674866 93.449997 300.239655 -144.985001 0.007000 144.992004
-itc5l 523.672058 93.448036 328.201660 -144.985001 0.007000 144.992004
-itc6h 432.674805 93.938866 300.230591 -144.985001 0.007000 144.992004
-itc6l 432.671997 93.936905 328.192596 -144.985001 0.007000 144.992004
-itc7h 342.674500 96.427856 300.221741 -144.985001 0.007000 144.992004
-itc7l 342.671692 96.425896 328.183746 -144.985001 0.007000 144.992004
-itc8h 250.174164 99.216545 300.212677 -144.985001 0.007000 144.992004
-itc8l 250.171371 99.214584 328.174683 -144.985001 0.007000 144.992004
-itc9h 523.680969 43.750000 300.236176 -144.985001 0.007000 144.992004
-itc9l 523.678162 43.748039 328.198181 -144.985001 0.007000 144.992004
-itpak -417.979309 64.557526 327.340332 -7.044564 0.007006 -172.954468
-itpakboven -417.995087 64.559479 197.340347 -7.044564 0.007006 -172.954468
+inputtray -469.109009 130.529007 232.585007 104.076004 0.713000 -14.034000
+itc10h -370.043030 37.610176 234.006485 104.076004 0.713000 -14.034000
+itc10l -370.337616 38.785007 331.331940 104.076004 0.713000 -14.034000
+itc11h -370.776550 -55.383621 235.126816 104.076004 0.713000 -14.034000
+itc11l -371.071136 -54.208790 332.452271 104.076004 0.713000 -14.034000
+itc12h -370.910065 -148.376968 236.248947 104.076004 0.713000 -14.034000
+itc12l -371.204651 -147.202133 333.574402 104.076004 0.713000 -14.034000
+itc1h -471.787567 203.697357 271.065613 104.698555 0.713624 -14.661071
+itc1l -469.408875 131.695007 329.921417 104.036285 0.713064 -13.991960
+itc2h -467.042542 37.537308 233.713776 104.076004 0.713000 -14.034000
+itc2l -467.337128 38.712139 331.039246 104.076004 0.713000 -14.034000
+itc3h -467.476074 -55.456268 234.835007 104.076004 0.713000 -14.034000
+itc3l -467.770660 -54.281437 332.160461 104.076004 0.713000 -14.034000
+itc4h -467.609619 -148.449600 235.957138 104.076004 0.713000 -14.034000
+itc4l -467.904205 -147.274765 333.282593 104.076004 0.713000 -14.034000
+itc5h -418.609253 130.566940 232.737396 104.076004 0.713000 -14.034000
+itc5l -418.903839 131.741776 330.062866 104.076004 0.713000 -14.034000
+itc6h -419.042786 37.573364 233.858627 104.076004 0.713000 -14.034000
+itc6l -419.337372 38.748196 331.184082 104.076004 0.713000 -14.034000
+itc7h -418.976318 -55.419830 234.981369 104.076004 0.713000 -14.034000
+itc7l -419.270905 -54.244999 332.306824 104.076004 0.713000 -14.034000
+itc8h -418.909851 -148.413010 236.104095 104.076004 0.713000 -14.034000
+itc8l -419.204437 -147.238174 333.429565 104.076004 0.713000 -14.034000
+itc9h -369.809479 130.603607 232.884659 104.076004 0.713000 -14.034000
+itc9l -370.104065 131.778442 330.210114 104.076004 0.713000 -14.034000
+itpak -417.979309 64.557526 327.340332 -7.044563 0.007006 -172.954468
+itpakboven -417.995087 64.559479 197.340347 -7.044563 0.007006 -172.954468
 jointpunt -367.533173 0.442523 278.773621 156.545563 0.778875 -66.064148
 lpoint -155.437531 -72.481674 -410.788391 24.999989 150.000000 -165.000015
 lpoint2 -110.242149 131.381470 -410.788391 -49.999996 150.000000 -165.000015
@@ -1909,26 +2681,26 @@ ltpakboven -278.741333 -321.820190 291.421478 0.282498 0.161616 89.711281
 my_point_1 310.259369 -148.776886 323.234253 -29.040014 1.134039 -33.064617
 my_point_2 99.983597 -148.769730 434.025696 -29.132324 1.130596 -32.975159
 my_point_3 269.446075 113.295494 301.626801 -29.140289 1.133580 -32.966244
-neutraal 161.289337 443.138855 308.109009 70.000000 79.600006 -90.000015
-neutral -366.201935 -0.000016 286.587952 90.000008 0.000000 0.000000
-nextcorner 50.833244 202.423431 353.032593 89.163498 92.192818 -92.546974
-o10 435.468000 -222.390000 300.302000 177.344000 0.017000 -177.338000
+neutraal 161.289337 443.138855 308.109009 70.000000 79.600006 -90.000023
+neutral -366.201935 -0.000016 286.587952 90.000015 0.000000 0.000000
+nextcorner 50.833244 202.423431 353.032593 89.163498 92.192825 -92.546982
+o10 435.467987 -222.389999 300.302002 177.343994 0.017000 -177.337997
 o7 437.975006 326.622009 300.278992 -137.809998 0.010000 137.811996
 o8 523.669006 141.449997 300.243011 -144.985001 0.007000 144.992004
-o9 521.176000 -40.744000 300.027000 -175.785000 0.011000 175.791000
+o9 521.176025 -40.743999 300.027008 -175.785004 0.011000 175.791000
 p 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-point1 553.342834 18.502590 16.124340 75.785179 100.034462 -175.478073
+point1 553.342834 18.502590 16.124340 75.785179 100.034470 -175.478073
 point2 462.644012 162.343033 345.587372 87.514938 87.965881 124.545349
-point3 439.954437 352.210937 191.158844 120.901588 96.597374 147.584686
-pos1 467.788544 24.026325 215.704544 -139.958725 32.049603 -135.290024
-pos2 467.783875 -214.397705 215.712769 -139.965927 32.049381 -135.282654
+point3 439.954437 352.210937 191.158844 120.901588 96.597382 147.584686
+pos1 467.788544 24.026325 215.704544 -139.958725 32.049603 -135.290039
+pos2 467.783875 -214.397705 215.712769 -139.965927 32.049381 -135.282669
 pos3 363.448822 -21.458935 215.706055 -139.968933 32.047325 -135.284866
-pose -475.752808 119.886322 272.059296 104.782578 0.715144 -14.742655
-pose1 -255.535263 42.459385 366.305115 147.741150 75.800446 -25.448547
-pose2 -115.992432 -255.943344 119.760223 -118.473045 110.172668 -52.085541
+pose -475.752808 119.886322 272.059296 104.782585 0.715144 -14.742655
+pose1 -255.535263 42.459385 366.305115 147.741150 75.800446 -25.448545
+pose2 -115.992432 -255.943344 119.760223 -118.473045 110.172676 -52.085545
 pose3 171.291626 -7.109505 428.984009 44.534264 41.273129 -55.012859
 position1 157.091339 -200.267075 230.454803 30.222631 84.263550 36.291531
-secondloc 320.446594 -316.528961 14.802069 -71.144646 103.785103 -59.910507
+secondloc 320.446594 -316.528961 14.802069 -71.144646 103.785110 -59.910515
 start 18.651585 349.213959 185.542511 14.238833 2.211993 165.321655
 switchovercorne 0.000000 0.000000 -125.000000 0.000000 0.000000 0.000000
 t -343.366302 -146.413742 -188.697845 -172.260208 172.497604 156.518433
@@ -1938,18 +2710,18 @@ tempcorner 0.000000 0.000000 -50.000000 0.000000 0.000000 0.000000
 test 160.558838 -197.496674 230.450455 31.221476 84.263573 36.291943
 test2 157.087585 -200.268723 230.450455 30.221478 84.263573 36.291943
 test3 139.035248 -213.197723 230.450455 25.221476 84.263573 36.291943
-testpak -382.997345 179.342590 319.678772 159.374939 1.899970 109.180199
-testpakboven -380.308716 178.330292 233.073486 159.394241 1.900845 109.158241
-testput 632.775330 89.621445 205.037811 9.229049 30.937765 -14.571338
-testputboven 565.847290 28.136595 -119.055801 3.449025 34.711704 113.531677
+testpak -382.997345 179.342590 319.678772 159.374939 1.899970 109.180206
+testpakboven -380.308716 178.330292 233.073486 159.394241 1.900845 109.158249
+testput 632.775330 89.621445 205.037811 9.229049 30.937763 -14.571336
+testputboven 565.847290 28.136595 -119.055801 3.449025 34.711704 113.531685
 tpos1 157.090179 -200.269363 230.475311 30.222393 84.263702 36.286922
 tpos2 157.090179 -200.269363 230.475311 30.222393 84.263702 36.286922
 tpos3 157.090179 -200.269363 230.475311 30.222393 84.263702 36.286922
-tray 350.624725 347.152435 319.643616 101.390793 3.349504 54.868938
+tray 350.624725 347.152435 319.643616 101.390800 3.349504 54.868938
 tussenpunt 310.196930 247.110535 191.296082 -60.227203 3.920555 174.063141
 up 0.000000 0.000000 -5.000000 0.000000 0.000000 0.000000
 x 192.241638 266.772888 34.018421 -22.005064 80.176147 59.592636
-zeropos 1.610662 404.843353 393.073914 89.163498 92.192818 -92.546974
+zeropos 1.610662 404.843353 393.073914 89.163498 92.192825 -92.546982
 .END
 .JOINTS
 #aaa 0.000000 100.000000 100.000000 0.000000 0.000000 180.000000
@@ -2000,7 +2772,7 @@ i = 2
 ip[0] = 192
 ip[1] = 168
 ip[2] = 0
-ip[3] = 50
+ip[3] = 2
 ip[4] = 10
 max_length = 255
 max_tcp_length = 255
@@ -2010,13 +2782,13 @@ pose1[2] = -15
 pose2[2] = -15
 pose3[2] = -15
 ret = 0
-sock_id1 = -2
+sock_id1 = -1
 tout = 60
 tout_open = 4
 tout_rec = 60
 .END
 .STRINGS
-$data[0] = "abcd"
+$data[0] = "Hallo Frits"
 $receive = "Password: User Logged In\r\n"
 $termchk = "\r\n"
 .END
