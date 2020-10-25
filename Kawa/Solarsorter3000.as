@@ -826,125 +826,125 @@ DCOLHJID9         0
 .SIG_COMMENT
 .END
 .PROGRAM KAWABOT () ; test
-	; *******************************************************************
-	;
-	; Program:      KAWABOT
-	; Comment:      test
-	; Author:       User
-	;
-	; Date:         10/5/2020
-	;
-	; *******************************************************************
-	;
-	;z=-56,711
-	;y=-91,5
-	POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-	POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-	POINT itc1h = #[-66.735, 93.106, 58.038, -179.01, -34.633, 202.49]
-	POINT itc1l = #[-66.672, 79.32, 43.007, -179.04, -35.874, 202.59]
-	POINT itc2h = inputtray + TRANS (-93, -2, 0, 0, 0, 0)
-	POINT itc2l = itc2h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc3h = inputtray + TRANS (-186, -1.5, 0, 0, 0, 0)
-	POINT itc3l = itc3h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc4h = inputtray + TRANS (-279, -1.3, 0, 0, 0, 0)
-	POINT itc4l = itc4h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc5h = inputtray + TRANS (0, -50.5, 0, 0, 0, 0)
-	POINT itc5l = itc5h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc6h = inputtray + TRANS (-93, -50, 0, 0, 0, 0)
-	POINT itc6l = itc6h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc7h = inputtray + TRANS (-186, -50, 0, 0, 0, 0)
-	POINT itc7l = itc7h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc8h = inputtray + TRANS (-279, -50, 0, 0, 0, 0)
-	POINT itc8l = itc8h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc9h = inputtray + TRANS (0, -99.3, 0, 0, 0, 0)
-	POINT itc9l = itc9h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc10h = inputtray + TRANS (-93, -99, 0, 0, 0, 0)
-	POINT itc10l = itc10h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc11h = inputtray + TRANS (-186, -98.2, 0, 0, 0, 0)
-	POINT itc11l = itc11h + TRANS (0, 0, 59.741, 0, 0, 0)
-	POINT itc12h = inputtray + TRANS (-279, -98, 0, 0, 0, 0)
-	POINT itc12l = itc12h + TRANS (0, 0, 59.741, 0, 0, 0)
-	;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-	;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-	;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-	FOR .i = 1 TO 3
-		SPEED 50 ALWAYS
-		PRINT "Frits is een sletje"
-		JMOVE start
-		TWAIT 1
-		JMOVE itc1h
-		TWAIT 1
-		LMOVE itc1l
-		TWAIT 1
-		LMOVE itc1h
-		TWAIT 1
-		JMOVE itc2h
-		TWAIT 1
-		LMOVE itc2l
-		TWAIT 1
-		LMOVE itc2h
-		TWAIT 1
-		JMOVE itc3h
-		TWAIT 1
-		LMOVE itc3l
-		TWAIT 1
-		LMOVE itc3h
-		TWAIT 1
-		JMOVE itc4h
-		TWAIT 1
-		LMOVE itc4l
-		TWAIT 1
-		LMOVE itc4h
-		TWAIT 1
-		JMOVE itc5h
-		TWAIT 1
-		LMOVE itc5l
-		TWAIT 1
-		LMOVE itc5h
-		TWAIT 1
-		JMOVE itc6h
-		TWAIT 1
-		LMOVE itc6l
-		TWAIT 1
-		LMOVE itc6h
-		TWAIT 1
-		JMOVE itc7h
-		TWAIT 1
-		LMOVE itc7l
-		TWAIT 1
-		LMOVE itc7h
-		TWAIT 1
-		JMOVE itc8h
-		TWAIT 1
-		LMOVE itc8l
-		TWAIT 1
-		LMOVE itc8h
-		TWAIT 1
-		JMOVE itc9h
-		TWAIT 1
-		LMOVE itc9l
-		TWAIT 1
-		LMOVE itc9h
-		TWAIT 1
-		JMOVE itc10h
-		TWAIT 1
-		LMOVE itc10l
-		TWAIT 1
-		LMOVE itc10h
-		TWAIT 1
-		JMOVE itc11h
-		TWAIT 1
-		LMOVE itc11l
-		TWAIT 1
-		LMOVE itc11h
-		TWAIT 1
-		JMOVE itc12h
-		TWAIT 1
-		LMOVE itc12l
-		TWAIT 1
-		LMOVE itc12h
-		TWAIT 1
-	END
+    ; *******************************************************************
+    ;
+    ; Program:      KAWABOT
+    ; Comment:      test
+    ; Author:       User
+    ;
+    ; Date:         10/5/2020
+    ;
+    ; *******************************************************************
+    ;
+    ;z=-56,711
+    ;y=-91,5
+    POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
+    POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
+    POINT itc1h = #[-66.735, 93.106, 58.038, -179.01, -34.633, 202.49]
+    POINT itc1l = #[-66.672, 79.32, 43.007, -179.04, -35.874, 202.59]
+    POINT itc2h = inputtray + TRANS (-93, -2, 0, 0, 0, 0)
+    POINT itc2l = itc2h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc3h = inputtray + TRANS (-186, -1.5, 0, 0, 0, 0)
+    POINT itc3l = itc3h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc4h = inputtray + TRANS (-279, -1.3, 0, 0, 0, 0)
+    POINT itc4l = itc4h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc5h = inputtray + TRANS (0, -50.5, 0, 0, 0, 0)
+    POINT itc5l = itc5h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc6h = inputtray + TRANS (-93, -50, 0, 0, 0, 0)
+    POINT itc6l = itc6h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc7h = inputtray + TRANS (-186, -50, 0, 0, 0, 0)
+    POINT itc7l = itc7h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc8h = inputtray + TRANS (-279, -50, 0, 0, 0, 0)
+    POINT itc8l = itc8h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc9h = inputtray + TRANS (0, -99.3, 0, 0, 0, 0)
+    POINT itc9l = itc9h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc10h = inputtray + TRANS (-93, -99, 0, 0, 0, 0)
+    POINT itc10l = itc10h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc11h = inputtray + TRANS (-186, -98.2, 0, 0, 0, 0)
+    POINT itc11l = itc11h + TRANS (0, 0, 59.741, 0, 0, 0)
+    POINT itc12h = inputtray + TRANS (-279, -98, 0, 0, 0, 0)
+    POINT itc12l = itc12h + TRANS (0, 0, 59.741, 0, 0, 0)
+    ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
+    ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
+    ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
+    FOR .i = 1 TO 3
+        SPEED 50 ALWAYS
+        PRINT "Frits is een sletje"
+        JMOVE start
+        TWAIT 1
+        JMOVE itc1h
+        TWAIT 1
+        LMOVE itc1l
+        TWAIT 1
+        LMOVE itc1h
+        TWAIT 1
+        JMOVE itc2h
+        TWAIT 1
+        LMOVE itc2l
+        TWAIT 1
+        LMOVE itc2h
+        TWAIT 1
+        JMOVE itc3h
+        TWAIT 1
+        LMOVE itc3l
+        TWAIT 1
+        LMOVE itc3h
+        TWAIT 1
+        JMOVE itc4h
+        TWAIT 1
+        LMOVE itc4l
+        TWAIT 1
+        LMOVE itc4h
+        TWAIT 1
+        JMOVE itc5h
+        TWAIT 1
+        LMOVE itc5l
+        TWAIT 1
+        LMOVE itc5h
+        TWAIT 1
+        JMOVE itc6h
+        TWAIT 1
+        LMOVE itc6l
+        TWAIT 1
+        LMOVE itc6h
+        TWAIT 1
+        JMOVE itc7h
+        TWAIT 1
+        LMOVE itc7l
+        TWAIT 1
+        LMOVE itc7h
+        TWAIT 1
+        JMOVE itc8h
+        TWAIT 1
+        LMOVE itc8l
+        TWAIT 1
+        LMOVE itc8h
+        TWAIT 1
+        JMOVE itc9h
+        TWAIT 1
+        LMOVE itc9l
+        TWAIT 1
+        LMOVE itc9h
+        TWAIT 1
+        JMOVE itc10h
+        TWAIT 1
+        LMOVE itc10l
+        TWAIT 1
+        LMOVE itc10h
+        TWAIT 1
+        JMOVE itc11h
+        TWAIT 1
+        LMOVE itc11l
+        TWAIT 1
+        LMOVE itc11h
+        TWAIT 1
+        JMOVE itc12h
+        TWAIT 1
+        LMOVE itc12l
+        TWAIT 1
+        LMOVE itc12h
+        TWAIT 1
+    END
 .END
 .PROGRAM testmeee (.traynr, .celnr, .hoogte);
   ; *******************************************************************
@@ -965,24 +965,193 @@ DCOLHJID9         0
      END
   END
 .END
-.PROGRAM Eindcode () ; 
+.PROGRAM Eindcode () ;
   ; *******************************************************************
   ;
-  ; Program:      test
+  ; Program:      Eindcode voor de solar sorter 3000
   ; Comment:
-  ; Author:       User
+  ; Author:       David, Dylan, Frits en Lex
   ;
   ; Date:         10/19/2020
   ;
   ; *******************************************************************
-  ;
-  ;POINT HALLO=[100,100,100,100,100,100]
-  ;t = input
-  ;c = input
-  ;h = input
-  ;CALL testmeee (t, c, h)
-  ;JMOVE #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  POINT t7c1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
+
+  ; Various points
+  POINT neutral = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
+  POINT scan = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
+
+  ; Empty stack points
+  POINT stack1 =
+  POINT stack2 =
+  POINT stack3 =
+  POINT stack4 =
+  POINT stack5 =
+  POINT stack6 =
+  POINT stackh =
+
+  ; Input tray points
+  POINT i1trayh =
+  POINT i1trayl =
+  POINT i1c1h =
+  POINT i1c1l =
+  POINT i1c2h =
+  POINT i1c2l =
+  POINT i1c3h =
+  POINT i1c3l =
+  POINT i1c4h =
+  POINT i1c4l =
+  POINT i1c5h =
+  POINT i1c5l =
+  POINT i1c6h =
+  POINT i1c6l =
+  POINT i1c7h =
+  POINT i1c7l =
+  POINT i1c8h =
+  POINT i1c8l =
+  POINT i1c9h =
+  POINT i1c9l =
+  POINT i1c10h =
+  POINT i1c10l =
+  POINT i1c11h =
+  POINT i1c11l =
+  POINT i1c12h =
+  POINT i1c12l =
+  POINT i2trayh =
+  POINT i2trayl =
+  POINT i2c1h =
+  POINT i2c1l =
+  POINT i2c2h =
+  POINT i2c2l =
+  POINT i2c3h =
+  POINT i2c3l =
+  POINT i2c4h =
+  POINT i2c4l =
+  POINT i2c5h =
+  POINT i2c5l =
+  POINT i2c6h =
+  POINT i2c6l =
+  POINT i2c7h =
+  POINT i2c7l =
+  POINT i2c8h =
+  POINT i2c8l =
+  POINT i2c9h =
+  POINT i2c9l =
+  POINT i2c10h =
+  POINT i2c10l =
+  POINT i2c11h =
+  POINT i2c11l =
+  POINT i2c12h =
+  POINT i2c12l =
+  POINT i3trayh =
+  POINT i3trayl =
+  POINT i3c1h =
+  POINT i3c1l =
+  POINT i3c2h =
+  POINT i3c2l =
+  POINT i3c3h =
+  POINT i3c3l =
+  POINT i3c4h =
+  POINT i3c4l =
+  POINT i3c5h =
+  POINT i3c5l =
+  POINT i3c6h =
+  POINT i3c6l =
+  POINT i3c7h =
+  POINT i3c7l =
+  POINT i3c8h =
+  POINT i3c8l =
+  POINT i3c9h =
+  POINT i3c9l =
+  POINT i3c10h =
+  POINT i3c10l =
+  POINT i3c11h =
+  POINT i3c11l =
+  POINT i3c12h =
+  POINT i3c12l =
+  POINT i4trayh =
+  POINT i4trayl =
+  POINT i4c1h =
+  POINT i4c1l =
+  POINT i4c2h =
+  POINT i4c2l =
+  POINT i4c3h =
+  POINT i4c3l =
+  POINT i4c4h =
+  POINT i4c4l =
+  POINT i4c5h =
+  POINT i4c5l =
+  POINT i4c6h =
+  POINT i4c6l =
+  POINT i4c7h =
+  POINT i4c7l =
+  POINT i4c8h =
+  POINT i4c8l =
+  POINT i4c9h =
+  POINT i4c9l =
+  POINT i4c10h =
+  POINT i4c10l =
+  POINT i4c11h =
+  POINT i4c11l =
+  POINT i4c12h =
+  POINT i4c12l =
+  POINT i5trayh =
+  POINT i5trayl =
+  POINT i5c1h =
+  POINT i5c1l =
+  POINT i5c2h =
+  POINT i5c2l =
+  POINT i5c3h =
+  POINT i5c3l =
+  POINT i5c4h =
+  POINT i5c4l =
+  POINT i5c5h =
+  POINT i5c5l =
+  POINT i5c6h =
+  POINT i5c6l =
+  POINT i5c7h =
+  POINT i5c7l =
+  POINT i5c8h =
+  POINT i5c8l =
+  POINT i5c9h =
+  POINT i5c9l =
+  POINT i5c10h =
+  POINT i5c10l =
+  POINT i5c11h =
+  POINT i5c11l =
+  POINT i5c12h =
+  POINT i5c12l =
+  POINT i6trayh =
+  POINT i6trayl =
+  POINT i6c1h =
+  POINT i6c1l =
+  POINT i6c2h =
+  POINT i6c2l =
+  POINT i6c3h =
+  POINT i6c3l =
+  POINT i6c4h =
+  POINT i6c4l =
+  POINT i6c5h =
+  POINT i6c5l =
+  POINT i6c6h =
+  POINT i6c6l =
+  POINT i6c7h =
+  POINT i6c7l =
+  POINT i6c8h =
+  POINT i6c8l =
+  POINT i6c9h =
+  POINT i6c9l =
+  POINT i6c10h =
+  POINT i6c10l =
+  POINT i6c11h =
+  POINT i6c11l =
+  POINT i6c12h =
+  POINT i6c12l =
+
+  ; Ouput tray points
+  POINT t7trayh =
+  POINT t7trayl =
+  POINT t7c1h = o7
+  POINT t7c1l = t7c1h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
   POINT t7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
   POINT t7c2l = t7c2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
   POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
@@ -1005,8 +1174,10 @@ DCOLHJID9         0
   POINT t7c11l = t7c11h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c12h = o7 + TRANS (-274.0, -89.2, 0, 0, 0, 0)
   POINT t7c12l = t7c12h + TRANS (0, 0, 26.979, 0, 0, 0)
-  
-  POINT t8c1l = #[74.884,70.401,22.007,0.003,48.399,-285.113]
+  POINT t8trayh =
+  POINT t8trayl =
+  POINT t8c1h = o8
+  POINT t8c1l = t8c1h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
   POINT t8c2h = o8 + TRANS (-91.5, 1.5, 0, 0, 0, 0)
   POINT t8c2l = t8c2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
   POINT t8c3h = o8 + TRANS (-183, 3, 0, 0, 0, 0)
@@ -1029,8 +1200,10 @@ DCOLHJID9         0
   POINT t8c11l = t8c11h + TRANS (0, 0, 27.962, 0, 0, 0)
   POINT t8c12h = o8 + TRANS (-274.0, -92.2, 0, 0, 0, 0)
   POINT t8c12l = t8c12h + TRANS (0, 0, 27.962, 0, 0, 0)
-  
-  POINT t9c1l = #[94.470,77.081,37.553,0.003,39.537,-265.526]
+  POINT t9trayh =
+  POINT t9trayl =
+  POINT t9c1h = o9
+  POINT t9c1l = t9c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t9c2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
   POINT t9c2l = t9c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t9c3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
@@ -1053,8 +1226,10 @@ DCOLHJID9         0
   POINT t9c11l = t9c11h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t9c12h = o9 + TRANS (-274.0, -94.7, 0, 0, 0, 0)
   POINT t9c12l = t9c12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  
-  POINT t10c1l = #[117.052,83.246,54.375,0.015,28.887,-242.956]
+  POINT t10trayh =
+  POINT t10trayl =
+  POINT t10c1h = o10
+  POINT t10c1l = t10c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t10c2h = o10 + TRANS (-91.5, 1, 0, 0, 0, 0)
   POINT t10c2l = t10c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t10c3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
@@ -1078,580 +1253,1149 @@ DCOLHJID9         0
   POINT t10c12h = o10 + TRANS (-275, -94.7, 0, 0, 0, 0)
   POINT t10c12l = t10c12h + TRANS (0, 0, 28.695, 0, 0, 0)
 
+  ; Program calls setup once, then (receives, acts and sends) in an infinite loop
 
-
-
-  
   CALL setup
-  WHILE 1 DO
+  WHILE TRUE DO
     CALL receive (.length)
+    PRINT $data[0] ; Print received message in terminal
+
+    IF $data[0]=="refresh" THEN
+      CALL send(.length)
+      CONTINUE
+    END
+
     IF $data[0]=="neutral" THEN
-      JMOVE #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385] 
-      GOTO reply
+      JMOVE neutral
+      CALL send(.length)
+      CONTINUE
     END
-    
-    IF $data[0]=="refresh" THEN 
-      GOTO reply
+
+    IF $data[0]=="scan" THEN
+      JMOVE scan
+      CALL send(.length)
+      CONTINUE
     END
-    
-    IF $data[0]=="scan" THEN 
-      JMOVE #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-      GOTO reply
-    END
-    
-    IF $data[0]=="disconnect" THEN 
+
+    IF $data[0]=="disconnect" THEN
       BREAK
     END
-    
+
+    ; Else, the message consists of an instruction and two numbers:
+    ; I-hh-cc means: go to cell/tray cc on input tray at height hh
+    ; Q-gg-cc means: go to cell/tray cc on output tray with grade gg
+    ; S-hh-00 means: go to tray at height hh on the empty tray stack
+
     $instruction = $LEFT($data[0],1)
     $number1 = $MID($data[0],3,2)
     $number2 = $MID($data[0],6,2)
-    
-    SCASE $instruction OF
-      SVALUE "I":
-        IF $number1 == 01 THEN
-          IF $number2 == 01 THEN
-          JMOVE 
-          END
-          IF $number2 == 02 THEN
-          JMOVE
-          END
-          IF $number2 == 03 THEN
-          JMOVE
-          END
-          IF $number2 == 04 THEN
-          JMOVE
-          END
-          IF $number2 == 05 THEN
-          JMOVE
-          END
-          IF $number2 == 06 THEN
-          JMOVE
-          END
-          IF $number2 == 07 THEN
-          JMOVE
-          END
-          IF $number2 == 08 THEN
-          JMOVE
-          END
-          IF $number2 == 09 THEN
-          JMOVE
-          END
-          IF $number2 == 10 THEN
-          JMOVE
-          END
-          IF $number2 == 11 THEN
-          JMOVE
-          END
-          IF $number2 == 12 THEN
-          JMOVE
-          END
-        END
-        IF $number1 == 02 THEN
-          IF $number2 == 01 THEN
-          JMOVE 
-          END
-          IF $number2 == 02 THEN
-          JMOVE
-          END
-          IF $number2 == 03 THEN
-          JMOVE
-          END
-          IF $number2 == 04 THEN
-          JMOVE
-          END
-          IF $number2 == 05 THEN
-          JMOVE
-          END
-          IF $number2 == 06 THEN
-          JMOVE
-          END
-          IF $number2 == 07 THEN
-          JMOVE
-          END
-          IF $number2 == 08 THEN
-          JMOVE
-          END
-          IF $number2 == 09 THEN
-          JMOVE
-          END
-          IF $number2 == 10 THEN
-          JMOVE
-          END
-          IF $number2 == 11 THEN
-          JMOVE
-          END
-          IF $number2 == 12 THEN
-          JMOVE
-          END
-        END
-        IF $number1 == 03 THEN
-          IF $number2 == 01 THEN
-          JMOVE 
-          END
-          IF $number2 == 02 THEN
-          JMOVE
-          END
-          IF $number2 == 03 THEN
-          JMOVE
-          END
-          IF $number2 == 04 THEN
-          JMOVE
-          END
-          IF $number2 == 05 THEN
-          JMOVE
-          END
-          IF $number2 == 06 THEN
-          JMOVE
-          END
-          IF $number2 == 07 THEN
-          JMOVE
-          END
-          IF $number2 == 08 THEN
-          JMOVE
-          END
-          IF $number2 == 09 THEN
-          JMOVE
-          END
-          IF $number2 == 10 THEN
-          JMOVE
-          END
-          IF $number2 == 11 THEN
-          JMOVE
-          END
-          IF $number2 == 12 THEN
-          JMOVE
-          END
-        END
-        IF $number1 == 04 THEN
-          IF $number2 == 01 THEN
-          JMOVE 
-          END
-          IF $number2 == 02 THEN
-          JMOVE
-          END
-          IF $number2 == 03 THEN
-          JMOVE
-          END
-          IF $number2 == 04 THEN
-          JMOVE
-          END
-          IF $number2 == 05 THEN
-          JMOVE
-          END
-          IF $number2 == 06 THEN
-          JMOVE
-          END
-          IF $number2 == 07 THEN
-          JMOVE
-          END
-          IF $number2 == 08 THEN
-          JMOVE
-          END
-          IF $number2 == 09 THEN
-          JMOVE
-          END
-          IF $number2 == 10 THEN
-          JMOVE
-          END
-          IF $number2 == 11 THEN
-          JMOVE
-          END
-          IF $number2 == 12 THEN
-          JMOVE
-          END
-        END
-        IF $number1 == 05 THEN
-          IF $number2 == 01 THEN
-          JMOVE 
-          END
-          IF $number2 == 02 THEN
-          JMOVE
-          END
-          IF $number2 == 03 THEN
-          JMOVE
-          END
-          IF $number2 == 04 THEN
-          JMOVE
-          END
-          IF $number2 == 05 THEN
-          JMOVE
-          END
-          IF $number2 == 06 THEN
-          JMOVE
-          END
-          IF $number2 == 07 THEN
-          JMOVE
-          END
-          IF $number2 == 08 THEN
-          JMOVE
-          END
-          IF $number2 == 09 THEN
-          JMOVE
-          END
-          IF $number2 == 10 THEN
-          JMOVE
-          END
-          IF $number2 == 11 THEN
-          JMOVE
-          END
-          IF $number2 == 12 THEN
-          JMOVE
-          END
-        END
-        IF $number1 == 06 THEN
-          IF $number2 == 01 THEN
-          JMOVE 
-          END
-          IF $number2 == 02 THEN
-          JMOVE
-          END
-          IF $number2 == 03 THEN
-          JMOVE
-          END
-          IF $number2 == 04 THEN
-          JMOVE
-          END
-          IF $number2 == 05 THEN
-          JMOVE
-          END
-          IF $number2 == 06 THEN
-          JMOVE
-          END
-          IF $number2 == 07 THEN
-          JMOVE
-          END
-          IF $number2 == 08 THEN
-          JMOVE
-          END
-          IF $number2 == 09 THEN
-          JMOVE
-          END
-          IF $number2 == 10 THEN
-          JMOVE
-          END
-          IF $number2 == 11 THEN
-          JMOVE
-          END
-          IF $number2 == 12 THEN
-          JMOVE
-          END
-        END
-   
-      SVALUE "Q":
-        IF $number1 == "07" THEN
-          IF $number2 == 01 THEN
-            JMOVE o7
-            LMOVE t7c1l
-            send(.length)
-            TWAIT 0.1
-            LMOVE o7
-            CONTINUE
-          END
-        IF $number2 == 02 THEN
-        JMOVE t7c2h
-        LMOVE t7c2l
-        send(.length)
-        LMOVE t7c2h
-        GOTO reply
-        END
-        IF $number2 == 03 THEN
-        JMOVE t7c3h
-        LMOVE t7c3l
-        send(.length)
-        LMOVE t7c3h
-    
-        GOTO reply
-        END
-        IF $number2 == 04 THEN
-        JMOVE t7c4h
-        LMOVE t7c4l
-        send(.length)
-        LMOVE t7c4h
-        GOTO reply
-        END
-        IF $number2 == 05 THEN
-        JMOVE t7c5h
-        LMOVE t7c5l
-        send(.length)
-        LMOVE t7c5h
-        GOTO reply
-        END
-        IF $number2 == 06 THEN
-        JMOVE t7c6h
-        LMOVE t7c6l
-        send(.length)
-        LMOVE t7c6h
-        GOTO reply
-        END
-        IF $number2 == 07 THEN
-        JMOVE t7c7h
-        LMOVE t7c7l
-        send(.length)
-        LMOVE t7c7h
-        GOTO reply
-        END
-        IF $number2 == 08 THEN
-        JMOVE t7c8h
-        LMOVE t7c8l
-        send(.length)
-        LMOVE t7c8h
-        GOTO reply
-        END
-        IF $number2 == 09 THEN
-        JMOVE t7c9h
-        LMOVE t7c9l
-        send(.length)
-        LMOVE t7c9h
-        GOTO reply
-        END
-        IF $number2 == 10 THEN
-        JMOVE t7c10h
-        LMOVE t7c10l
-        send(.length)
-        LMOVE t7c10h
-        GOTO reply
-        END
-        IF $number2 == 11 THEN
-        JMOVE t7c11h
-        LMOVE t7c12l
-        send(.length)
-        LMOVE t7c12h
-        GOTO reply
-        END
-        IF $number2 == 12 THEN
-        JMOVE t7c12h
-        LMOVE t7c12l
-        send(.length)
-        LMOVE t7c12h
-        GOTO reply
-        END
-      END
-    IF $number1 == 08 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-        IF $number2 == 04 THEN
-        JMOVE
-        END
-        IF $number2 == 05 THEN
-        JMOVE
-        END
-        IF $number2 == 06 THEN
-        JMOVE
-        END
-        IF $number2 == 07 THEN
-        JMOVE
-        END
-        IF $number2 == 08 THEN
-        JMOVE
-        END
-        IF $number2 == 09 THEN
-        JMOVE
-        END
-        IF $number2 == 10 THEN
-        JMOVE
-        END
-        IF $number2 == 11 THEN
-        JMOVE
-        END
-        IF $number2 == 12 THEN
-        JMOVE
-        END
-      END
-    IF $number1 == 09 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-        IF $number2 == 04 THEN
-        JMOVE
-        END
-        IF $number2 == 05 THEN
-        JMOVE
-        END
-        IF $number2 == 06 THEN
-        JMOVE
-        END
-        IF $number2 == 07 THEN
-        JMOVE
-        END
-        IF $number2 == 08 THEN
-        JMOVE
-        END
-        IF $number2 == 09 THEN
-        JMOVE
-        END
-        IF $number2 == 10 THEN
-        JMOVE
-        END
-        IF $number2 == 11 THEN
-        JMOVE
-        END
-        IF $number2 == 12 THEN
-        JMOVE
-        END
-      END
-    IF $number1 == 10 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-        IF $number2 == 04 THEN
-        JMOVE
-        END
-        IF $number2 == 05 THEN
-        JMOVE
-        END
-        IF $number2 == 06 THEN
-        JMOVE
-        END
-        IF $number2 == 07 THEN
-        JMOVE
-        END
-        IF $number2 == 08 THEN
-        JMOVE
-        END
-        IF $number2 == 09 THEN
-        JMOVE
-        END
-        IF $number2 == 10 THEN
-        JMOVE
-        END
-        IF $number2 == 11 THEN
-        JMOVE
-        END
-        IF $number2 == 12 THEN
-        JMOVE
-        END
-      END
-      SVALUE "D":
-    IF $number1 == 01 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-        IF $number2 == 04 THEN
-        JMOVE
-        END
-        IF $number2 == 05 THEN
-        JMOVE
-        END
-        IF $number2 == 06 THEN
-        JMOVE
-        END
-      END
-    IF $number1 == 02 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-        IF $number2 == 04 THEN
-        JMOVE
-        END
-        IF $number2 == 05 THEN
-        JMOVE
-        END
-      END
-    IF $number1 == 03 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-        IF $number2 == 04 THEN
-        JMOVE
-        END
-      END
-     IF $number1 == 04 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-        IF $number2 == 03 THEN
-        JMOVE
-        END
-      END
-      IF $number1 == 05 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-        IF $number2 == 02 THEN
-        JMOVE
-        END
-      END
-    IF $number1 == 06 THEN
-        IF $number2 == 01 THEN
-        JMOVE 
-        END
-      END
-    SVALUE "C":
-      PRINT "FRITS IS EEN SLETJE"
-    END
-    
 
-    
-    
-    PRINT $data[0]
-    reply:
-    CALL send (.length)
-    ; IF expr THEN ... [ELSE ...] END
-    ; WHILE expr DO ... END
-    ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
-      
+    SCASE $instruction OF
+    SVALUE "I":
+      IF $number1 == "01" THEN
+        IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
+          JMOVE i1trayh
+          LMOVE i1trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
+          JMOVE i1c1h
+          LMOVE i1c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE i1c2h
+          LMOVE i1c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE i1c3h
+          LMOVE i1c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE i1c4h
+          LMOVE i1c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE i1c5h
+          LMOVE i1c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE i1c6h
+          LMOVE i1c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE i1c7h
+          LMOVE i1c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE i1c8h
+          LMOVE i1c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE i1c9h
+          LMOVE i1c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE i1c10h
+          LMOVE i1c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE i1c11h
+          LMOVE i1c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE i1c12h
+          LMOVE i1c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i1c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "02" THEN
+        IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
+          JMOVE i2trayh
+          LMOVE i2trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
+          JMOVE i2c1h
+          LMOVE i2c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE i2c2h
+          LMOVE i2c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE i2c3h
+          LMOVE i2c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE i2c4h
+          LMOVE i2c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE i2c5h
+          LMOVE i2c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE i2c6h
+          LMOVE i2c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE i2c7h
+          LMOVE i2c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE i2c8h
+          LMOVE i2c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE i2c9h
+          LMOVE i2c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE i2c10h
+          LMOVE i2c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE i2c11h
+          LMOVE i2c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE i2c12h
+          LMOVE i2c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i2c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "03" THEN
+        IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
+          JMOVE i3trayh
+          LMOVE i3trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
+          JMOVE i3c1h
+          LMOVE i3c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE i3c2h
+          LMOVE i3c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE i3c3h
+          LMOVE i3c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE i3c4h
+          LMOVE i3c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE i3c5h
+          LMOVE i3c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE i3c6h
+          LMOVE i3c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE i3c7h
+          LMOVE i3c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE i3c8h
+          LMOVE i3c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE i3c9h
+          LMOVE i3c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE i3c10h
+          LMOVE i3c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE i3c11h
+          LMOVE i3c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE i3c12h
+          LMOVE i3c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i3c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "04" THEN
+        IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
+          JMOVE i4trayh
+          LMOVE i4trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
+          JMOVE i4c1h
+          LMOVE i4c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE i4c2h
+          LMOVE i4c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE i4c3h
+          LMOVE i4c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE i4c4h
+          LMOVE i4c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE i4c5h
+          LMOVE i4c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE i4c6h
+          LMOVE i4c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE i4c7h
+          LMOVE i4c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE i4c8h
+          LMOVE i4c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE i4c9h
+          LMOVE i4c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE i4c10h
+          LMOVE i4c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE i4c11h
+          LMOVE i4c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE i4c12h
+          LMOVE i4c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i4c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "05" THEN
+        IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
+          JMOVE i5trayh
+          LMOVE i5trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
+          JMOVE i5c1h
+          LMOVE i5c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE i5c2h
+          LMOVE i5c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE i5c3h
+          LMOVE i5c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE i5c4h
+          LMOVE i5c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE i5c5h
+          LMOVE i5c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE i5c6h
+          LMOVE i5c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE i5c7h
+          LMOVE i5c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE i5c8h
+          LMOVE i5c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE i5c9h
+          LMOVE i5c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE i5c10h
+          LMOVE i5c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE i5c11h
+          LMOVE i5c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE i5c12h
+          LMOVE i5c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i5c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "06" THEN
+        IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
+          JMOVE i6trayh
+          LMOVE i6trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
+          JMOVE i6c1h
+          LMOVE i6c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE i6c2h
+          LMOVE i6c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE i6c3h
+          LMOVE i6c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE i6c4h
+          LMOVE i6c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE i6c5h
+          LMOVE i6c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE i6c6h
+          LMOVE i6c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE i6c7h
+          LMOVE i6c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE i6c8h
+          LMOVE i6c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE i6c9h
+          LMOVE i6c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE i6c10h
+          LMOVE i6c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE i6c11h
+          LMOVE i6c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE i6c12h
+          LMOVE i6c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE i6c12h
+          CONTINUE
+        END
+      END
+    SVALUE "Q":
+      IF $number1 == "07" THEN
+        IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
+          JMOVE t7trayh
+          LMOVE t7trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
+          JMOVE t7c1h
+          LMOVE t7c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE t7c2h
+          LMOVE t7c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE t7c3h
+          LMOVE t7c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE t7c4h
+          LMOVE t7c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE t7c5h
+          LMOVE t7c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE t7c6h
+          LMOVE t7c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE t7c7h
+          LMOVE t7c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE t7c8h
+          LMOVE t7c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE t7c9h
+          LMOVE t7c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE t7c10h
+          LMOVE t7c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE t7c11h
+          LMOVE t7c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE t7c12h
+          LMOVE t7c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t7c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "08" THEN
+        IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
+          JMOVE t8trayh
+          LMOVE t8trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
+          JMOVE t8c1h
+          LMOVE t8c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE t8c2h
+          LMOVE t8c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE t8c3h
+          LMOVE t8c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE t8c4h
+          LMOVE t8c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE t8c5h
+          LMOVE t8c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE t8c6h
+          LMOVE t8c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE t8c7h
+          LMOVE t8c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE t8c8h
+          LMOVE t8c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE t8c9h
+          LMOVE t8c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE t8c10h
+          LMOVE t8c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE t8c11h
+          LMOVE t8c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE t8c12h
+          LMOVE t8c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t8c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "09" THEN
+        IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
+          JMOVE t9trayh
+          LMOVE t9trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
+          JMOVE t9c1h
+          LMOVE t9c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE t9c2h
+          LMOVE t9c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE t9c3h
+          LMOVE t9c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE t9c4h
+          LMOVE t9c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE t9c5h
+          LMOVE t9c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE t9c6h
+          LMOVE t9c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE t9c7h
+          LMOVE t9c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE t9c8h
+          LMOVE t9c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE t9c9h
+          LMOVE t9c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE t9c10h
+          LMOVE t9c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE t9c11h
+          LMOVE t9c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE t9c12h
+          LMOVE t9c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t9c12h
+          CONTINUE
+        END
+      END
+      IF $number1 == "10" THEN
+        IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
+          JMOVE t10trayh
+          LMOVE t10trayl
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10trayh
+          CONTINUE
+        END
+        IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
+          JMOVE t10c1h
+          LMOVE t10c1l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c1h
+          CONTINUE
+        END
+        IF $number2 == "02" THEN
+          JMOVE t10c2h
+          LMOVE t10c2l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c2h
+          CONTINUE
+        END
+        IF $number2 == "03" THEN
+          JMOVE t10c3h
+          LMOVE t10c3l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c3h
+          CONTINUE
+        END
+        IF $number2 == "04" THEN
+          JMOVE t10c4h
+          LMOVE t10c4l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c4h
+          CONTINUE
+        END
+        IF $number2 == "05" THEN
+          JMOVE t10c5h
+          LMOVE t10c5l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c5h
+          CONTINUE
+        END
+        IF $number2 == "06" THEN
+          JMOVE t10c6h
+          LMOVE t10c6l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c6h
+          CONTINUE
+        END
+        IF $number2 == "07" THEN
+          JMOVE t10c7h
+          LMOVE t10c7l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c7h
+          CONTINUE
+        END
+        IF $number2 == "08" THEN
+          JMOVE t10c8h
+          LMOVE t10c8l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c8h
+          CONTINUE
+        END
+        IF $number2 == "09" THEN
+          JMOVE t10c9h
+          LMOVE t10c9l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c9h
+          CONTINUE
+        END
+        IF $number2 == "10" THEN
+          JMOVE t10c10h
+          LMOVE t10c10l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c10h
+          CONTINUE
+        END
+        IF $number2 == "11" THEN
+          JMOVE t10c11h
+          LMOVE t10c11l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c11h
+          CONTINUE
+        END
+        IF $number2 == "12" THEN
+          JMOVE t10c12h
+          LMOVE t10c12l
+          CALL send(.length)
+          TWAIT 0.1
+          LMOVE t10c12h
+          CONTINUE
+        END
+      END
+    SVALUE "S":
+      JMOVE stackh
+      SCASE $number1 OF
+        SVALUE "01":
+          LMOVE stack1
+        SVALUE "02":
+          LMOVE stack2
+        SVALUE "03":
+          LMOVE stack3
+        SVALUE "04":
+          LMOVE stack4
+        SVALUE "05":
+          LMOVE stack5
+        SVALUE "06":
+          LMOVE stack6
+      END
+      CALL send(.length)
+      TWAIT 0.1
+      LMOVE stackh
+      CONTINUE
+    END
+    PRINT "!!! Reached the end of the while loop !!!"
   END
-  
+
   CALL disconnect
 .END
 .PROGRAM robotcalibrate () ;
-	; *******************************************************************
-	;
-	; Program:      test8
-	; Comment:
-	; Author:       User
-	;
-	; Date:         10/15/2020
-	;
-	; *******************************************************************
-	;
-	;POINT #J = #[0, 100, 100, 0, 0, 0]
-	;POINT #J2 = #[-90, 100, 100, 0, 0, 0]
-	POINT t = #[-473.53, 56.448, 244.47, 111.33, 2.186, 150.83]
-	SPEED 10 ALWAYS
-	;JMOVE #J2
-	JMOVE t
+    ; *******************************************************************
+    ;
+    ; Program:      test8
+    ; Comment:
+    ; Author:       User
+    ;
+    ; Date:         10/15/2020
+    ;
+    ; *******************************************************************
+    ;
+    ;POINT #J = #[0, 100, 100, 0, 0, 0]
+    ;POINT #J2 = #[-90, 100, 100, 0, 0, 0]
+    POINT t = #[-473.53, 56.448, 244.47, 111.33, 2.186, 150.83]
+    SPEED 10 ALWAYS
+    ;JMOVE #J2
+    JMOVE t
 .END
 .PROGRAM solarsorter () ; Project bij GTM | Q1 '20'21 | Sorteren van zonnecellen
   ; *******************************************************************
@@ -1776,49 +2520,49 @@ DCOLHJID9         0
 exit:
 .END
 .PROGRAM IT.to.LT ()
-	; *******************************************************************
-	;
-	; Program:      IT.to.LT
-	; Comment:
-	; Author:       User
-	;
-	; Date:         10/21/2020
-	;
-	; *******************************************************************
-	;
-	POINT neutral = #[-90, 100, 100, 0, 0, 0]
-	POINT ltappro = #[-131.22, 95.458, 94.934, -189.29, -0.653, -211.93]
-	POINT ltapproboven = ltappro + TRANS (0, 0, -59.741, 0, 0, 0)
-	POINT ltpak = #[-139.09, 89.372, 76.463, -180.54, -13.016, -228.57]
-	POINT ltpakboven = ltpak + TRANS (0, 0, -35, 0, 0, 0)
-	POINT itpak = #[-81.22, 89.309, 77.078, 0.001, 12.238, 98.78]
-	POINT itpakboven = itpak + TRANS (0, 0, -130, 0, 0, 0)
-	;POINT cel2 = jointpunt + TRANS(90,0,0,0,0,0)
-	;print .celnr
-	;RETURN .hoogte
-	;NT t= #neutral TRANS(20,0,0,0,0,0)
-	;POINT temp.pos=TRANS(#neutral)+(20,0,0,0,0,0)
-	;SPEED 30
-	; JMOVE neutral
-	; TWAIT 1
-	; JMOVE cel2
-	TWAIT 5
-	JMOVE itpakboven
-	TWAIT 1
-	LMOVE itpak
-	TWAIT 1
-	LMOVE itpakboven
-	TWAIT 1
-	JMOVE ltapproboven
-	TWAIT 1
-	JMOVE ltappro
-	TWAIT 1
-	LMOVE ltpakboven
-	TWAIT 1
-	LMOVE ltpak
-	TWAIT 1
-	JMOVE ltappro
-	TWAIT 1
+    ; *******************************************************************
+    ;
+    ; Program:      IT.to.LT
+    ; Comment:
+    ; Author:       User
+    ;
+    ; Date:         10/21/2020
+    ;
+    ; *******************************************************************
+    ;
+    POINT neutral = #[-90, 100, 100, 0, 0, 0]
+    POINT ltappro = #[-131.22, 95.458, 94.934, -189.29, -0.653, -211.93]
+    POINT ltapproboven = ltappro + TRANS (0, 0, -59.741, 0, 0, 0)
+    POINT ltpak = #[-139.09, 89.372, 76.463, -180.54, -13.016, -228.57]
+    POINT ltpakboven = ltpak + TRANS (0, 0, -35, 0, 0, 0)
+    POINT itpak = #[-81.22, 89.309, 77.078, 0.001, 12.238, 98.78]
+    POINT itpakboven = itpak + TRANS (0, 0, -130, 0, 0, 0)
+    ;POINT cel2 = jointpunt + TRANS(90,0,0,0,0,0)
+    ;print .celnr
+    ;RETURN .hoogte
+    ;NT t= #neutral TRANS(20,0,0,0,0,0)
+    ;POINT temp.pos=TRANS(#neutral)+(20,0,0,0,0,0)
+    ;SPEED 30
+    ; JMOVE neutral
+    ; TWAIT 1
+    ; JMOVE cel2
+    TWAIT 5
+    JMOVE itpakboven
+    TWAIT 1
+    LMOVE itpak
+    TWAIT 1
+    LMOVE itpakboven
+    TWAIT 1
+    JMOVE ltapproboven
+    TWAIT 1
+    JMOVE ltappro
+    TWAIT 1
+    LMOVE ltpakboven
+    TWAIT 1
+    LMOVE ltpak
+    TWAIT 1
+    JMOVE ltappro
+    TWAIT 1
 .END
 .PROGRAM tray.7 ()
   ; *******************************************************************
@@ -2551,74 +3295,74 @@ exit:
   $data[0] = ""
 .END
 .PROGRAM Comment___ () ; Comments for IDE. Do not use.
-	; @@@ PROJECT @@@
-	; @@@ HISTORY @@@
-	; 13.10.2020 15:31:58
-	; 
-	; 14.10.2020 11:41:37
-	; 
-	; 19.10.2020 10:15:18
-	; 
-	; 22.10.2020 10:32:13
-	; 
-	; 23.10.2020 11:25:21
-	; 
-	; @@@ INSPECTION @@@
-	; @@@ CONNECTION @@@
-	; Robot
-	; 192.168.0.1
-	; 23
-	; @@@ PROGRAM @@@
-	; 0:KAWABOT
-	; .i 
-	; 0:testmeee
-	; .traynr 
-	; .celnr 
-	; .hoogte 
-	; 0:Eindcode
-	; .length 
-	; 0:robotcalibrate
-	; 0:solarsorter
-	; .err 
-	; .port 
-	; .timeout 
-	; .length 
-	; 0:IT.to.LT
-	; 0:tray.7
-	; .i 
-	; 0:tray.8
-	; .i 
-	; 0:tray.9
-	; .i 
-	; 0:tray.10
-	; .i 
-	; 0:INPUT.tray
-	; .i 
-	; 0:send
-	; .length 
-	; .err 
-	; .timeout 
-	; 0:receive
-	; .length 
-	; .err 
-	; .timeout 
-	; 0:setup
-	; .err 
-	; .port 
-	; .timeout 
-	; 0:disconnect
-	; .err 
-	; 0:autostart.pc
-	; @@@ TRANS @@@
-	; @@@ JOINTS @@@
-	; @@@ REALS @@@
-	; @@@ STRINGS @@@
-	; @@@ INTEGER @@@
-	; @@@ SIGNALS @@@
-	; @@@ TOOLS @@@
-	; @@@ BASE @@@
-	; @@@ FRAME @@@
-	; @@@ BOOL @@@
+    ; @@@ PROJECT @@@
+    ; @@@ HISTORY @@@
+    ; 13.10.2020 15:31:58
+    ; 
+    ; 14.10.2020 11:41:37
+    ; 
+    ; 19.10.2020 10:15:18
+    ; 
+    ; 22.10.2020 10:32:13
+    ; 
+    ; 23.10.2020 11:25:21
+    ; 
+    ; @@@ INSPECTION @@@
+    ; @@@ CONNECTION @@@
+    ; Robot
+    ; 192.168.0.1
+    ; 23
+    ; @@@ PROGRAM @@@
+    ; 0:KAWABOT
+    ; .i 
+    ; 0:testmeee
+    ; .traynr 
+    ; .celnr 
+    ; .hoogte 
+    ; 0:Eindcode
+    ; .length 
+    ; 0:robotcalibrate
+    ; 0:solarsorter
+    ; .err 
+    ; .port 
+    ; .timeout 
+    ; .length 
+    ; 0:IT.to.LT
+    ; 0:tray.7
+    ; .i 
+    ; 0:tray.8
+    ; .i 
+    ; 0:tray.9
+    ; .i 
+    ; 0:tray.10
+    ; .i 
+    ; 0:INPUT.tray
+    ; .i 
+    ; 0:send
+    ; .length 
+    ; .err 
+    ; .timeout 
+    ; 0:receive
+    ; .length 
+    ; .err 
+    ; .timeout 
+    ; 0:setup
+    ; .err 
+    ; .port 
+    ; .timeout 
+    ; 0:disconnect
+    ; .err 
+    ; 0:autostart.pc
+    ; @@@ TRANS @@@
+    ; @@@ JOINTS @@@
+    ; @@@ REALS @@@
+    ; @@@ STRINGS @@@
+    ; @@@ INTEGER @@@
+    ; @@@ SIGNALS @@@
+    ; @@@ TOOLS @@@
+    ; @@@ BASE @@@
+    ; @@@ FRAME @@@
+    ; @@@ BOOL @@@
 .END
 .TRANS
 aaa -475.751953 119.889572 272.059326 104.793175 0.714860 -14.754285
