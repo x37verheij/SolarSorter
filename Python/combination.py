@@ -9,6 +9,7 @@ Mocht de invoertray leeg zijn, dan vertelt de pc niet welke cel de robot moet pa
 """
 
 import re                               # Regular expressions
+import os                               # File path functions, for exists and remove functions
 import sys                              # System variables, like error values
 import cv2                              # Opencv, for image extraction
 import time                             # To measure time intervals
@@ -25,17 +26,15 @@ from openpyxl import cell as xlcell     # Compare and extract Excel cell propert
 xlsxPath = "80518_Measurement Data_Lot XXX.xlsx"
 excelData = {}
 
-# General Socket properties
+# Socket properties
 s_size = 255                # Can receive up to 255 bytes
 s_ipv4 = socket.AF_INET     # Use ipv4 configuration
 s_tcp = socket.SOCK_STREAM  # Use TCP configuration
+Allconnected = False        # Whether we have connected all devices.
 
 # Variables to keep connections alive and avoid timeouts by refreshing
-timeout = 10                # Seconds
+timeout = 40                # Seconds #TODO
 lastRefresh = time.time()   # Timestamp of last refresh
-
-# Time interval to check whether connections are still alive
-# TODO
 
 #####################
 # HMI message class #
@@ -130,9 +129,10 @@ def retrievePhoto():
 def locateCells(image):
     pass # TODO implement
     # returns list of filled locations
-    return [3, 6, 12]
-# TCP Connect function
+    # return [3, 6, 12]
+    return [1]
 
+# TCP Connect function
 def connect(device):
     device.socket.connect((device.ip, device.port))
     print(device.name, " connected at ", device.ip, ":", device.port, sep="")
@@ -153,13 +153,17 @@ def disconnect(device):
 
 # TCP Handle Errors function updates the connection info to display on the HMI and disconnect devices, perhaps
 def handleError(device):
-    print("TCP Error for device", device.name, sys.exc_info()[0])
-    pass # TODO disconnect needs devices, which are declared later on...
-    send(robot, "disconnect")
-    disconnect(robot)
-    disconnect(plc)
-    disconnect(qrCamera)
-    disconnect(invoerCamera)
+    if Allconnected:
+        if device is not None: print("TCP Error for device", device.name, sys.exc_info()[0])
+        if device != robot: send(robot, "disconnect"); disconnect(robot)
+        if device != qrCamera: disconnect(qrCamera)
+        if device != invoerCamera: disconnect(invoerCamera)
+        if device != plc:
+            if device == robot: HMImsg.connRobot = 0
+            elif device == qrCamera: HMImsg.connQRcam = 0
+            elif device == invoerCamera: HMImsg.connINcam = 0
+            if device is not None: send(plc, HMImsg.toString())
+            disconnect(plc)
     exit(-1)
 
 # TCP Send function
@@ -207,22 +211,29 @@ def refresh():
         receive(invoerCamera, verbal = False)
         HMImsg.fromString(receive(plc, verbal = False))
 
-        # If the program is running, not halted and no output trays are full, then return
-        if HMImsg.status == 1 and HMImsg.halt == 0 and HMImsg.outputTray == 100:
+        # If the program is running, not halted, no output trays are full and excel error persists, then return
+        if HMImsg.status and not HMImsg.halt and HMImsg.outputTray == 100 and not HMImsg.excel:
             return
 
         # While within the timeout interval, check the PLC/HMI twice per second
         while time.time() - lastRefresh < timeout:
             HMImsg.fromString(receive(plc, verbal = False))
 
-            # Return when the program is running, not halted and without full output trays
-            if HMImsg.status == 1 and HMImsg.halt == 0 and HMImsg.outputTray == 100:
+            # Return when the program is running, not halted, without full output trays and without excel errors
+            if HMImsg.status and not HMImsg.halt and HMImsg.outputTray == 100 and not HMImsg.excel:
                 return
+            
+            # If the user chooses to terminate the program due to an Excel error
+            if HMImsg.excel == 4:
+                handleError(None)
 
             # Print some debug messages while waiting for the user to acknowledge via the HMI
             if HMImsg.status != 1: print("Waiting for start acknowledge by user via HMI...")
             if HMImsg.halt != 0: print("Program halted. Waiting for user acknowledge via HMI...")
-            if HMImsg.outputTray != 100: print("Waiting for user to acknowledge ouput tray removal via HMI...")
+            if HMImsg.outputTray != 100: print("Waiting for user to acknowledge output tray removal via HMI...")
+            if HMImsg.excel == 1: print("Waiting for user to acknowledge new excel sheet upload via HMI...")
+            if HMImsg.excel == 2: print("Waiting for user response to serial number not being in excel sheet via HMI...") #TODO
+            if HMImsg.excel == 3: print("Waiting for user response to unreadable data matrix via HMI...")
 
             time.sleep(0.5)
 
@@ -249,6 +260,7 @@ Device = namedtuple("Device", "name, ip, port, socket")
 # The PLC and cameras always immediately respond, since their socket handling is non-blocking. The robot will not
 plc = Device("PLC", "192.168.0.2", 2000, newSocket())  # Connect to the HMI via the PLC
 robot = Device("Robot", "192.168.0.1", 10000, newSocket())
+# robot = Device("Robot", "192.168.0.50", 10000, newSocket()) # TODO
 qrCamera = Device("QRcam", "192.168.0.10", 10000, newSocket())
 invoerCamera = Device("INcam", "192.168.0.11", 10000, newSocket())
 
@@ -256,13 +268,24 @@ invoerCamera = Device("INcam", "192.168.0.11", 10000, newSocket())
 # Read the excel sheet and connect devices #
 ############################################
 
-# Read Excel sheet and put the data in excelData
-readExcel()
-print("Excel sheet has been read successfully")
-
 # Setup a client socket for the PLC and connect
 print("Connecting to PLC...", end="\r", flush=True)
 connect(plc)
+
+# Read Excel sheet and put the data in excelData
+while True:
+    try:
+        readExcel()
+        print("Excel sheet has been read successfully")
+        break
+    except FileNotFoundError:
+        HMImsg.excel = 1
+        send(plc, HMImsg.toString())        # Show HMI warning and wait for response
+        time.sleep(0.5)                     # Give the PLC time to process
+        while True:
+            HMImsg.fromString(receive(plc)) # Collect response and store it
+            if not HMImsg.excel: break
+            time.sleep(1)                   # Give the user time to upload a new Excel sheet
 
 # Setup a client socket for the Robot and connect
 print("Connecting to Robot...", end="\r", flush=True)
@@ -283,6 +306,7 @@ connect(invoerCamera)
 login(invoerCamera)
 HMImsg.connINcam = 1
 send(plc, HMImsg.toString(), verbal = False)
+Allconnected = True
 
 ################
 # Main program #
@@ -309,7 +333,7 @@ while counter.inputHeight:
         send(robot, robotMsg("I", counter.inputHeight, i))
         receive(robot)                  # Robot has reached cell location
 
-        refresh()
+        HMImsg.fromString(receive(plc))
         HMImsg.air = 1
         send(plc, HMImsg.toString())    # Instruct the PLC to enable the vacuum generator
         time.sleep(0.5)                 # Give the PLC time to process
@@ -325,8 +349,8 @@ while counter.inputHeight:
         time.sleep(0.5)                 # Give the PLC time to process
         HMImsg.fromString(receive(plc)) # Collect response and store it
 
-        # Read the serial number (data matrix), retry five times, if needed
-        for i in range(5):
+        # Read the serial number (data matrix), retry ten times, if needed
+        for i in range(10):
             refresh()
             send(qrCamera, "sw8\r\n")       # Trigger a photo
             receive(qrCamera, 0)            # Acknowledge
@@ -353,6 +377,7 @@ while counter.inputHeight:
         # If this else clause is executed, it means that the data matrix is not recognized after 5 retries
         else:
             print("Data matrix cannot be recognized")
+            handleError(robot)
             pass
             # TODO this clause
         
@@ -364,11 +389,15 @@ while counter.inputHeight:
         HMImsg.fromString(receive(plc)) # Collect response and store it
 
         refresh()
+        send(robot, "neutral")          # Instruct the robot return to its neutral position
+        receive(robot)                  # Robot has reached its destination
+        
+        refresh()
         cell = counter.increment(grade) - 1     # Increment output tray cell counter and store free spot
         send(robot, robotMsg("Q", grade, cell)) # Instruct the robot to place the cell there
         receive(robot)                  # Robot has reached its destination
 
-        refresh()
+        HMImsg.fromString(receive(plc))
         HMImsg.air = 0
         send(plc, HMImsg.toString())    # Instruct the PLC to disable the vacuum generator
         time.sleep(0.5)                 # Give the PLC time to process
@@ -390,28 +419,43 @@ while counter.inputHeight:
             HMImsg.outputTray = grade
             send(plc, HMImsg.toString())    # Instruct the HMI to execute the tray replacement procedure
             time.sleep(0.5)                 # Give the PLC time to process
-            HMImsg.fromString(receive(plc)) # Collect response and store it
-
-            # We will wait for the user to acknowledge output tray removal via the HMI
-            refresh() # Will also be called next iteration in this loop, or the one below.
+            HMImsg.fromString(receive(plc)) # Collect response and store it. Next refresh checks value
 
     # If input tray has no cells left, move the tray to the empty tray stack
-    # TODO
-    refresh() # Loop will also start with refresh!
+    refresh()
+    send(robot, robotMsg("I", counter.inputHeight, 0))
+    counter.inputHeight -= 1        # Robot picks up the input tray
+    receive(robot)                  # Robot has reached its destination
 
+    HMImsg.fromString(receive(plc))
+    HMImsg.air = 1
+    send(plc, HMImsg.toString())    # Instruct the PLC to enable the vacuum generator
+    time.sleep(0.5)                 # Give the PLC time to process
+    HMImsg.fromString(receive(plc)) # Collect response and store it
 
-    counter.inputHeight -= 1
+    refresh()
+    counter.emptyHeight += 1        # Robot places tray on the stack at the new height
+    send(robot, robotMsg("S", counter.emptyHeight, 0))
+    receive(robot)                  # Robot has reached its destination
+
+    HMImsg.fromString(receive(plc))
+    HMImsg.air = 0
+    send(plc, HMImsg.toString())    # Instruct the PLC to disable the vacuum generator
+    time.sleep(0.5)                 # Give the PLC time to process
+    HMImsg.fromString(receive(plc)) # Collect response and store it
+
+    refresh()
+    send(robot, "neutral")          # Instruct the robot return to its neutral position
+    receive(robot)                  # Robot has reached its neutral position
 
 # Program finished
-
-# TODO
+HMImsg.status = 4
+send(plc, HMImsg.toString())
 
 ######################
 # Disconnect devices #
 ######################
 
-HMImsg.status = 2
-send(plc, HMImsg.toString())
 
 send(robot, "disconnect")
 
