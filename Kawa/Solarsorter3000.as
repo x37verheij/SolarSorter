@@ -977,7 +977,7 @@ DCOLHJID9         0
   ;
   ; *******************************************************************
   ;
-  
+  SPEED 20 ALWAYS
   
   ; Various points
   POINT neutral = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
@@ -1281,16 +1281,19 @@ DCOLHJID9         0
     IF $data[0] == "refresh" THEN
       CALL send (.length)
       GOTO beginloop
+    SIGNAL -2254
     END
     
     IF $data[0] == "neutral" THEN
       JMOVE neutral
+JMOVE neutral
       CALL send (.length)
       GOTO beginloop
     END
     
     IF $data[0] == "scan" THEN
       JMOVE scan
+JMOVE scan
       CALL send (.length)
       GOTO beginloop
     END
@@ -1315,15 +1318,18 @@ DCOLHJID9         0
             JMOVE i1trayh
             LMOVE i1trayl
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i1c1h
             LMOVE i1c1l
+      LMOVE i1c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+      SIGNAL -2254
             LMOVE i1c1h
             GOTO beginloop
           END
@@ -1331,7 +1337,8 @@ DCOLHJID9         0
             JMOVE i1c2h
             LMOVE i1c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c2h
             GOTO beginloop
           END
@@ -1339,7 +1346,8 @@ DCOLHJID9         0
             JMOVE i1c3h
             LMOVE i1c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c3h
             GOTO beginloop
           END
@@ -1347,7 +1355,8 @@ DCOLHJID9         0
             JMOVE i1c4h
             LMOVE i1c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c4h
             GOTO beginloop
           END
@@ -1355,7 +1364,8 @@ DCOLHJID9         0
             JMOVE i1c5h
             LMOVE i1c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c5h
             GOTO beginloop
           END
@@ -1363,7 +1373,8 @@ DCOLHJID9         0
             JMOVE i1c6h
             LMOVE i1c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c6h
             GOTO beginloop
           END
@@ -1371,7 +1382,8 @@ DCOLHJID9         0
             JMOVE i1c7h
             LMOVE i1c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c7h
             GOTO beginloop
           END
@@ -1379,7 +1391,8 @@ DCOLHJID9         0
             JMOVE i1c8h
             LMOVE i1c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c8h
             GOTO beginloop
           END
@@ -1387,7 +1400,8 @@ DCOLHJID9         0
             JMOVE i1c9h
             LMOVE i1c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c9h
             GOTO beginloop
           END
@@ -1395,7 +1409,8 @@ DCOLHJID9         0
             JMOVE i1c10h
             LMOVE i1c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c10h
             GOTO beginloop
           END
@@ -1403,7 +1418,8 @@ DCOLHJID9         0
             JMOVE i1c11h
             LMOVE i1c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c11h
             GOTO beginloop
           END
@@ -1411,7 +1427,8 @@ DCOLHJID9         0
             JMOVE i1c12h
             LMOVE i1c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i1c12h
             GOTO beginloop
           END
@@ -1421,7 +1438,8 @@ DCOLHJID9         0
             JMOVE i2trayh
             LMOVE i2trayl
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2trayh
             GOTO beginloop
           END
@@ -1429,7 +1447,8 @@ DCOLHJID9         0
             JMOVE i2c1h
             LMOVE i2c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c1h
             GOTO beginloop
           END
@@ -1437,7 +1456,8 @@ DCOLHJID9         0
             JMOVE i2c2h
             LMOVE i2c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c2h
             GOTO beginloop
           END
@@ -1445,7 +1465,8 @@ DCOLHJID9         0
             JMOVE i2c3h
             LMOVE i2c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c3h
             GOTO beginloop
           END
@@ -1453,7 +1474,8 @@ DCOLHJID9         0
             JMOVE i2c4h
             LMOVE i2c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c4h
             GOTO beginloop
           END
@@ -1461,7 +1483,8 @@ DCOLHJID9         0
             JMOVE i2c5h
             LMOVE i2c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c5h
             GOTO beginloop
           END
@@ -1469,7 +1492,8 @@ DCOLHJID9         0
             JMOVE i2c6h
             LMOVE i2c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c6h
             GOTO beginloop
           END
@@ -1477,7 +1501,8 @@ DCOLHJID9         0
             JMOVE i2c7h
             LMOVE i2c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c7h
             GOTO beginloop
           END
@@ -1485,7 +1510,8 @@ DCOLHJID9         0
             JMOVE i2c8h
             LMOVE i2c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c8h
             GOTO beginloop
           END
@@ -1493,7 +1519,8 @@ DCOLHJID9         0
             JMOVE i2c9h
             LMOVE i2c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c9h
             GOTO beginloop
           END
@@ -1501,7 +1528,8 @@ DCOLHJID9         0
             JMOVE i2c10h
             LMOVE i2c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c10h
             GOTO beginloop
           END
@@ -1509,7 +1537,8 @@ DCOLHJID9         0
             JMOVE i2c11h
             LMOVE i2c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c11h
             GOTO beginloop
           END
@@ -1517,7 +1546,8 @@ DCOLHJID9         0
             JMOVE i2c12h
             LMOVE i2c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i2c12h
             GOTO beginloop
           END
@@ -1527,7 +1557,8 @@ DCOLHJID9         0
             JMOVE i3trayh
             LMOVE i3trayl
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3trayh
             GOTO beginloop
           END
@@ -1535,7 +1566,8 @@ DCOLHJID9         0
             JMOVE i3c1h
             LMOVE i3c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c1h
             GOTO beginloop
           END
@@ -1543,7 +1575,8 @@ DCOLHJID9         0
             JMOVE i3c2h
             LMOVE i3c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c2h
             GOTO beginloop
           END
@@ -1551,7 +1584,8 @@ DCOLHJID9         0
             JMOVE i3c3h
             LMOVE i3c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c3h
             GOTO beginloop
           END
@@ -1559,7 +1593,8 @@ DCOLHJID9         0
             JMOVE i3c4h
             LMOVE i3c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c4h
             GOTO beginloop
           END
@@ -1567,7 +1602,8 @@ DCOLHJID9         0
             JMOVE i3c5h
             LMOVE i3c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c5h
             GOTO beginloop
           END
@@ -1575,7 +1611,8 @@ DCOLHJID9         0
             JMOVE i3c6h
             LMOVE i3c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c6h
             GOTO beginloop
           END
@@ -1583,7 +1620,8 @@ DCOLHJID9         0
             JMOVE i3c7h
             LMOVE i3c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c7h
             GOTO beginloop
           END
@@ -1591,7 +1629,8 @@ DCOLHJID9         0
             JMOVE i3c8h
             LMOVE i3c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c8h
             GOTO beginloop
           END
@@ -1599,7 +1638,8 @@ DCOLHJID9         0
             JMOVE i3c9h
             LMOVE i3c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c9h
             GOTO beginloop
           END
@@ -1607,7 +1647,8 @@ DCOLHJID9         0
             JMOVE i3c10h
             LMOVE i3c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c10h
             GOTO beginloop
           END
@@ -1615,7 +1656,8 @@ DCOLHJID9         0
             JMOVE i3c11h
             LMOVE i3c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c11h
             GOTO beginloop
           END
@@ -1623,7 +1665,8 @@ DCOLHJID9         0
             JMOVE i3c12h
             LMOVE i3c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i3c12h
             GOTO beginloop
           END
@@ -1633,7 +1676,8 @@ DCOLHJID9         0
             JMOVE i4trayh
             LMOVE i4trayl
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4trayh
             GOTO beginloop
           END
@@ -1641,7 +1685,8 @@ DCOLHJID9         0
             JMOVE i4c1h
             LMOVE i4c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c1h
             GOTO beginloop
           END
@@ -1649,7 +1694,8 @@ DCOLHJID9         0
             JMOVE i4c2h
             LMOVE i4c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c2h
             GOTO beginloop
           END
@@ -1657,7 +1703,8 @@ DCOLHJID9         0
             JMOVE i4c3h
             LMOVE i4c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c3h
             GOTO beginloop
           END
@@ -1665,7 +1712,8 @@ DCOLHJID9         0
             JMOVE i4c4h
             LMOVE i4c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c4h
             GOTO beginloop
           END
@@ -1673,7 +1721,8 @@ DCOLHJID9         0
             JMOVE i4c5h
             LMOVE i4c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c5h
             GOTO beginloop
           END
@@ -1681,7 +1730,8 @@ DCOLHJID9         0
             JMOVE i4c6h
             LMOVE i4c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c6h
             GOTO beginloop
           END
@@ -1689,7 +1739,8 @@ DCOLHJID9         0
             JMOVE i4c7h
             LMOVE i4c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c7h
             GOTO beginloop
           END
@@ -1697,7 +1748,8 @@ DCOLHJID9         0
             JMOVE i4c8h
             LMOVE i4c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c8h
             GOTO beginloop
           END
@@ -1705,7 +1757,8 @@ DCOLHJID9         0
             JMOVE i4c9h
             LMOVE i4c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c9h
             GOTO beginloop
           END
@@ -1713,7 +1766,8 @@ DCOLHJID9         0
             JMOVE i4c10h
             LMOVE i4c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c10h
             GOTO beginloop
           END
@@ -1721,7 +1775,8 @@ DCOLHJID9         0
             JMOVE i4c11h
             LMOVE i4c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c11h
             GOTO beginloop
           END
@@ -1729,7 +1784,8 @@ DCOLHJID9         0
             JMOVE i4c12h
             LMOVE i4c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i4c12h
             GOTO beginloop
           END
@@ -1739,7 +1795,8 @@ DCOLHJID9         0
             JMOVE i5trayh
             LMOVE i5trayl
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5trayh
             GOTO beginloop
           END
@@ -1747,7 +1804,8 @@ DCOLHJID9         0
             JMOVE i5c1h
             LMOVE i5c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c1h
             GOTO beginloop
           END
@@ -1755,7 +1813,8 @@ DCOLHJID9         0
             JMOVE i5c2h
             LMOVE i5c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c2h
             GOTO beginloop
           END
@@ -1763,7 +1822,8 @@ DCOLHJID9         0
             JMOVE i5c3h
             LMOVE i5c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c3h
             GOTO beginloop
           END
@@ -1771,7 +1831,8 @@ DCOLHJID9         0
             JMOVE i5c4h
             LMOVE i5c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c4h
             GOTO beginloop
           END
@@ -1779,7 +1840,8 @@ DCOLHJID9         0
             JMOVE i5c5h
             LMOVE i5c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c5h
             GOTO beginloop
           END
@@ -1787,7 +1849,8 @@ DCOLHJID9         0
             JMOVE i5c6h
             LMOVE i5c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c6h
             GOTO beginloop
           END
@@ -1795,7 +1858,8 @@ DCOLHJID9         0
             JMOVE i5c7h
             LMOVE i5c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c7h
             GOTO beginloop
           END
@@ -1803,7 +1867,8 @@ DCOLHJID9         0
             JMOVE i5c8h
             LMOVE i5c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c8h
             GOTO beginloop
           END
@@ -1811,7 +1876,8 @@ DCOLHJID9         0
             JMOVE i5c9h
             LMOVE i5c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c9h
             GOTO beginloop
           END
@@ -1819,7 +1885,8 @@ DCOLHJID9         0
             JMOVE i5c10h
             LMOVE i5c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c10h
             GOTO beginloop
           END
@@ -1827,7 +1894,8 @@ DCOLHJID9         0
             JMOVE i5c11h
             LMOVE i5c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c11h
             GOTO beginloop
           END
@@ -1835,7 +1903,8 @@ DCOLHJID9         0
             JMOVE i5c12h
             LMOVE i5c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i5c12h
             GOTO beginloop
           END
@@ -1845,7 +1914,8 @@ DCOLHJID9         0
             JMOVE i6trayh
             LMOVE i6trayl
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6trayh
             GOTO beginloop
           END
@@ -1853,7 +1923,8 @@ DCOLHJID9         0
             JMOVE i6c1h
             LMOVE i6c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c1h
             GOTO beginloop
           END
@@ -1861,7 +1932,8 @@ DCOLHJID9         0
             JMOVE i6c2h
             LMOVE i6c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c2h
             GOTO beginloop
           END
@@ -1869,7 +1941,8 @@ DCOLHJID9         0
             JMOVE i6c3h
             LMOVE i6c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c3h
             GOTO beginloop
           END
@@ -1877,7 +1950,8 @@ DCOLHJID9         0
             JMOVE i6c4h
             LMOVE i6c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c4h
             GOTO beginloop
           END
@@ -1885,7 +1959,8 @@ DCOLHJID9         0
             JMOVE i6c5h
             LMOVE i6c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c5h
             GOTO beginloop
           END
@@ -1893,7 +1968,8 @@ DCOLHJID9         0
             JMOVE i6c6h
             LMOVE i6c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c6h
             GOTO beginloop
           END
@@ -1901,7 +1977,8 @@ DCOLHJID9         0
             JMOVE i6c7h
             LMOVE i6c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c7h
             GOTO beginloop
           END
@@ -1909,7 +1986,8 @@ DCOLHJID9         0
             JMOVE i6c8h
             LMOVE i6c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c8h
             GOTO beginloop
           END
@@ -1917,7 +1995,8 @@ DCOLHJID9         0
             JMOVE i6c9h
             LMOVE i6c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c9h
             GOTO beginloop
           END
@@ -1925,7 +2004,8 @@ DCOLHJID9         0
             JMOVE i6c10h
             LMOVE i6c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c10h
             GOTO beginloop
           END
@@ -1933,7 +2013,8 @@ DCOLHJID9         0
             JMOVE i6c11h
             LMOVE i6c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c11h
             GOTO beginloop
           END
@@ -1941,7 +2022,8 @@ DCOLHJID9         0
             JMOVE i6c12h
             LMOVE i6c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE i6c12h
             GOTO beginloop
           END
@@ -1952,15 +2034,17 @@ DCOLHJID9         0
           ;  JMOVE t7trayh
           ;  LMOVE t7trayl
           ;  CALL send(.length)
-          ;  TWAIT 0.1
+      ;  TWAIT 0.1
           ;  LMOVE t7trayh
           ;  GOTO beginloop
           ;END
           IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
             JMOVE t7c1h
             LMOVE t7c1l
+            LMOVE t7c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c1h
             GOTO beginloop
           END
@@ -1968,7 +2052,8 @@ DCOLHJID9         0
             JMOVE t7c2h
             LMOVE t7c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c2h
             GOTO beginloop
           END
@@ -1976,7 +2061,8 @@ DCOLHJID9         0
             JMOVE t7c3h
             LMOVE t7c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c3h
             GOTO beginloop
           END
@@ -1984,7 +2070,8 @@ DCOLHJID9         0
             JMOVE t7c4h
             LMOVE t7c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c4h
             GOTO beginloop
           END
@@ -1992,7 +2079,8 @@ DCOLHJID9         0
             JMOVE t7c5h
             LMOVE t7c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c5h
             GOTO beginloop
           END
@@ -2000,7 +2088,8 @@ DCOLHJID9         0
             JMOVE t7c6h
             LMOVE t7c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c6h
             GOTO beginloop
           END
@@ -2008,7 +2097,8 @@ DCOLHJID9         0
             JMOVE t7c7h
             LMOVE t7c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c7h
             GOTO beginloop
           END
@@ -2016,7 +2106,8 @@ DCOLHJID9         0
             JMOVE t7c8h
             LMOVE t7c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c8h
             GOTO beginloop
           END
@@ -2024,7 +2115,8 @@ DCOLHJID9         0
             JMOVE t7c9h
             LMOVE t7c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c9h
             GOTO beginloop
           END
@@ -2032,7 +2124,8 @@ DCOLHJID9         0
             JMOVE t7c10h
             LMOVE t7c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c10h
             GOTO beginloop
           END
@@ -2040,7 +2133,8 @@ DCOLHJID9         0
             JMOVE t7c11h
             LMOVE t7c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c11h
             GOTO beginloop
           END
@@ -2048,7 +2142,8 @@ DCOLHJID9         0
             JMOVE t7c12h
             LMOVE t7c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t7c12h
             GOTO beginloop
           END
@@ -2066,7 +2161,8 @@ DCOLHJID9         0
             JMOVE t8c1h
             LMOVE t8c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c1h
             GOTO beginloop
           END
@@ -2074,7 +2170,8 @@ DCOLHJID9         0
             JMOVE t8c2h
             LMOVE t8c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c2h
             GOTO beginloop
           END
@@ -2082,7 +2179,8 @@ DCOLHJID9         0
             JMOVE t8c3h
             LMOVE t8c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c3h
             GOTO beginloop
           END
@@ -2090,7 +2188,8 @@ DCOLHJID9         0
             JMOVE t8c4h
             LMOVE t8c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c4h
             GOTO beginloop
           END
@@ -2098,7 +2197,8 @@ DCOLHJID9         0
             JMOVE t8c5h
             LMOVE t8c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c5h
             GOTO beginloop
           END
@@ -2106,7 +2206,8 @@ DCOLHJID9         0
             JMOVE t8c6h
             LMOVE t8c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c6h
             GOTO beginloop
           END
@@ -2114,7 +2215,8 @@ DCOLHJID9         0
             JMOVE t8c7h
             LMOVE t8c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c7h
             GOTO beginloop
           END
@@ -2122,7 +2224,8 @@ DCOLHJID9         0
             JMOVE t8c8h
             LMOVE t8c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c8h
             GOTO beginloop
           END
@@ -2130,7 +2233,8 @@ DCOLHJID9         0
             JMOVE t8c9h
             LMOVE t8c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c9h
             GOTO beginloop
           END
@@ -2138,7 +2242,8 @@ DCOLHJID9         0
             JMOVE t8c10h
             LMOVE t8c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c10h
             GOTO beginloop
           END
@@ -2146,7 +2251,8 @@ DCOLHJID9         0
             JMOVE t8c11h
             LMOVE t8c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c11h
             GOTO beginloop
           END
@@ -2154,7 +2260,8 @@ DCOLHJID9         0
             JMOVE t8c12h
             LMOVE t8c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t8c12h
             GOTO beginloop
           END
@@ -2172,7 +2279,8 @@ DCOLHJID9         0
             JMOVE t9c1h
             LMOVE t9c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c1h
             GOTO beginloop
           END
@@ -2180,7 +2288,8 @@ DCOLHJID9         0
             JMOVE t9c2h
             LMOVE t9c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c2h
             GOTO beginloop
           END
@@ -2188,7 +2297,8 @@ DCOLHJID9         0
             JMOVE t9c3h
             LMOVE t9c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c3h
             GOTO beginloop
           END
@@ -2196,7 +2306,8 @@ DCOLHJID9         0
             JMOVE t9c4h
             LMOVE t9c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c4h
             GOTO beginloop
           END
@@ -2204,7 +2315,8 @@ DCOLHJID9         0
             JMOVE t9c5h
             LMOVE t9c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c5h
             GOTO beginloop
           END
@@ -2212,7 +2324,8 @@ DCOLHJID9         0
             JMOVE t9c6h
             LMOVE t9c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c6h
             GOTO beginloop
           END
@@ -2220,7 +2333,8 @@ DCOLHJID9         0
             JMOVE t9c7h
             LMOVE t9c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c7h
             GOTO beginloop
           END
@@ -2228,7 +2342,8 @@ DCOLHJID9         0
             JMOVE t9c8h
             LMOVE t9c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c8h
             GOTO beginloop
           END
@@ -2236,7 +2351,8 @@ DCOLHJID9         0
             JMOVE t9c9h
             LMOVE t9c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c9h
             GOTO beginloop
           END
@@ -2244,7 +2360,8 @@ DCOLHJID9         0
             JMOVE t9c10h
             LMOVE t9c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c10h
             GOTO beginloop
           END
@@ -2252,7 +2369,8 @@ DCOLHJID9         0
             JMOVE t9c11h
             LMOVE t9c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c11h
             GOTO beginloop
           END
@@ -2260,7 +2378,8 @@ DCOLHJID9         0
             JMOVE t9c12h
             LMOVE t9c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t9c12h
             GOTO beginloop
           END
@@ -2278,7 +2397,8 @@ DCOLHJID9         0
             JMOVE t10c1h
             LMOVE t10c1l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c1h
             GOTO beginloop
           END
@@ -2286,7 +2406,8 @@ DCOLHJID9         0
             JMOVE t10c2h
             LMOVE t10c2l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c2h
             GOTO beginloop
           END
@@ -2294,7 +2415,8 @@ DCOLHJID9         0
             JMOVE t10c3h
             LMOVE t10c3l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c3h
             GOTO beginloop
           END
@@ -2302,7 +2424,8 @@ DCOLHJID9         0
             JMOVE t10c4h
             LMOVE t10c4l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c4h
             GOTO beginloop
           END
@@ -2310,7 +2433,8 @@ DCOLHJID9         0
             JMOVE t10c5h
             LMOVE t10c5l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c5h
             GOTO beginloop
           END
@@ -2318,7 +2442,8 @@ DCOLHJID9         0
             JMOVE t10c6h
             LMOVE t10c6l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c6h
             GOTO beginloop
           END
@@ -2326,7 +2451,8 @@ DCOLHJID9         0
             JMOVE t10c7h
             LMOVE t10c7l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c7h
             GOTO beginloop
           END
@@ -2334,7 +2460,8 @@ DCOLHJID9         0
             JMOVE t10c8h
             LMOVE t10c8l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c8h
             GOTO beginloop
           END
@@ -2342,7 +2469,8 @@ DCOLHJID9         0
             JMOVE t10c9h
             LMOVE t10c9l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c9h
             GOTO beginloop
           END
@@ -2350,7 +2478,8 @@ DCOLHJID9         0
             JMOVE t10c10h
             LMOVE t10c10l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c10h
             GOTO beginloop
           END
@@ -2358,7 +2487,8 @@ DCOLHJID9         0
             JMOVE t10c11h
             LMOVE t10c11l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c11h
             GOTO beginloop
           END
@@ -2366,7 +2496,8 @@ DCOLHJID9         0
             JMOVE t10c12h
             LMOVE t10c12l
             CALL send (.length)
-            TWAIT 0.1
+            WAIT 2254
+SIGNAL -2254
             LMOVE t10c12h
             GOTO beginloop
           END
@@ -2400,7 +2531,8 @@ DCOLHJID9         0
             LMOVE stack6
         END
         CALL send (.length)
-        TWAIT 0.1
+        WAIT 2254
+SIGNAL -2254
         LMOVE stackh
         GOTO beginloop
     END
@@ -2409,7 +2541,6 @@ DCOLHJID9         0
   eindeloop:
   CALL disconnect
 .END
-
 .PROGRAM robotcalibrate () ;
 	; *******************************************************************
 	;
@@ -3227,11 +3358,12 @@ exit:
   .err = -2
   .timeout = 60
   TCP_SEND .err, sock_id1, $data[0], .length, .timeout
-    IF .err < 0 THEN
-      PRINT "ERR IN TCP_SEND: ", .err
-      CALL disconnect
-      STOP
-    END
+  IF .err < 0 THEN
+    PRINT "ERR IN TCP_SEND: ", .err
+    CALL disconnect
+    STOP
+  END
+  SIGNAL 2254
 .END
 .PROGRAM receive (.length) ; Receives data from the connected tcp connection
   ; *******************************************************************
@@ -3274,6 +3406,7 @@ exit:
   ;
   ; *******************************************************************
   ;
+  SIGNAL -2254
   .err = -2
   .port = 10000
   .timeout = 60
@@ -3285,6 +3418,7 @@ exit:
     PRINT "ERR IN TCP_LISTEN: ", .err
     STOP
   END
+  PRINT "Listening..."
   ; Accept connection from the pc. Note that the sock_id param is also the err param
   TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
   IF sock_id1 < 0 THEN
