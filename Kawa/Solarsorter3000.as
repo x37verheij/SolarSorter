@@ -825,147 +825,6 @@ DCOLHJID9         0
 .END
 .SIG_COMMENT
 .END
-.PROGRAM KAWABOT () ; test
-
-
-
-  ; *******************************************************************
-  ;
-  ; Program:      KAWABOT
-  ; Comment:      test
-  ; Author:       User
-  ;
-  ; Date:         10/5/2020
-  ;
-  ; *******************************************************************
-  ;
-  
-  POINT i2c1h = inputtray
-  POINT i2c1l = i2c1h + TRANS (0, 0, 91.732, 0, 0, 0, 0)
-  POINT i2c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i2c2l = i2c2h + TRANS (0, 0, 91.732, 0, 0, 0, 0)
-  POINT i2c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i2c3l = i2c3h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i2c4l = i2c4h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i2c5l = i2c5h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i2c6l = i2c6h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i2c7l = i2c7h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i2c8l = i2c8h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i2c9l = i2c9h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i2c10l = i2c10h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i2c11l = i2c11h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i2c12l = i2c12h + TRANS (0, 0, 91.732, 0, 0, 0)
-  FOR .i = 1 TO 3
-    SPEED 10 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE i2c1h
-    TWAIT 1
-    LMOVE i2c1l
-    TWAIT 1
-    LMOVE i2c1h
-    TWAIT 1
-    JMOVE i2c2h
-    TWAIT 1
-    LMOVE i2c2l
-    TWAIT 1
-    LMOVE i2c2h
-    TWAIT 1
-    JMOVE i2c3h
-    TWAIT 1
-    LMOVE i2c3l
-    TWAIT 1
-    LMOVE i2c3h
-    TWAIT 1
-    JMOVE i2c4h
-    TWAIT 1
-    LMOVE i2c4l
-    TWAIT 1
-    LMOVE i2c4h
-    TWAIT 1
-    JMOVE i2c5h
-    TWAIT 1
-    LMOVE i2c5l
-    TWAIT 1
-    LMOVE i2c5h
-    TWAIT 1
-    JMOVE i2c6h
-    TWAIT 1
-    LMOVE i2c6l
-    TWAIT 1
-    LMOVE i2c6h
-    TWAIT 1
-    JMOVE i2c7h
-    TWAIT 1
-    LMOVE i2c7l
-    TWAIT 1
-    LMOVE i2c7h
-    TWAIT 1
-    JMOVE i2c8h
-    TWAIT 1
-    LMOVE i2c8l
-    TWAIT 1
-    LMOVE i2c8h
-    TWAIT 1
-    JMOVE i2c9h
-    TWAIT 1
-    LMOVE i2c9l
-    TWAIT 1
-    LMOVE i2c9h
-    TWAIT 1
-    JMOVE i2c10h
-    TWAIT 1
-    LMOVE i2c10l
-    TWAIT 1
-    LMOVE i2c10h
-    TWAIT 1
-    JMOVE i2c11h
-    TWAIT 1
-    LMOVE i2c11l
-    TWAIT 1
-    LMOVE i2c11h
-    TWAIT 1
-    JMOVE i2c12h
-    TWAIT 1
-    LMOVE i2c12l
-    TWAIT 1
-    LMOVE i2c12h
-    TWAIT 1
-
-
-  END
-.END
-.PROGRAM testmeee (.traynr, .celnr, .hoogte);
-  ; *******************************************************************
-  ;
-  ; Program:      testmeee
-  ; Comment:
-  ; Author:       User
-  ;
-  ; Date:         10/19/2020
-  ;
-  ; *******************************************************************
-  ;
-  ;IF .traynr == 7 THEN
-  ;   IF .celnr == 1 THEN
-  ;      JMOVE o7
-  ;      LMOVE #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  ;      LMOVE o7
-  ;   END
-  ;END
-  SPEED 10 ALWAYS
-  JMOVE #[-90,100,100,180,0,0]
-.END
 .PROGRAM Eindcode () ;
   ; *******************************************************************
   ;
@@ -977,11 +836,13 @@ DCOLHJID9         0
   ;
   ; *******************************************************************
   ;
-  SPEED 20 ALWAYS
+  SPEED 60 ALWAYS
   
   ; Various points
   POINT neutral = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
   POINT scan = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
+  POINT #boxh = #[-45.763, 96.932, 81.176, -0.511, 15.885, 44.727]
+  POINT #boxl = #[-45.772, 89.719, 74.414, -0.525, 15.434, 44.732]
   
   ; Empty stack points
   POINT stack1 = #[-138.796, 88.710, 75.869, 182.084, -12.383, -229.525]
@@ -993,7 +854,7 @@ DCOLHJID9         0
   POINT stackh = #[-138.889, 108.610, 92.862, 181.702, -15.291, -229.220]
   
   ; Input tray points
-  POINT i1trayh = #[ -90.977, 107.833, 93.730, 179.800, -13.462, -89.538]
+  POINT i1trayh = #[-90.977, 107.833, 93.730, 179.800, -13.462, -89.538]
   POINT i1trayl = #[-90.983, 89.443, 77.945, 179.757, -10.854, -89.498]
   POINT i1c1h = inputtray
   POINT i1c1l = i1c1h + TRANS (0, 0, 97.597, 0, 0, 0, 0)
@@ -1020,8 +881,10 @@ DCOLHJID9         0
   POINT i1c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i1c12l = i1c12h + TRANS (0, 0, 97.597, 0, 0, 0)
   
-  POINT i2trayh = i1trayh + TRANS (0, 0, -5.865, 0, 0, 0)
-  POINT i2trayl = i1trayl + TRANS (0, 0, -5.865, 0, 0, 0)
+  ;POINT i2trayh = i1trayh + TRANS (0, 0, -5.865, 0, 0, 0)
+  ;POINT i2trayl = i1trayl + TRANS (0, 0, -5.865, 0, 0, 0)
+  POINT i2trayh = i1trayh + TRANS (0, 0, -5.1, 0, 0, 0)
+  POINT i2trayl = i1trayl + TRANS (0, 0, -5.1, 0, 0, 0)
   POINT i2c1h = inputtray
   POINT i2c1l = i2c1h + TRANS (0, 0, 90.5, 0, 0, 0, 0)
   POINT i2c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
@@ -1047,10 +910,15 @@ DCOLHJID9         0
   POINT i2c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i2c12l = i2c12h + TRANS (0, 0, 90.5, 0, 0, 0)
   
-  POINT i3trayh = i1trayh + TRANS (0, 0, -11.73, 0, 0, 0)
-  POINT i3trayl = i1trayl + TRANS (0, 0, -11.73, 0, 0, 0)
+  ;POINT i3trayh = i1trayh + TRANS (0, 0, -11.73, 0, 0, 0)
+  ;POINT i3trayl = i1trayl + TRANS (0, 0, -11.73, 0, 0, 0)
+  ;POINT i3trayh = i1trayh + TRANS (0, 0, -10.2, 0, 0, 0)
+  ;POINT i3trayl = i1trayl + TRANS (0, 0, -10.2, 0, 0, 0)
+  POINT i3trayh = i1trayh + TRANS (0, 0, -8, 0, 0, 0)
+  POINT i3trayl = i1trayl + TRANS (0, 0, -8, 0, 0, 0)
   POINT i3c1h = inputtray
-  POINT i3c1l = i3c1h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
+  ;POINT i3c1l = i3c1h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
+  POINT i3c1l = i3c1h + TRANS (0, 0, 85.4, 0, 0, 0, 0)
   POINT i3c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
   POINT i3c2l = i3c2h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
   POINT i3c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
@@ -1074,12 +942,13 @@ DCOLHJID9         0
   POINT i3c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i3c12l = i3c12h + TRANS (0, 0, 84.5, 0, 0, 0)
   
-  
-  
-  POINT i4trayh = i1trayh + TRANS (0, 0, -17.595, 0, 0, 0)
-  POINT i4trayl = i1trayl + TRANS (0, 0, -17.595, 0, 0, 0)
+  ;POINT i4trayh = i1trayh + TRANS (0, 0, -17.595, 0, 0, 0)
+  ;POINT i4trayl = i1trayl + TRANS (0, 0, -17.595, 0, 0, 0)
+  POINT i4trayh = i1trayh + TRANS (0, 0, -15.3, 0, 0, 0)
+  POINT i4trayl = i1trayl + TRANS (0, 0, -15.3, 0, 0, 0)
   POINT i4c1h = inputtray
-  POINT i4c1l = i4c1h + TRANS (0, 0, 78.5, 0, 0, 0, 0)
+  ;POINT i4c1l = i4c1h + TRANS (0, 0, 78.5, 0, 0, 0, 0)
+  POINT i4c1l = i4c1h + TRANS (0, 0, 80.3, 0, 0, 0, 0)
   POINT i4c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
   POINT i4c2l = i4c2h + TRANS (0, 0, 78.5, 0, 0, 0, 0)
   POINT i4c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
@@ -1103,11 +972,13 @@ DCOLHJID9         0
   POINT i4c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i4c12l = i4c12h + TRANS (0, 0, 78.5, 0, 0, 0)
   
-  
-  POINT i5trayh = i1trayh + TRANS (0, 0, -23.46, 0, 0, 0)
-  POINT i5trayl = i1trayl + TRANS (0, 0, -23.46, 0, 0, 0)
+  ;POINT i5trayh = i1trayh + TRANS (0, 0, -23.46, 0, 0, 0)
+  ;POINT i5trayl = i1trayl + TRANS (0, 0, -23.46, 0, 0, 0)
+  POINT i5trayh = i1trayh + TRANS (0, 0, -20.4, 0, 0, 0)
+  POINT i5trayl = i1trayl + TRANS (0, 0, -20.4, 0, 0, 0)
   POINT i5c1h = inputtray
-  POINT i5c1l = i5c1h + TRANS (0, 0, 72.5, 0, 0, 0, 0)
+  ;POINT i5c1l = i5c1h + TRANS (0, 0, 72.5, 0, 0, 0, 0)
+  POINT i5c1l = i5c1h + TRANS (0, 0, 75.2, 0, 0, 0, 0)
   POINT i5c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
   POINT i5c2l = i5c2h + TRANS (0, 0, 72.5, 0, 0, 0, 0)
   POINT i5c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
@@ -1131,11 +1002,13 @@ DCOLHJID9         0
   POINT i5c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i5c12l = i5c12h + TRANS (0, 0, 72.5, 0, 0, 0)
   
-  
-  POINT i6trayh = i1trayh + TRANS (0, 0, -29.325, 0, 0, 0)
-  POINT i6trayl = i1trayl + TRANS (0, 0, -29.325, 0, 0, 0)
+  ;POINT i6trayh = i1trayh + TRANS (0, 0, -29.325, 0, 0, 0)
+  ;POINT i6trayl = i1trayl + TRANS (0, 0, -29.325, 0, 0, 0)
+  POINT i6trayh = i1trayh + TRANS (0, 0, -25.5, 0, 0, 0)
+  POINT i6trayl = i1trayl + TRANS (0, 0, -25.5, 0, 0, 0)
   POINT i6c1h = inputtray
-  POINT i6c1l = i6c1h + TRANS (0, 0, 66.5, 0, 0, 0, 0)
+  ;POINT i6c1l = i6c1h + TRANS (0, 0, 66.5, 0, 0, 0, 0)
+  POINT i6c1l = i6c1h + TRANS (0, 0, 70.1, 0, 0, 0, 0)
   POINT i6c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
   POINT i6c2l = i6c2h + TRANS (0, 0, 66.5, 0, 0, 0, 0)
   POINT i6c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
@@ -1159,8 +1032,6 @@ DCOLHJID9         0
   POINT i6c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i6c12l = i6c12h + TRANS (0, 0, 66.5, 0, 0, 0)
   
-  
-  
   ; Ouput tray points
   ;POINT t7trayh =
   ;POINT t7trayl =
@@ -1171,7 +1042,7 @@ DCOLHJID9         0
   POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
   POINT t7c3l = t7c3h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
-  POINT t7c4l = t7c4h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c4l = t7c4h + TRANS (0, 0, 25.979, 0, 0, 0) ; Solve for E1128
   POINT t7c5h = o7 + TRANS (0, -47.5, 0, 0, 0, 0)
   POINT t7c5l = t7c5h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
@@ -1281,20 +1152,29 @@ DCOLHJID9         0
     IF $data[0] == "refresh" THEN
       CALL send (.length)
       GOTO beginloop
-    SIGNAL -2254
     END
     
     IF $data[0] == "neutral" THEN
       JMOVE neutral
-JMOVE neutral
+      JMOVE neutral
       CALL send (.length)
       GOTO beginloop
     END
     
     IF $data[0] == "scan" THEN
       JMOVE scan
-JMOVE scan
+      JMOVE scan
       CALL send (.length)
+      GOTO beginloop
+    END
+    
+    IF $data[0] == "box" THEN
+      JMOVE #boxh
+      LMOVE #boxl
+      LMOVE #boxl
+      CALL send (.length)
+      TWAIT 0.2
+      LMOVE #boxh
       GOTO beginloop
     END
     
@@ -1317,118 +1197,117 @@ JMOVE scan
           IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
             JMOVE i1trayh
             LMOVE i1trayl
+            JMOVE i1trayl
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i1c1h
             LMOVE i1c1l
-      LMOVE i1c1l
+            JMOVE i1c1l
             CALL send (.length)
-            WAIT 2254
-      SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE i1c2h
             LMOVE i1c2l
+            JMOVE i1c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE i1c3h
             LMOVE i1c3l
+            JMOVE i1c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE i1c4h
             LMOVE i1c4l
+            JMOVE i1c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE i1c5h
             LMOVE i1c5l
+            JMOVE i1c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE i1c6h
             LMOVE i1c6l
+            JMOVE i1c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE i1c7h
             LMOVE i1c7l
+            JMOVE i1c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE i1c8h
             LMOVE i1c8l
+            JMOVE i1c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE i1c9h
             LMOVE i1c9l
+            JMOVE i1c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE i1c10h
             LMOVE i1c10l
+            JMOVE i1c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE i1c11h
             LMOVE i1c11l
+            JMOVE i1c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE i1c12h
             LMOVE i1c12l
+            JMOVE i1c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i1c12h
             GOTO beginloop
           END
@@ -1437,117 +1316,117 @@ SIGNAL -2254
           IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
             JMOVE i2trayh
             LMOVE i2trayl
+            JMOVE i2trayl
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i2c1h
             LMOVE i2c1l
+            JMOVE i2c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE i2c2h
             LMOVE i2c2l
+            JMOVE i2c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE i2c3h
             LMOVE i2c3l
+            JMOVE i2c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE i2c4h
             LMOVE i2c4l
+            JMOVE i2c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE i2c5h
             LMOVE i2c5l
+            JMOVE i2c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE i2c6h
             LMOVE i2c6l
+            JMOVE i2c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE i2c7h
             LMOVE i2c7l
+            JMOVE i2c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE i2c8h
             LMOVE i2c8l
+            JMOVE i2c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE i2c9h
             LMOVE i2c9l
+            JMOVE i2c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE i2c10h
             LMOVE i2c10l
+            JMOVE i2c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE i2c11h
             LMOVE i2c11l
+            JMOVE i2c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE i2c12h
             LMOVE i2c12l
+            JMOVE i2c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i2c12h
             GOTO beginloop
           END
@@ -1556,117 +1435,117 @@ SIGNAL -2254
           IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
             JMOVE i3trayh
             LMOVE i3trayl
+            JMOVE i3trayl
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i3c1h
             LMOVE i3c1l
+            JMOVE i3c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE i3c2h
             LMOVE i3c2l
+            JMOVE i3c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE i3c3h
             LMOVE i3c3l
+            JMOVE i3c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE i3c4h
             LMOVE i3c4l
+            JMOVE i3c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE i3c5h
             LMOVE i3c5l
+            JMOVE i3c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE i3c6h
             LMOVE i3c6l
+            JMOVE i3c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE i3c7h
             LMOVE i3c7l
+            JMOVE i3c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE i3c8h
             LMOVE i3c8l
+            JMOVE i3c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE i3c9h
             LMOVE i3c9l
+            JMOVE i3c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE i3c10h
             LMOVE i3c10l
+            JMOVE i3c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE i3c11h
             LMOVE i3c11l
+            JMOVE i3c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE i3c12h
             LMOVE i3c12l
+            JMOVE i3c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i3c12h
             GOTO beginloop
           END
@@ -1675,117 +1554,117 @@ SIGNAL -2254
           IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
             JMOVE i4trayh
             LMOVE i4trayl
+            JMOVE i4trayl
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i4c1h
             LMOVE i4c1l
+            JMOVE i4c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE i4c2h
             LMOVE i4c2l
+            JMOVE i4c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE i4c3h
             LMOVE i4c3l
+            JMOVE i4c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE i4c4h
             LMOVE i4c4l
+            JMOVE i4c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE i4c5h
             LMOVE i4c5l
+            JMOVE i4c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE i4c6h
             LMOVE i4c6l
+            JMOVE i4c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE i4c7h
             LMOVE i4c7l
+            JMOVE i4c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE i4c8h
             LMOVE i4c8l
+            JMOVE i4c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE i4c9h
             LMOVE i4c9l
+            JMOVE i4c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE i4c10h
             LMOVE i4c10l
+            JMOVE i4c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE i4c11h
             LMOVE i4c11l
+            JMOVE i4c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE i4c12h
             LMOVE i4c12l
+            JMOVE i4c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i4c12h
             GOTO beginloop
           END
@@ -1794,117 +1673,117 @@ SIGNAL -2254
           IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
             JMOVE i5trayh
             LMOVE i5trayl
+            JMOVE i5trayl
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i5c1h
             LMOVE i5c1l
+            JMOVE i5c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE i5c2h
             LMOVE i5c2l
+            JMOVE i5c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE i5c3h
             LMOVE i5c3l
+            JMOVE i5c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE i5c4h
             LMOVE i5c4l
+            JMOVE i5c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE i5c5h
             LMOVE i5c5l
+            JMOVE i5c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE i5c6h
             LMOVE i5c6l
+            JMOVE i5c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE i5c7h
             LMOVE i5c7l
+            JMOVE i5c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE i5c8h
             LMOVE i5c8l
+            JMOVE i5c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE i5c9h
             LMOVE i5c9l
+            JMOVE i5c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE i5c10h
             LMOVE i5c10l
+            JMOVE i5c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE i5c11h
             LMOVE i5c11l
+            JMOVE i5c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE i5c12h
             LMOVE i5c12l
+            JMOVE i5c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i5c12h
             GOTO beginloop
           END
@@ -1913,117 +1792,117 @@ SIGNAL -2254
           IF $number2 == "00" THEN ; with height of $number1, go to tray pickup point
             JMOVE i6trayh
             LMOVE i6trayl
+            JMOVE i6trayl
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6trayh
             GOTO beginloop
           END
           IF $number2 == "01" THEN ; with height of $number1 and cel location $number2
             JMOVE i6c1h
             LMOVE i6c1l
+            JMOVE i6c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE i6c2h
             LMOVE i6c2l
+            JMOVE i6c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE i6c3h
             LMOVE i6c3l
+            JMOVE i6c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE i6c4h
             LMOVE i6c4l
+            JMOVE i6c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE i6c5h
             LMOVE i6c5l
+            JMOVE i6c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE i6c6h
             LMOVE i6c6l
+            JMOVE i6c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE i6c7h
             LMOVE i6c7l
+            JMOVE i6c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE i6c8h
             LMOVE i6c8l
+            JMOVE i6c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE i6c9h
             LMOVE i6c9l
+            JMOVE i6c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE i6c10h
             LMOVE i6c10l
+            JMOVE i6c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE i6c11h
             LMOVE i6c11l
+            JMOVE i6c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE i6c12h
             LMOVE i6c12l
+            JMOVE i6c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE i6c12h
             GOTO beginloop
           END
@@ -2033,117 +1912,121 @@ SIGNAL -2254
           ;IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
           ;  JMOVE t7trayh
           ;  LMOVE t7trayl
+          ;  LMOVE t7trayl
           ;  CALL send(.length)
-      ;  TWAIT 0.1
+          ;  TWAIT 0.2
           ;  LMOVE t7trayh
           ;  GOTO beginloop
           ;END
           IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
             JMOVE t7c1h
             LMOVE t7c1l
-            LMOVE t7c1l
+            JMOVE t7c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE t7c2h
             LMOVE t7c2l
+            JMOVE t7c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE t7c3h
             LMOVE t7c3l
+            JMOVE t7c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
+            PRINT "A"
             JMOVE t7c4h
+            PRINT "B"
             LMOVE t7c4l
+            PRINT "C"
+            LMOVE t7c4l
+            PRINT "D"
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE t7c5h
             LMOVE t7c5l
+            JMOVE t7c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE t7c6h
             LMOVE t7c6l
+            JMOVE t7c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE t7c7h
             LMOVE t7c7l
+            JMOVE t7c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE t7c8h
             LMOVE t7c8l
+            JMOVE t7c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE t7c9h
             LMOVE t7c9l
+            JMOVE t7c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE t7c10h
             LMOVE t7c10l
+            JMOVE t7c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE t7c11h
             LMOVE t7c11l
+            JMOVE t7c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE t7c12h
             LMOVE t7c12l
+            JMOVE t7c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t7c12h
             GOTO beginloop
           END
@@ -2152,116 +2035,117 @@ SIGNAL -2254
           ;IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
           ;  JMOVE t8trayh
           ;  LMOVE t8trayl
+          ;  LMOVE t8trayl
           ;  CALL send(.length)
-          ;  TWAIT 0.1
+          ;  TWAIT 0.2
           ;  LMOVE t8trayh
           ;  GOTO beginloop
           ;END
           IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
             JMOVE t8c1h
             LMOVE t8c1l
+            JMOVE t8c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE t8c2h
             LMOVE t8c2l
+            JMOVE t8c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE t8c3h
             LMOVE t8c3l
+            JMOVE t8c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE t8c4h
             LMOVE t8c4l
+            JMOVE t8c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE t8c5h
             LMOVE t8c5l
+            JMOVE t8c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE t8c6h
             LMOVE t8c6l
+            JMOVE t8c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE t8c7h
             LMOVE t8c7l
+            JMOVE t8c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE t8c8h
             LMOVE t8c8l
+            JMOVE t8c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE t8c9h
             LMOVE t8c9l
+            JMOVE t8c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE t8c10h
             LMOVE t8c10l
+            JMOVE t8c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE t8c11h
             LMOVE t8c11l
+            JMOVE t8c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE t8c12h
             LMOVE t8c12l
+            JMOVE t8c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t8c12h
             GOTO beginloop
           END
@@ -2270,116 +2154,117 @@ SIGNAL -2254
           ;IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
           ;  JMOVE t9trayh
           ;  LMOVE t9trayl
+          ;  LMOVE t9trayl
           ;  CALL send(.length)
-          ;  TWAIT 0.1
+          ;  TWAIT 0.2
           ;  LMOVE t9trayh
           ;  GOTO beginloop
           ;END
           IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
             JMOVE t9c1h
             LMOVE t9c1l
+            JMOVE t9c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE t9c2h
             LMOVE t9c2l
+            JMOVE t9c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE t9c3h
             LMOVE t9c3l
+            JMOVE t9c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE t9c4h
             LMOVE t9c4l
+            JMOVE t9c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE t9c5h
             LMOVE t9c5l
+            JMOVE t9c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE t9c6h
             LMOVE t9c6l
+            JMOVE t9c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE t9c7h
             LMOVE t9c7l
+            JMOVE t9c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE t9c8h
             LMOVE t9c8l
+            JMOVE t9c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE t9c9h
             LMOVE t9c9l
+            JMOVE t9c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE t9c10h
             LMOVE t9c10l
+            JMOVE t9c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE t9c11h
             LMOVE t9c11l
+            JMOVE t9c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE t9c12h
             LMOVE t9c12l
+            JMOVE t9c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t9c12h
             GOTO beginloop
           END
@@ -2388,116 +2273,117 @@ SIGNAL -2254
           ;IF $number2 == "00" THEN ; with grade of $number1, go to tray pickup point
           ;  JMOVE t10trayh
           ;  LMOVE t10trayl
+          ;  LMOVE t10trayl
           ;  CALL send (.length)
-          ;  TWAIT 0.1
+          ;  TWAIT 0.2
           ;  LMOVE t10trayh
           ;  GOTO beginloop
           ;END
           IF $number2 == "01" THEN ; Dump cell with grade $number1 on location $number2
             JMOVE t10c1h
             LMOVE t10c1l
+            JMOVE t10c1l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c1h
             GOTO beginloop
           END
           IF $number2 == "02" THEN
             JMOVE t10c2h
             LMOVE t10c2l
+            JMOVE t10c2l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c2h
             GOTO beginloop
           END
           IF $number2 == "03" THEN
             JMOVE t10c3h
             LMOVE t10c3l
+            JMOVE t10c3l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
             JMOVE t10c4h
             LMOVE t10c4l
+            JMOVE t10c4l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c4h
             GOTO beginloop
           END
           IF $number2 == "05" THEN
             JMOVE t10c5h
             LMOVE t10c5l
+            JMOVE t10c5l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c5h
             GOTO beginloop
           END
           IF $number2 == "06" THEN
             JMOVE t10c6h
             LMOVE t10c6l
+            JMOVE t10c6l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c6h
             GOTO beginloop
           END
           IF $number2 == "07" THEN
             JMOVE t10c7h
             LMOVE t10c7l
+            JMOVE t10c7l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
             JMOVE t10c8h
             LMOVE t10c8l
+            JMOVE t10c8l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c8h
             GOTO beginloop
           END
           IF $number2 == "09" THEN
             JMOVE t10c9h
             LMOVE t10c9l
+            JMOVE t10c9l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c9h
             GOTO beginloop
           END
           IF $number2 == "10" THEN
             JMOVE t10c10h
             LMOVE t10c10l
+            JMOVE t10c10l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c10h
             GOTO beginloop
           END
           IF $number2 == "11" THEN
             JMOVE t10c11h
             LMOVE t10c11l
+            JMOVE t10c11l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c11h
             GOTO beginloop
           END
           IF $number2 == "12" THEN
             JMOVE t10c12h
             LMOVE t10c12l
+            JMOVE t10c12l
             CALL send (.length)
-            WAIT 2254
-SIGNAL -2254
+            TWAIT 0.2
             LMOVE t10c12h
             GOTO beginloop
           END
@@ -2507,32 +2393,37 @@ SIGNAL -2254
         SCASE $number1 OF
           SVALUE "01":
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
             LMOVE stack1
+      JMOVE stack1
           SVALUE "02":
             JMOVE stackh
             TWAIT 0.1
             LMOVE stack2
+      JMOVE stack2
           SVALUE "03":
             JMOVE stackh
             TWAIT 0.1
             LMOVE stack3
+      JMOVE stack3
           SVALUE "04":
             JMOVE stackh
             TWAIT 0.1
             LMOVE stack4
+      JMOVE stack4
           SVALUE "05":
             JMOVE stackh
             TWAIT 0.1
             LMOVE stack5
+      JMOVE stack5
           SVALUE "06":
             JMOVE stackh
             TWAIT 0.1
             LMOVE stack6
+      JMOVE stack6
         END
         CALL send (.length)
-        WAIT 2254
-SIGNAL -2254
+        TWAIT 0.2
         LMOVE stackh
         GOTO beginloop
     END
@@ -2540,809 +2431,6 @@ SIGNAL -2254
   END
   eindeloop:
   CALL disconnect
-.END
-.PROGRAM robotcalibrate () ;
-	; *******************************************************************
-	;
-	; Program:      test8
-	; Comment:
-	; Author:       User
-	;
-	; Date:         10/15/2020
-	;
-	; *******************************************************************
-	;
-	;POINT #J = #[0, 100, 100, 0, 0, 0]
-	;POINT #J2 = #[-90, 100, 100, 0, 0, 0]
-	POINT t = #[-473.53, 56.448, 244.47, 111.33, 2.186, 150.83]
-	SPEED 10 ALWAYS
-	;JMOVE #J2
-	JMOVE t
-.END
-.PROGRAM solarsorter () ; Project bij GTM | Q1 '20'21 | Sorteren van zonnecellen
-  ; *******************************************************************
-  ;
-  ; Program:      solarSorter
-  ; Comment:      Voor het eerste bedrijfsproject in de minor heeft GTM gevraagd of wij een systeem kunnen bouwen die trays met zonnecellen en een excelsheet accepteert en dat omzet naar gesorteerde trays met ieder een bepaalde klasse cellen.
-  ;     De robot zal initieel verbinding maken met de TCP server van de python pc en reageren op elk bericht dat de pc stuurt.
-  ;     Gedurende het programma zal de robot vanuit de rustpositie wachten tot de pc uit de invoercamera beeld heeft ontvangen en de robot vertelt waar de ongesorteerde cellen liggen. De robot pakt dan een voor een elke ongesorteerde cel op en verplaatst deze boven de qrcamera. De robot zal de pc een bericht sturen dat deze op locatie is.
-  ;     De pc zal het serienummer laten scannen door de qrcamera en koppelen aan deze cel in de eerste foto. Vervolgens wordt de klasse opgezocht in de excelsheet en stuurt de pc de klasse naar de robot. De robot verplaatst de cel dan naar de uitvoertray met cellen van die klasse. De robot verplaatst zich dan weer naar de rustpositie.
-  ;     Mocht een uitvoertray vol zitten, laat de robot dit via de pc weten en stopt met verdergaan totdat hij expliciet te horen krijgt dat de uitvoertray is verwijderd. Dit gaat via de hmi. Vervolgens plaatst de robot een lege tray op de geleegde plek en vervolgt hij zijn programma.
-  ;     Mocht de invoertray leeg zijn, dan vertelt de pc niet welke cel de robot moet pakken, maar dat de tray leeg is en vervangen moet worden. De robot verplaatst dan de lege tray en gaat terug naar de rustpositie. De robot laat vervolgens de pc vertellen waar de volgende cellen liggen en gaat deze een na een af.
-  ; Author:       User
-  ;
-  ; Date:         october 12th, 2020
-  ;
-  ; *******************************************************************
-  ;
-  ; AS Programming Language: variables
-  ; var1      : Global variables are saved in memory and can be used in any program
-  ; .var2     : Local variables are not saved
-  ; $var3     : String variable
-  ; var4[5]   : Element located directly to the right of var4[4], index must be in [0-9999]
-  ; var5[1,2] : Element in 2D array var5
-  ; pose1     : Transformation pose (consists of the values x, y, z, rx, ry, rz)
-  ; #pose2    : Joint pose (consists of the values JT1, JT2, JT3, JT4, JT5, JT6)
-  ;
-  ; Variable name can only consist of: [0-9a-zA-Z._] and are case insensitive
-  ; Variable names start with [a-zA-Z] and have a length of max 15 characters
-  ;
-  ; *Invalid* variable names: (See AS programming reference page 41 or 3-12)
-  ; 3p        : Does not start with [a-zA-Z]
-  ; part#2    : # prefix is reserved for joint poses and cannot be used in variable names
-  ; random    : Keyword
-  ; TCP_SEND  : Keyword
-  ; .arr[1]   : Arrays can't be defined local variables.
-  ;
-  ; For defining/accessing arrays:
-  ; arr[1] = 6    ; Cannot assign multiple variables on the same line
-  ; arr[3] = 7    ;   e.g. var1 = 6, var2 = 7 is a syntax error
-  ; PRINT arr[2]  ; Gives runtime error E0102: Variable is not defined.
-  ;
-  ; For operators: many are valid, see AS programming reference page 50 or 3-21
-  ;
-  ; For comparing strings: (See AS programming reference page 53 or 3-24)
-  ; "AAA"  < "AAB"
-  ; "ABC" == "ABC"
-  ; "DEF." > "DEF"
-  ; "xyz"  > "XYZ"
-  ;
-  ; Loops / other structure instructions:
-  ; IF expr THEN ... [ELSE ...] END     ; ELSEIF does not exist in the AS programming reference and appears to be an invalid statement
-  ; WHILE expr DO ... END
-  ; DO ... UNTIL expr
-  ; FOR var = x TO y [STEP z] ... END
-  ; CASE var OF VALUE x,y,z: ... [VALUE n: ...]+ [ANY ...] END
-  ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
-  ;
-  ;
-  ; AS Programming Language: poses
-  ; HERE #pose1         : Define a joint pose variable using the current pose of the robot
-  ; HERE pose2          : Define a transformation pose variable using the current pose of the robot
-  ; POINT #pose3        : Type in the joint values or copy them using 'POINT pose3 = pose1'
-  ; POINT pose4         : Type in the transformation values or copy them using 'POINT pose4 = pose2'
-  ; HERE pose4 + pose5  : Pose5 relative to pose4, since we defined pose4 earlier
-  ;
-  ;
-  ; AS Programming Language: moves
-  ; JMOVE pose1         : Joint move: during the move, every joint moves at linear speed
-  ; LMOVE pose1         : Linear move: during the move, the tool moves at linear speed
-  ; JAPPRO pose1, 100   : Joint move: approach 100 mm above the target pose
-  ;
-  ; *******************************************************************
-  ; Variables
-  .err = -1             ; Error variable
-  .port = 10000         ; Outgoing port
-  sock_id1 = -1         ; Positive socket id if connected with pc
-  .timeout = 60         ; Timeout in seconds to wait for a connection
-  ip[0] = 0             ; The ip of the connecting pc (ip[1-4])
-  $data[0] = ""         ; "Character string variable array"
-  max_tcp_length = 255  ; Maximum length of data received/sent
-  ; Listen for devices that would like to connect
-  TCP_LISTEN .err, .port
-  IF .err < 0 THEN
-    PRINT "ERR IN TCP_LISTEN: ", .err
-    GOTO exit
-  END
-  ; Accept connection from the pc. Note that the sock_id param is also the err param
-  TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
-  IF sock_id1 < 0 THEN
-    PRINT "ERR IN TCP_ACCEPT: ", sock_id1
-    GOTO exit
-  END
-  ; Stop listening for more devices
-  TCP_END_LISTEN .err, .port
-  .timeout = 1
-  ; Loop 2 times and echo messages
-  FOR i = 0 TO 1    ; In AS Language 'TO' means: To and including
-    ; Receive a message
-    TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
-    IF .err < 0 THEN
-      PRINT "ERR IN TCP_RECV: ", .err
-      GOTO exit
-    ELSE
-      IF .length < 1 THEN
-        PRINT "EMPTY MESSAGE IN TCP_RECV"
-        GOTO exit
-      END
-    END
-    ; Send/echo the message
-    TCP_SEND .err, sock_id1, $data[0], .length, .timeout
-    IF .err < 0 THEN
-      PRINT "ERR IN TCP_SEND: ", .err
-      GOTO exit
-    END
-  END
-  ; Close connection
-  TCP_CLOSE .err, sock_id1
-  PRINT "Succesfully disconnected socket ", sock_id1
-  sock_id1 = -1
-  ; Bedenk of je de TCP parallel wil laten lopen op de achtergrond
-  ; Uitzoeken. Heet dit subroutine?
-exit:
-.END
-.PROGRAM IT.to.LT ()
-	; *******************************************************************
-	;
-	; Program:      IT.to.LT
-	; Comment:
-	; Author:       User
-	;
-	; Date:         10/21/2020
-	;
-	; *******************************************************************
-	;
-	POINT neutral = #[-90, 100, 100, 0, 0, 0]
-	POINT ltappro = #[-131.22, 95.458, 94.934, -189.29, -0.653, -211.93]
-	POINT ltapproboven = ltappro + TRANS (0, 0, -59.741, 0, 0, 0)
-	POINT ltpak = #[-139.09, 89.372, 76.463, -180.54, -13.016, -228.57]
-	POINT ltpakboven = ltpak + TRANS (0, 0, -35, 0, 0, 0)
-	POINT itpak = #[-81.22, 89.309, 77.078, 0.001, 12.238, 98.78]
-	POINT itpakboven = itpak + TRANS (0, 0, -130, 0, 0, 0)
-	;POINT cel2 = jointpunt + TRANS(90,0,0,0,0,0)
-	;print .celnr
-	;RETURN .hoogte
-	;NT t= #neutral TRANS(20,0,0,0,0,0)
-	;POINT temp.pos=TRANS(#neutral)+(20,0,0,0,0,0)
-	;SPEED 30
-	; JMOVE neutral
-	; TWAIT 1
-	; JMOVE cel2
-	TWAIT 5
-	JMOVE itpakboven
-	TWAIT 1
-	LMOVE itpak
-	TWAIT 1
-	LMOVE itpakboven
-	TWAIT 1
-	JMOVE ltapproboven
-	TWAIT 1
-	JMOVE ltappro
-	TWAIT 1
-	LMOVE ltpakboven
-	TWAIT 1
-	LMOVE ltpak
-	TWAIT 1
-	JMOVE ltappro
-	TWAIT 1
-.END
-.PROGRAM tray.7 ()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.7
-  ; Comment:
-  ; Author:       User
-  ;
-  ; Date:         10/21/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT T7c1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT T7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
-  POINT itc3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc5h = o7 + TRANS (0, -47.5, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc7h = o7 + TRANS (-183, -44.5, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc8h = o7 + TRANS (-274.5, -40.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc9h = o7 + TRANS (0, -96.2, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc10h = o7 + TRANS (-91, -94.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc11h = o7 + TRANS (-181.5, -91, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc12h = o7 + TRANS (-274.0, -89.2, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 26.979, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o7
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o7
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    LMOVE itc3l
-    TWAIT 1
-    LMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-.END
-.PROGRAM tray.8()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.8
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/21/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[74.884,70.401,22.007,0.003,48.399,-285.113]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o8 + TRANS (-91.5, 1.5, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT itc3h = o8 + TRANS (-183, 3, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc4h = o8 + TRANS (-274.5, 6.5, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc5h = o8 + TRANS (0, -48.0, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc6h = o8 + TRANS (-91, -47.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc7h = o8 + TRANS (-181, -45, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc8h = o8 + TRANS (-273.5, -42.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc9h = o8 + TRANS (0, -97.7, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc10h = o8 + TRANS (-91, -96.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc11h = o8 + TRANS (-180.5, -93.5, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc12h = o8 + TRANS (-274.0, -92.2, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 27.962, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o8
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o8
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc3l
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-.END
-.PROGRAM tray.9()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.9
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/22/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[94.470,77.081,37.553,0.003,39.537,-265.526]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT itc3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc4h = o9 + TRANS (-272.5, 4.0, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc5h = o9 + TRANS (-1, -49.0, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc6h = o9 + TRANS (-92, -47.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc7h = o9 + TRANS (-181, -47, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc8h = o9 + TRANS (-273.5, -45.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc9h = o9 + TRANS (-1, -97.7, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT itc10h = o9 + TRANS (-92, -96.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc11h = o9 + TRANS (-181.5, -96, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc12h = o9 + TRANS (-274.0, -94.7, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o9
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o9
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc3l
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-
-.END
-.PROGRAM tray.10()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.10
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/22/2020
-  ;
-  ; *******************************************************************
-  ;
-  
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[117.052,83.246,54.375,0.015,28.887,-242.956]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o10 + TRANS (-91.5, 1, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT itc3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc4h = o10 + TRANS (-272.0, 2.5, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc5h = o10 + TRANS (-2, -49.0, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc6h = o10 + TRANS (-93, -47.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc7h = o10 + TRANS (-183, -47, -60, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 88.695, 0, 0, 0)
-  POINT itc8h = o10 + TRANS (-274.5, -45.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc9h = o10 + TRANS (-2.5, -97.7, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT itc10h = o10 + TRANS (-95, -96.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc11h = o10 + TRANS (-186, -94, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc12h = o10 + TRANS (-275, -94.7, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o10
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o10
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc3l
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    JMOVE itc7l
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-
-.END
-.PROGRAM INPUT.tray()
-  ; *******************************************************************
-  ;
-  ; Program:      INPUT.tray
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/22/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  
-  POINT itc1l = #[-74.430,83.112,54.728,1.319,28.038,-345.548]
-  POINT itc2h = inputtray + TRANS (-93, -2, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc3h = inputtray + TRANS (-186, -1.5, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc4h = inputtray + TRANS (-279, -1.3, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc5h = inputtray + TRANS (0, -50.5, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc6h = inputtray + TRANS (-93, -50, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc7h = inputtray + TRANS (-186, -50, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc8h = inputtray + TRANS (-279, -50, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc9h = inputtray + TRANS (0, -99.3, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc10h = inputtray + TRANS (-93, -99, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc11h = inputtray + TRANS (-186, -98.2, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc12h = inputtray + TRANS (-279, -98, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 97.333, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 20 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE inputtray
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE inputtray
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    LMOVE itc3l
-    TWAIT 1
-    LMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    LMOVE itc4l
-    TWAIT 1
-    LMOVE itc4h
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
 .END
 .PROGRAM send (.length) ; Sends data to the connected tcp connection
   ; *******************************************************************
@@ -3363,7 +2451,6 @@ exit:
     CALL disconnect
     STOP
   END
-  SIGNAL 2254
 .END
 .PROGRAM receive (.length) ; Receives data from the connected tcp connection
   ; *******************************************************************
@@ -3379,8 +2466,6 @@ exit:
   .err = -2
   .timeout = 60
   max_tcp_length = 255
-  
-  PRINT "Hallo"
   
   TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
     IF .err < 0 THEN
@@ -3406,11 +2491,15 @@ exit:
   ;
   ; *******************************************************************
   ;
-  SIGNAL -2254
   .err = -2
   .port = 10000
   .timeout = 60
   ip[0] = 0
+  
+  ; If a previous call did not disconnect correctly
+  IF sock_id1 > 0 THEN
+    CALL disconnect
+  END
   
   ; Listen for devices that would like to connect
   TCP_LISTEN .err, .port
@@ -3444,6 +2533,20 @@ exit:
   PRINT "Succesfully disconnected socket ", sock_id1
   sock_id1 = -1
 .END
+.PROGRAM testmeee2()
+  ; *******************************************************************
+  ;
+  ; Program:      testmeee2
+  ; Comment:      
+  ; Author:       User
+  ;
+  ; Date:         10/27/2020
+  ;
+  ; *******************************************************************
+  ;
+  POINT #david = #[0, 100, 100, 0, 0, 90]
+  JMOVE #david
+.END
 .PROGRAM autostart.pc () ; Resets connection boolean with Cognex Camera
   ; *******************************************************************
   ;
@@ -3455,7 +2558,6 @@ exit:
   ;
   ; *******************************************************************
   ;
-  SIGNAL -2254, -2245
   sock_id1 = -2
   $data[0] = ""
 .END
@@ -3474,37 +2576,18 @@ exit:
 	; 
 	; 26.10.2020 10:40:48
 	; 
+	; 27.10.2020 09:15:41
+	; 
+	; 28.10.2020 09:59:22
+	; 
 	; @@@ INSPECTION @@@
 	; @@@ CONNECTION @@@
 	; Robot
 	; 192.168.0.1
 	; 23
 	; @@@ PROGRAM @@@
-	; 0:KAWABOT
-	; .i 
-	; 0:testmeee
-	; .traynr 
-	; .celnr 
-	; .hoogte 
 	; 0:Eindcode
 	; .length 
-	; 0:robotcalibrate
-	; 0:solarsorter
-	; .err 
-	; .port 
-	; .timeout 
-	; .length 
-	; 0:IT.to.LT
-	; 0:tray.7
-	; .i 
-	; 0:tray.8
-	; .i 
-	; 0:tray.9
-	; .i 
-	; 0:tray.10
-	; .i 
-	; 0:INPUT.tray
-	; .i 
 	; 0:send
 	; .length 
 	; .err 
@@ -3519,6 +2602,7 @@ exit:
 	; .timeout 
 	; 0:disconnect
 	; .err 
+	; 0:testmeee2
 	; 0:autostart.pc
 	; @@@ TRANS @@@
 	; @@@ JOINTS @@@
@@ -3702,6 +2786,4 @@ tout_rec = 60
 .END
 .STRINGS
 $data[0] = "Hallo Frits"
-$receive = "Password: User Logged In\r\n"
-$termchk = "\r\n"
 .END
