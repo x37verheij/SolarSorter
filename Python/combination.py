@@ -14,7 +14,9 @@ import sys                              # System variables, like error values
 import cv2                              # Opencv, for image extraction
 import time                             # To measure time intervals
 import socket                           # To connect to all devices with the TCP protocol
+import numpy as np                      # Numpy is used for opencv image definition and alteration
 from ftplib import FTP                  # FTP protocol to download images from the cameras
+from queue import SimpleQueue           # Simple queue data type for storing the cell photos
 from collections import namedtuple      # Datatype for easy access to device properties
 from openpyxl import load_workbook      # Function to import Excel sheets
 from openpyxl import cell as xlcell     # Compare and extract Excel cell properties
@@ -22,7 +24,7 @@ from openpyxl import cell as xlcell     # Compare and extract Excel cell propert
 # Documentation for openpyxl: https://openpyxl.readthedocs.io/en/stable/
 # Documentation for opencv:   https://docs.opencv.org/master/
 
-# Path to Excel sheet and a dict for its contents (where (k, v) is (serialnr, grade))
+# Path to Excel sheet and a dict for its contents (where (k, v) is (sid, grade))
 xlsxPath = "80518_Measurement Data_Lot XXX.xlsx"
 excelData = {}
 
@@ -35,6 +37,7 @@ s_tcp = socket.SOCK_STREAM  # Use TCP configuration
 timeout = 10                # Seconds
 lastRefresh = time.time()   # Timestamp of last refresh
 lastPickupInstruction = ""  # Last instruction sent to the robot to pickup a cell/tray
+photos = SimpleQueue()      # Store the photos of ungraded cells in a queue
 
 #####################
 # HMI message class #
@@ -76,8 +79,8 @@ HMImsg = HMImessage()
 # Counter class #
 #################
 
-# Counter object that keeps track of the occupied output spaces
 class Counter:
+    """Counter object that keeps track of the occupied output spaces"""
     def __init__(self):
         self.outputs = [1, 1, 1, 1]     # Index 0 refers to grade 7, index 3 to grade 10
         self.emptyHeight = 0
@@ -99,8 +102,8 @@ counter = Counter()
 # Functions #
 #############
 
-# Read the Excel sheet and collect its data
 def readExcel():
+    """Read the Excel sheet and collect its data"""
     wb = load_workbook(filename = xlsxPath, data_only = True, read_only = True)
     ws = wb.active
 
@@ -111,34 +114,61 @@ def readExcel():
     for row in rows:
         if type(row[0]) is not xlcell.read_only.EmptyCell and type(row[0].value) is int:
             grade = row[0].value
-            serialnr = row[2].value
-            # print("Cell", serialnr, "has grade", grade)
-            excelData[serialnr] = grade
+            sid = row[2].value
+            excelData[sid] = grade
     wb.close()
 
-# FTP Retrieve photo function
 def retrievePhoto():
+    """FTP Retrieve photo function"""
     ftp = FTP(invoerCamera.ip, user="admin", timeout=3)
-    with open('image.jpg', 'wb') as imageBuffer:
-        ftp.retrbinary('RETR image.jpg', imageBuffer.write)
+    with open("image.jpg", "wb") as imageBuffer:
+        ftp.retrbinary("RETR image.jpg", imageBuffer.write)
         imageBuffer.close()
     ftp.quit()
     return cv2.imread("image.jpg")
 
-# Opencv locate cells function
-def locateCells(image):
-    pass # TODO implement
-    # returns list of filled locations
-    # return [1, 2]
-    return [1]
+def locateCells(img):
+    """Opencv locate cells function"""
+    kernel = np.ones((5, 5), np.uint8)
+    result = []
 
-# TCP Connect function
+    # Cut the image to isolate each cell
+    cuts = [0]*12
+    cuts[0] = img[165:279, :201]
+    cuts[1] = img[165:279, 201:404]
+    cuts[2] = img[165:279, 404:603]
+    cuts[3] = img[165:279, 603:]
+    cuts[4] = img[279:383, :201]
+    cuts[5] = img[279:383, 201:404]
+    cuts[6] = img[279:383, 404:603]
+    cuts[7] = img[279:383, 603:]
+    cuts[8] = img[383:497, :201]
+    cuts[9] = img[383:497, 201:404]
+    cuts[10] = img[383:497, 404:603]
+    cuts[11] = img[383:497, 603:]
+
+    # Decide for every spot if it is occupied by a cell
+    for i in range(12):
+        org = cuts[i]
+        img = cv2.cvtColor(org, cv2.COLOR_BGR2GRAY)                         # Grayscale
+        img = cv2.threshold(img, 64, 255, cv2.THRESH_BINARY)[1]             # BW
+        img = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel, iterations=2)   # Close holes
+        if cv2.countNonZero(img) < 15000:   # If there are less than 15000 pixels in this cut
+            photos.put(org)                 # Temporarily store this image, until we know its grade
+            result.append(i + 1)            # Cell 0 has position 1, cell 11 has position 12, etc.
+    return result
+
+def SavePhoto(sid):
+    """Save the photo of this cell with its serial number as file name"""
+    cv2.imwrite("Photos\\" + sid + ".png", photos.get(block=False))
+
 def connect(device):
+    """TCP Connect function"""
     device.socket.connect((device.ip, device.port))
     print(device.name, " connected at ", device.ip, ":", device.port, sep="")
 
-# TCP Login function
 def login(device):
+    """TCP Login function"""
     if "User" not in device.socket.recv(s_size).decode():   # Welcome to In-Sight(tm)  7200C Session 0
         device.socket.recv(s_size)                          # User:
     device.socket.send(b"admin\r\n")
@@ -147,12 +177,12 @@ def login(device):
     device.socket.recv(s_size)                              # User Logged In
     print(device.name, "login success")
 
-# TCP Disconnect function
 def disconnect(device):
+    """TCP Disconnect function"""
     device.socket.close()
 
-# TCP Handle Errors function updates the connection info to display on the HMI and disconnect devices, perhaps
 def handleError(device):
+    """TCP Handle Errors function updates the connection info to display on the HMI and disconnects all devices"""
     if device is not None: print("TCP Error for device", device.name, sys.exc_info()[0])
     if device != robot: send(robot, "disconnect"); disconnect(robot)
     if device != qrCamera: disconnect(qrCamera)
@@ -165,16 +195,16 @@ def handleError(device):
         disconnect(plc)
     exit(-1)
 
-# TCP Send function
 def send(device, msg, verbal = True):
+    """TCP Send function"""
     try:
         if verbal: print("PC > ", device.name, ":\t", msg.encode(), sep="")
         device.socket.send(msg.encode())
     except:
         handleError(device)
 
-# TCP Receive function. If index is provided, the received data will be split
 def receive(device, index = None, verbal = True):
+    """TCP Receive function. If index is provided, the received data will be split"""
     if device == plc:
         flush(plc)
     try:
@@ -187,16 +217,16 @@ def receive(device, index = None, verbal = True):
     except:
         handleError(device)
 
-# TCP flush function that empties its receive buffer to ensure actual data (e.g. HMI keeps sending data)
 def flush(device):
+    """TCP flush function that empties its receive buffer to ensure actual data (e.g. HMI keeps sending data)"""
     try:
         while len(device.socket.recv(s_size)) == s_size:
             pass
     except:
         handleError(device)
 
-# TCP Refresh function
-def refresh():
+def refresh(excelloop):
+    """TCP Refresh function"""
     global lastRefresh
     while True:
         # While within refresh timeout
@@ -231,8 +261,8 @@ def refresh():
         send(invoerCamera, "refresh\r\n", verbal = False)
         receive(invoerCamera, verbal = False)
 
-# Return cell function that instructs the robot to return the cell to its last location and stops the program
 def robotReturnCell():
+    """This function instructs the robot to return the cell to its last location and stops the program"""
     send(robot, lastPickupInstruction)
     receive(robot)                  # Robot has reached cell location
 
@@ -246,8 +276,8 @@ def robotReturnCell():
 
     handleError(None)
 
-# Robot Message function for easy message creation using convention "X-YY-ZZ"
 def robotMsg(instruction, heightGrade, celIndex):
+    """Robot Message function for easy message creation using convention 'X-YY-ZZ'"""
     global lastPickupInstruction
     heightGrade = str(heightGrade) if heightGrade > 9 else "0" + str(heightGrade)
     celIndex = str(celIndex) if celIndex > 9 else "0" + str(celIndex)
@@ -255,8 +285,8 @@ def robotMsg(instruction, heightGrade, celIndex):
     if res[0] == "I": lastPickupInstruction = res
     return res
 
-# Create new socket function
 def newSocket():
+    """Function to create a new socket"""
     s = socket.socket(s_ipv4, s_tcp)
     s.settimeout(timeout)
     return s
@@ -320,21 +350,22 @@ while True:
         break
     except FileNotFoundError:
         HMImsg.excel = 1
-        send(plc, HMImsg.toString())        # Show HMI warning and wait for response
-        time.sleep(0.5)                     # Give the PLC time to process
+        send(plc, HMImsg.toString())    # Show HMI warning and wait for response
+        time.sleep(0.5)                 # Give the PLC time to process
         refresh()
 
 # Reset the mocked status code
 HMImsg.status = 0
 send(plc, HMImsg.toString(), verbal = False)
-time.sleep(0.5)                             # Give the PLC time to process
+time.sleep(1)                           # Give the PLC time to process
 
 ################
 # Main program #
 ################
 
 # Connections are established, so we wait for the user to start the program on the HMI
-refresh()
+while HMImsg.status != 1:
+    refresh()
 
 # At this point, we received the amount of input trays from the HMI
 HMImsg.fromString(receive(plc))
@@ -379,10 +410,11 @@ while counter.inputHeight:
             send(qrCamera, "gvb002\r\n")
             sid = receive(qrCamera, 1)      # Get the serial number from the camera
 
-            # If this sid matches the format of "xxxxx xxxx xx" where x are all digits, get the grade
+            # If this sid matches the format of "xxxxx xxxx xx" where all x are digits, get the grade
             if re.search("\d{5} \d{4} \d{2}", sid):
                 try:
                     grade = excelData[sid]
+                    SavePhoto(sid)
                     break
                 # If the sid is not present in the Excel sheet
                 except KeyError:
@@ -395,10 +427,12 @@ while counter.inputHeight:
 
                     refresh()                       # Wait for user to accept message on hmi
                     robotReturnCell()               # Return
-                    
+
         # If this else clause is executed, it means that the data matrix is not recognized after 10 retries
         else:
             print("Data matrix cannot be recognized")
+            SavePhoto(time.strftime("unreadable cell on %Y-%m-%d %X GMT", time.gmtime()))
+
             refresh()
             HMImsg.excel = 3
             HMImsg.light = 0
@@ -484,7 +518,7 @@ while counter.inputHeight:
 # Program finished
 HMImsg.status = 4
 send(plc, HMImsg.toString())
-time.sleep(0.5)                     # Give the PLC time to process
+time.sleep(1)                       # Give the PLC time to process
 
 ######################
 # Disconnect devices #
