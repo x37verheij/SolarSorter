@@ -121,11 +121,11 @@ def readExcel():
 def retrievePhoto():
     """FTP Retrieve photo function"""
     ftp = FTP(invoerCamera.ip, user="admin", timeout=3)
-    with open("image.jpg", "wb") as imageBuffer:
-        ftp.retrbinary("RETR image.jpg", imageBuffer.write)
+    with open("image.bmp", "wb") as imageBuffer:
+        ftp.retrbinary("RETR image.bmp", imageBuffer.write)
         imageBuffer.close()
     ftp.quit()
-    return cv2.imread("image.jpg")
+    return cv2.imread("image.bmp")
 
 def locateCells(img):
     """Opencv locate cells function"""
@@ -225,7 +225,7 @@ def flush(device):
     except:
         handleError(device)
 
-def refresh(excelloop):
+def refresh():
     """TCP Refresh function"""
     global lastRefresh
     while True:

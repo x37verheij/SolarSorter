@@ -9,14 +9,17 @@
   ;
   ; *******************************************************************
   ;
+  
   SPEED 40 ALWAYS
   
   ; Various points
   POINT neutral = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
   POINT scan = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
+  POINT #boxh = #[-45.763, 96.932, 81.176, -0.511, 15.885, 44.727]
+  POINT #boxl = #[-45.772, 89.719, 74.414, -0.525, 15.434, 44.732]
   
   ; Empty stack points
-  POINT stack1 = #[-138.796, 88.710, 75.869, 182.084, -12.383, -229.525]
+  POINT stack1 = #[-137.905,88.841,76.434,-0.094,13.065,-46.500]
   POINT stack2 = stack1 + TRANS (0,0,-6,0,0,0)
   POINT stack3 = stack2 + TRANS (0,0,-6,0,0,0)
   POINT stack4 = stack3 + TRANS (0,0,-6,0,0,0)
@@ -25,7 +28,7 @@
   POINT stackh = #[-138.889, 108.610, 92.862, 181.702, -15.291, -229.220]
   
   ; Input tray points
-  POINT i1trayh = #[ -90.977, 107.833, 93.730, 179.800, -13.462, -89.538]
+  POINT i1trayh = #[-90.977, 107.833, 93.730, 179.800, -13.462, -89.538]
   POINT i1trayl = #[-90.983, 89.443, 77.945, 179.757, -10.854, -89.498]
   POINT i1c1h = inputtray
   POINT i1c1l = i1c1h + TRANS (0, 0, 97.597, 0, 0, 0, 0)
@@ -52,8 +55,8 @@
   POINT i1c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i1c12l = i1c12h + TRANS (0, 0, 97.597, 0, 0, 0)
   
-  POINT i2trayh = i1trayh + TRANS (0, 0, -5.865, 0, 0, 0)
-  POINT i2trayl = i1trayl + TRANS (0, 0, -5.865, 0, 0, 0)
+  POINT i2trayh = i1trayh + TRANS (0, 0, -3.265, 0, 0, 0)
+  POINT i2trayl = i1trayl + TRANS (0, 0, -3.265, 0, 0, 0)
   POINT i2c1h = inputtray
   POINT i2c1l = i2c1h + TRANS (0, 0, 90.5, 0, 0, 0, 0)
   POINT i2c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
@@ -79,113 +82,113 @@
   POINT i2c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
   POINT i2c12l = i2c12h + TRANS (0, 0, 90.5, 0, 0, 0)
   
-  POINT i3trayh = i1trayh + TRANS (0, 0, -11.73, 0, 0, 0)
-  POINT i3trayl = i1trayl + TRANS (0, 0, -11.73, 0, 0, 0)
+  POINT i3trayh = i1trayh + TRANS (0, 0, -9.13, 0, 0, 0)
+  POINT i3trayl = i1trayl + TRANS (0, 0, -9.13, 0, 0, 0)
   POINT i3c1h = inputtray
-  POINT i3c1l = i3c1h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
+  POINT i3c1l = i3c1h + TRANS (0, 0, 85.4, 0, 0, 0, 0)
   POINT i3c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i3c2l = i3c2h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
+  POINT i3c2l = i3c2h + TRANS (0, 0, 85.4, 0, 0, 0, 0)
   POINT i3c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i3c3l = i3c3h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c3l = i3c3h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i3c4l = i3c4h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c4l = i3c4h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i3c5l = i3c5h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c5l = i3c5h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i3c6l = i3c6h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c6l = i3c6h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i3c7l = i3c7h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c7l = i3c7h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i3c8l = i3c8h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c8l = i3c8h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i3c9l = i3c9h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c9l = i3c9h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i3c10l = i3c10h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c10l = i3c10h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i3c11l = i3c11h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c11l = i3c11h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i3c12l = i3c12h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c12l = i3c12h + TRANS (0, 0, 85.4, 0, 0, 0)
   
-  POINT i4trayh = i1trayh + TRANS (0, 0, -17.595, 0, 0, 0)
-  POINT i4trayl = i1trayl + TRANS (0, 0, -17.595, 0, 0, 0)
+  POINT i4trayh = i1trayh + TRANS (0, 0, -14.995, 0, 0, 0)
+  POINT i4trayl = i1trayl + TRANS (0, 0, -14.995, 0, 0, 0)
   POINT i4c1h = inputtray
-  POINT i4c1l = i4c1h + TRANS (0, 0, 78.5, 0, 0, 0, 0)
+  POINT i4c1l = i4c1h + TRANS (0, 0, 80.3, 0, 0, 0, 0)
   POINT i4c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i4c2l = i4c2h + TRANS (0, 0, 78.5, 0, 0, 0, 0)
+  POINT i4c2l = i4c2h + TRANS (0, 0, 80.3, 0, 0, 0, 0)
   POINT i4c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i4c3l = i4c3h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c3l = i4c3h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i4c4l = i4c4h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c4l = i4c4h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i4c5l = i4c5h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c5l = i4c5h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i4c6l = i4c6h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c6l = i4c6h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i4c7l = i4c7h + TRANS (0, 0, 78.5, 0, 0, 0)
-  POINT i4c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i4c8l = i4c8h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c7l = i4c7h + TRANS (0, 0, 80.3, 0, 0, 0)
+  POINT i4c8h = inputtray + TRANS (-280.3, -43.2, 0, 0, 0, 0)
+  POINT i4c8l = i4c8h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i4c9l = i4c9h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c9l = i4c9h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i4c10l = i4c10h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c10l = i4c10h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i4c11l = i4c11h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c11l = i4c11h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i4c12l = i4c12h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c12l = i4c12h + TRANS (0, 0, 80.3, 0, 0, 0)
   
-  POINT i5trayh = i1trayh + TRANS (0, 0, -23.46, 0, 0, 0)
-  POINT i5trayl = i1trayl + TRANS (0, 0, -23.46, 0, 0, 0)
+  POINT i5trayh = i1trayh + TRANS (0, 0, -20.86, 0, 0, 0)
+  POINT i5trayl = i1trayl + TRANS (0, 0, -20.86, 0, 0, 0)
   POINT i5c1h = inputtray
-  POINT i5c1l = i5c1h + TRANS (0, 0, 72.5, 0, 0, 0, 0)
+  POINT i5c1l = i5c1h + TRANS (0, 0, 75.2, 0, 0, 0, 0)
   POINT i5c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i5c2l = i5c2h + TRANS (0, 0, 72.5, 0, 0, 0, 0)
+  POINT i5c2l = i5c2h + TRANS (0, 0, 75.2, 0, 0, 0, 0)
   POINT i5c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i5c3l = i5c3h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c3l = i5c3h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i5c4l = i5c4h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c4l = i5c4h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i5c5l = i5c5h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c5l = i5c5h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i5c6l = i5c6h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c6l = i5c6h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i5c7l = i5c7h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c7l = i5c7h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i5c8l = i5c8h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c8l = i5c8h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i5c9l = i5c9h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c9l = i5c9h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i5c10l = i5c10h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c10l = i5c10h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i5c11l = i5c11h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c11l = i5c11h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i5c12l = i5c12h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c12l = i5c12h + TRANS (0, 0, 75.2, 0, 0, 0)
   
-  POINT i6trayh = i1trayh + TRANS (0, 0, -29.325, 0, 0, 0)
-  POINT i6trayl = i1trayl + TRANS (0, 0, -29.325, 0, 0, 0)
+  POINT i6trayh = i1trayh + TRANS (0, 0, -26.725, 0, 0, 0)
+  POINT i6trayl = i1trayl + TRANS (0, 0, -26.725, 0, 0, 0)
   POINT i6c1h = inputtray
-  POINT i6c1l = i6c1h + TRANS (0, 0, 66.5, 0, 0, 0, 0)
+  POINT i6c1l = i6c1h + TRANS (0, 0, 70.1, 0, 0, 0, 0)
   POINT i6c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i6c2l = i6c2h + TRANS (0, 0, 66.5, 0, 0, 0, 0)
+  POINT i6c2l = i6c2h + TRANS (0, 0, 70.1, 0, 0, 0, 0)
   POINT i6c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i6c3l = i6c3h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c3l = i6c3h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i6c4l = i6c4h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c4l = i6c4h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i6c5l = i6c5h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c5l = i6c5h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i6c6l = i6c6h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c6l = i6c6h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i6c7l = i6c7h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c7l = i6c7h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i6c8l = i6c8h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c8l = i6c8h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i6c9l = i6c9h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c9l = i6c9h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i6c10l = i6c10h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c10l = i6c10h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i6c11l = i6c11h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c11l = i6c11h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i6c12l = i6c12h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c12l = i6c12h + TRANS (0, 0, 70.1, 0, 0, 0)
   
   ; Ouput tray points
   ;POINT t7trayh =
@@ -197,8 +200,7 @@
   POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
   POINT t7c3l = t7c3h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
-  POINT t7c4m = t7c4h + TRANS (0, 0, 21.979, 0, 0, 0) ;Solve for E1128
-  POINT t7c4l = t7c4h + TRANS (0, 0, 26.979, 0, 0, 0)
+  POINT t7c4l = t7c4h + TRANS (0, 0, 25.979, 0, 0, 0) ; Solve for E1128
   POINT t7c5h = o7 + TRANS (0, -47.5, 0, 0, 0, 0)
   POINT t7c5l = t7c5h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
@@ -220,27 +222,27 @@
   ;POINT t8trayl =
   POINT t8c1h = o8
   POINT t8c1l = t8c1h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c2h = o8 + TRANS (-91.5, 1.5, 0, 0, 0, 0)
+  POINT t8c2h = o8 + TRANS (-90.5, 3.5, 0, 0, 0, 0)
   POINT t8c2l = t8c2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c3h = o8 + TRANS (-183, 3, 0, 0, 0, 0)
+  POINT t8c3h = o8 + TRANS (-181, 5, 0, 0, 0, 0)
   POINT t8c3l = t8c3h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c4h = o8 + TRANS (-274.5, 6.5, 0, 0, 0, 0)
+  POINT t8c4h = o8 + TRANS (-273.5, 8.5, 0, 0, 0, 0)
   POINT t8c4l = t8c4h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c5h = o8 + TRANS (0, -48.0, 0, 0, 0, 0)
+  POINT t8c5h = o8 + TRANS (0, -46.0, 0, 0, 0, 0)
   POINT t8c5l = t8c5h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c6h = o8 + TRANS (-91, -47.5, 0, 0, 0, 0)
+  POINT t8c6h = o8 + TRANS (-90, -45.5, 0, 0, 0, 0)
   POINT t8c6l = t8c6h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c7h = o8 + TRANS (-181, -45, 0, 0, 0, 0)
+  POINT t8c7h = o8 + TRANS (-180, -43, 0, 0, 0, 0)
   POINT t8c7l = t8c7h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c8h = o8 + TRANS (-273.5, -42.2, 0, 0, 0, 0)
+  POINT t8c8h = o8 + TRANS (-272.5, -40.2, 0, 0, 0, 0)
   POINT t8c8l = t8c8h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c9h = o8 + TRANS (0, -97.7, 0, 0, 0, 0)
+  POINT t8c9h = o8 + TRANS (0, -95.7, 0, 0, 0, 0)
   POINT t8c9l = t8c9h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c10h = o8 + TRANS (-91, -96.2, 0, 0, 0, 0)
+  POINT t8c10h = o8 + TRANS (-90, -94.2, 0, 0, 0, 0)
   POINT t8c10l = t8c10h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c11h = o8 + TRANS (-180.5, -93.5, 0, 0, 0, 0)
+  POINT t8c11h = o8 + TRANS (-179.5, -91.5, 0, 0, 0, 0)
   POINT t8c11l = t8c11h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c12h = o8 + TRANS (-274.0, -92.2, 0, 0, 0, 0)
+  POINT t8c12h = o8 + TRANS (-273.0, -90.2, 0, 0, 0, 0)
   POINT t8c12l = t8c12h + TRANS (0, 0, 27.962, 0, 0, 0)
   ;POINT t9trayh =
   ;POINT t9trayl =
@@ -321,6 +323,16 @@
       JMOVE scan
       JMOVE scan
       CALL send (.length)
+      GOTO beginloop
+    END
+    
+    IF $data[0] == "box" THEN
+      JMOVE #boxh
+      LMOVE #boxl
+      LMOVE #boxl
+      CALL send (.length)
+      TWAIT 0.2
+      LMOVE #boxh
       GOTO beginloop
     END
     
@@ -1092,9 +1104,13 @@
             GOTO beginloop
           END
           IF $number2 == "04" THEN
+            PRINT "A"
             JMOVE t7c4h
+            PRINT "B"
             LMOVE t7c4l
-            JMOVE t7c4m ; Solve for E1128
+            PRINT "C"
+            LMOVE t7c4l
+            PRINT "D"
             CALL send (.length)
             TWAIT 0.2
             LMOVE t7c4h
@@ -1534,35 +1550,47 @@
         JMOVE stackh
         SCASE $number1 OF
           SVALUE "01":
+            SPEED 10
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
+            SPEED 5
             LMOVE stack1
-      JMOVE stack1
+            JMOVE stack1
           SVALUE "02":
+            SPEED 10
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
+            SPEED 5
             LMOVE stack2
-      JMOVE stack2
+            JMOVE stack2
           SVALUE "03":
+            SPEED 10
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
+            SPEED 5
             LMOVE stack3
-      JMOVE stack3
+            JMOVE stack3
           SVALUE "04":
+            SPEED 10
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
+            SPEED 5
             LMOVE stack4
-      JMOVE stack4
+            JMOVE stack4
           SVALUE "05":
+            SPEED 10
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
+            SPEED 5
             LMOVE stack5
-      JMOVE stack5
+            JMOVE stack5
           SVALUE "06":
+            SPEED 10
             JMOVE stackh
-            TWAIT 0.1
+            TWAIT 0.6
+            SPEED 5
             LMOVE stack6
-      JMOVE stack6
+            JMOVE stack6
         END
         CALL send (.length)
         TWAIT 0.2

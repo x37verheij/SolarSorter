@@ -825,147 +825,6 @@ DCOLHJID9         0
 .END
 .SIG_COMMENT
 .END
-.PROGRAM KAWABOT () ; test
-
-
-
-  ; *******************************************************************
-  ;
-  ; Program:      KAWABOT
-  ; Comment:      test
-  ; Author:       User
-  ;
-  ; Date:         10/5/2020
-  ;
-  ; *******************************************************************
-  ;
-  
-  POINT i2c1h = inputtray
-  POINT i2c1l = i2c1h + TRANS (0, 0, 91.732, 0, 0, 0, 0)
-  POINT i2c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i2c2l = i2c2h + TRANS (0, 0, 91.732, 0, 0, 0, 0)
-  POINT i2c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i2c3l = i2c3h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i2c4l = i2c4h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i2c5l = i2c5h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i2c6l = i2c6h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i2c7l = i2c7h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i2c8l = i2c8h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i2c9l = i2c9h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i2c10l = i2c10h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i2c11l = i2c11h + TRANS (0, 0, 91.732, 0, 0, 0)
-  POINT i2c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i2c12l = i2c12h + TRANS (0, 0, 91.732, 0, 0, 0)
-  FOR .i = 1 TO 3
-    SPEED 10 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE i2c1h
-    TWAIT 1
-    LMOVE i2c1l
-    TWAIT 1
-    LMOVE i2c1h
-    TWAIT 1
-    JMOVE i2c2h
-    TWAIT 1
-    LMOVE i2c2l
-    TWAIT 1
-    LMOVE i2c2h
-    TWAIT 1
-    JMOVE i2c3h
-    TWAIT 1
-    LMOVE i2c3l
-    TWAIT 1
-    LMOVE i2c3h
-    TWAIT 1
-    JMOVE i2c4h
-    TWAIT 1
-    LMOVE i2c4l
-    TWAIT 1
-    LMOVE i2c4h
-    TWAIT 1
-    JMOVE i2c5h
-    TWAIT 1
-    LMOVE i2c5l
-    TWAIT 1
-    LMOVE i2c5h
-    TWAIT 1
-    JMOVE i2c6h
-    TWAIT 1
-    LMOVE i2c6l
-    TWAIT 1
-    LMOVE i2c6h
-    TWAIT 1
-    JMOVE i2c7h
-    TWAIT 1
-    LMOVE i2c7l
-    TWAIT 1
-    LMOVE i2c7h
-    TWAIT 1
-    JMOVE i2c8h
-    TWAIT 1
-    LMOVE i2c8l
-    TWAIT 1
-    LMOVE i2c8h
-    TWAIT 1
-    JMOVE i2c9h
-    TWAIT 1
-    LMOVE i2c9l
-    TWAIT 1
-    LMOVE i2c9h
-    TWAIT 1
-    JMOVE i2c10h
-    TWAIT 1
-    LMOVE i2c10l
-    TWAIT 1
-    LMOVE i2c10h
-    TWAIT 1
-    JMOVE i2c11h
-    TWAIT 1
-    LMOVE i2c11l
-    TWAIT 1
-    LMOVE i2c11h
-    TWAIT 1
-    JMOVE i2c12h
-    TWAIT 1
-    LMOVE i2c12l
-    TWAIT 1
-    LMOVE i2c12h
-    TWAIT 1
-
-
-  END
-.END
-.PROGRAM testmeee (.traynr, .celnr, .hoogte);
-  ; *******************************************************************
-  ;
-  ; Program:      testmeee
-  ; Comment:
-  ; Author:       User
-  ;
-  ; Date:         10/19/2020
-  ;
-  ; *******************************************************************
-  ;
-  ;IF .traynr == 7 THEN
-  ;   IF .celnr == 1 THEN
-  ;      JMOVE o7
-  ;      LMOVE #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  ;      LMOVE o7
-  ;   END
-  ;END
-  SPEED 10 ALWAYS
-  JMOVE #[-90,100,100,180,0,0]
-.END
 .PROGRAM Eindcode () ;
   ; *******************************************************************
   ;
@@ -1053,111 +912,110 @@ DCOLHJID9         0
   POINT i3trayh = i1trayh + TRANS (0, 0, -9.13, 0, 0, 0)
   POINT i3trayl = i1trayl + TRANS (0, 0, -9.13, 0, 0, 0)
   POINT i3c1h = inputtray
-  ;POINT i3c1l = i3c1h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
   POINT i3c1l = i3c1h + TRANS (0, 0, 85.4, 0, 0, 0, 0)
   POINT i3c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i3c2l = i3c2h + TRANS (0, 0, 84.5, 0, 0, 0, 0)
+  POINT i3c2l = i3c2h + TRANS (0, 0, 85.4, 0, 0, 0, 0)
   POINT i3c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i3c3l = i3c3h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c3l = i3c3h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i3c4l = i3c4h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c4l = i3c4h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i3c5l = i3c5h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c5l = i3c5h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i3c6l = i3c6h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c6l = i3c6h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i3c7l = i3c7h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c7l = i3c7h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i3c8l = i3c8h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c8l = i3c8h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i3c9l = i3c9h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c9l = i3c9h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i3c10l = i3c10h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c10l = i3c10h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i3c11l = i3c11h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c11l = i3c11h + TRANS (0, 0, 85.4, 0, 0, 0)
   POINT i3c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i3c12l = i3c12h + TRANS (0, 0, 84.5, 0, 0, 0)
+  POINT i3c12l = i3c12h + TRANS (0, 0, 85.4, 0, 0, 0)
   
   POINT i4trayh = i1trayh + TRANS (0, 0, -14.995, 0, 0, 0)
   POINT i4trayl = i1trayl + TRANS (0, 0, -14.995, 0, 0, 0)
   POINT i4c1h = inputtray
   POINT i4c1l = i4c1h + TRANS (0, 0, 80.3, 0, 0, 0, 0)
   POINT i4c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i4c2l = i4c2h + TRANS (0, 0, 78.5, 0, 0, 0, 0)
+  POINT i4c2l = i4c2h + TRANS (0, 0, 80.3, 0, 0, 0, 0)
   POINT i4c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i4c3l = i4c3h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c3l = i4c3h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i4c4l = i4c4h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c4l = i4c4h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i4c5l = i4c5h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c5l = i4c5h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i4c6l = i4c6h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c6l = i4c6h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i4c7l = i4c7h + TRANS (0, 0, 78.5, 0, 0, 0)
-  POINT i4c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i4c8l = i4c8h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c7l = i4c7h + TRANS (0, 0, 80.3, 0, 0, 0)
+  POINT i4c8h = inputtray + TRANS (-280.3, -43.2, 0, 0, 0, 0)
+  POINT i4c8l = i4c8h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i4c9l = i4c9h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c9l = i4c9h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i4c10l = i4c10h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c10l = i4c10h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i4c11l = i4c11h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c11l = i4c11h + TRANS (0, 0, 80.3, 0, 0, 0)
   POINT i4c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i4c12l = i4c12h + TRANS (0, 0, 78.5, 0, 0, 0)
+  POINT i4c12l = i4c12h + TRANS (0, 0, 80.3, 0, 0, 0)
   
   POINT i5trayh = i1trayh + TRANS (0, 0, -20.86, 0, 0, 0)
   POINT i5trayl = i1trayl + TRANS (0, 0, -20.86, 0, 0, 0)
   POINT i5c1h = inputtray
   POINT i5c1l = i5c1h + TRANS (0, 0, 75.2, 0, 0, 0, 0)
   POINT i5c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i5c2l = i5c2h + TRANS (0, 0, 72.5, 0, 0, 0, 0)
+  POINT i5c2l = i5c2h + TRANS (0, 0, 75.2, 0, 0, 0, 0)
   POINT i5c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i5c3l = i5c3h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c3l = i5c3h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i5c4l = i5c4h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c4l = i5c4h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i5c5l = i5c5h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c5l = i5c5h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i5c6l = i5c6h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c6l = i5c6h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i5c7l = i5c7h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c7l = i5c7h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i5c8l = i5c8h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c8l = i5c8h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i5c9l = i5c9h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c9l = i5c9h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i5c10l = i5c10h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c10l = i5c10h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i5c11l = i5c11h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c11l = i5c11h + TRANS (0, 0, 75.2, 0, 0, 0)
   POINT i5c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i5c12l = i5c12h + TRANS (0, 0, 72.5, 0, 0, 0)
+  POINT i5c12l = i5c12h + TRANS (0, 0, 75.2, 0, 0, 0)
   
   POINT i6trayh = i1trayh + TRANS (0, 0, -26.725, 0, 0, 0)
   POINT i6trayl = i1trayl + TRANS (0, 0, -26.725, 0, 0, 0)
   POINT i6c1h = inputtray
   POINT i6c1l = i6c1h + TRANS (0, 0, 70.1, 0, 0, 0, 0)
   POINT i6c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i6c2l = i6c2h + TRANS (0, 0, 66.5, 0, 0, 0, 0)
+  POINT i6c2l = i6c2h + TRANS (0, 0, 70.1, 0, 0, 0, 0)
   POINT i6c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i6c3l = i6c3h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c3l = i6c3h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i6c4l = i6c4h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c4l = i6c4h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i6c5l = i6c5h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c5l = i6c5h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i6c6l = i6c6h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c6l = i6c6h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i6c7l = i6c7h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c7l = i6c7h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i6c8l = i6c8h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c8l = i6c8h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i6c9l = i6c9h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c9l = i6c9h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i6c10l = i6c10h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c10l = i6c10h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i6c11l = i6c11h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c11l = i6c11h + TRANS (0, 0, 70.1, 0, 0, 0)
   POINT i6c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i6c12l = i6c12h + TRANS (0, 0, 66.5, 0, 0, 0)
+  POINT i6c12l = i6c12h + TRANS (0, 0, 70.1, 0, 0, 0)
   
   ; Ouput tray points
   ;POINT t7trayh =
@@ -2571,896 +2429,6 @@ DCOLHJID9         0
   eindeloop:
   CALL disconnect
 .END
-.PROGRAM robotcalibrate () ;
-	; *******************************************************************
-	;
-	; Program:      test8
-	; Comment:
-	; Author:       User
-	;
-	; Date:         10/15/2020
-	;
-	; *******************************************************************
-	;
-	;POINT #J = #[0, 100, 100, 0, 0, 0]
-	;POINT #J2 = #[-90, 100, 100, 0, 0, 0]
-	POINT t = #[-473.53, 56.448, 244.47, 111.33, 2.186, 150.83]
-	SPEED 10 ALWAYS
-	;JMOVE #J2
-	JMOVE t
-.END
-.PROGRAM solarsorter () ; Project bij GTM | Q1 '20'21 | Sorteren van zonnecellen
-  ; *******************************************************************
-  ;
-  ; Program:      solarSorter
-  ; Comment:      Voor het eerste bedrijfsproject in de minor heeft GTM gevraagd of wij een systeem kunnen bouwen die trays met zonnecellen en een excelsheet accepteert en dat omzet naar gesorteerde trays met ieder een bepaalde klasse cellen.
-  ;     De robot zal initieel verbinding maken met de TCP server van de python pc en reageren op elk bericht dat de pc stuurt.
-  ;     Gedurende het programma zal de robot vanuit de rustpositie wachten tot de pc uit de invoercamera beeld heeft ontvangen en de robot vertelt waar de ongesorteerde cellen liggen. De robot pakt dan een voor een elke ongesorteerde cel op en verplaatst deze boven de qrcamera. De robot zal de pc een bericht sturen dat deze op locatie is.
-  ;     De pc zal het serienummer laten scannen door de qrcamera en koppelen aan deze cel in de eerste foto. Vervolgens wordt de klasse opgezocht in de excelsheet en stuurt de pc de klasse naar de robot. De robot verplaatst de cel dan naar de uitvoertray met cellen van die klasse. De robot verplaatst zich dan weer naar de rustpositie.
-  ;     Mocht een uitvoertray vol zitten, laat de robot dit via de pc weten en stopt met verdergaan totdat hij expliciet te horen krijgt dat de uitvoertray is verwijderd. Dit gaat via de hmi. Vervolgens plaatst de robot een lege tray op de geleegde plek en vervolgt hij zijn programma.
-  ;     Mocht de invoertray leeg zijn, dan vertelt de pc niet welke cel de robot moet pakken, maar dat de tray leeg is en vervangen moet worden. De robot verplaatst dan de lege tray en gaat terug naar de rustpositie. De robot laat vervolgens de pc vertellen waar de volgende cellen liggen en gaat deze een na een af.
-  ; Author:       User
-  ;
-  ; Date:         october 12th, 2020
-  ;
-  ; *******************************************************************
-  ;
-  ; AS Programming Language: variables
-  ; var1      : Global variables are saved in memory and can be used in any program
-  ; .var2     : Local variables are not saved
-  ; $var3     : String variable
-  ; var4[5]   : Element located directly to the right of var4[4], index must be in [0-9999]
-  ; var5[1,2] : Element in 2D array var5
-  ; pose1     : Transformation pose (consists of the values x, y, z, rx, ry, rz)
-  ; #pose2    : Joint pose (consists of the values JT1, JT2, JT3, JT4, JT5, JT6)
-  ;
-  ; Variable name can only consist of: [0-9a-zA-Z._] and are case insensitive
-  ; Variable names start with [a-zA-Z] and have a length of max 15 characters
-  ;
-  ; *Invalid* variable names: (See AS programming reference page 41 or 3-12)
-  ; 3p        : Does not start with [a-zA-Z]
-  ; part#2    : # prefix is reserved for joint poses and cannot be used in variable names
-  ; random    : Keyword
-  ; TCP_SEND  : Keyword
-  ; .arr[1]   : Arrays can't be defined local variables.
-  ;
-  ; For defining/accessing arrays:
-  ; arr[1] = 6    ; Cannot assign multiple variables on the same line
-  ; arr[3] = 7    ;   e.g. var1 = 6, var2 = 7 is a syntax error
-  ; PRINT arr[2]  ; Gives runtime error E0102: Variable is not defined.
-  ;
-  ; For operators: many are valid, see AS programming reference page 50 or 3-21
-  ;
-  ; For comparing strings: (See AS programming reference page 53 or 3-24)
-  ; "AAA"  < "AAB"
-  ; "ABC" == "ABC"
-  ; "DEF." > "DEF"
-  ; "xyz"  > "XYZ"
-  ;
-  ; Loops / other structure instructions:
-  ; IF expr THEN ... [ELSE ...] END     ; ELSEIF does not exist in the AS programming reference and appears to be an invalid statement
-  ; WHILE expr DO ... END
-  ; DO ... UNTIL expr
-  ; FOR var = x TO y [STEP z] ... END
-  ; CASE var OF VALUE x,y,z: ... [VALUE n: ...]+ [ANY ...] END
-  ; SCASE $var OF SVALUE $x+"y": ... [SVALUE $x+"z": ... ]+ [ANY ...] END
-  ;
-  ;
-  ; AS Programming Language: poses
-  ; HERE #pose1         : Define a joint pose variable using the current pose of the robot
-  ; HERE pose2          : Define a transformation pose variable using the current pose of the robot
-  ; POINT #pose3        : Type in the joint values or copy them using 'POINT pose3 = pose1'
-  ; POINT pose4         : Type in the transformation values or copy them using 'POINT pose4 = pose2'
-  ; HERE pose4 + pose5  : Pose5 relative to pose4, since we defined pose4 earlier
-  ;
-  ;
-  ; AS Programming Language: moves
-  ; JMOVE pose1         : Joint move: during the move, every joint moves at linear speed
-  ; LMOVE pose1         : Linear move: during the move, the tool moves at linear speed
-  ; JAPPRO pose1, 100   : Joint move: approach 100 mm above the target pose
-  ;
-  ; *******************************************************************
-  ; Variables
-  .err = -1             ; Error variable
-  .port = 10000         ; Outgoing port
-  sock_id1 = -1         ; Positive socket id if connected with pc
-  .timeout = 60         ; Timeout in seconds to wait for a connection
-  ip[0] = 0             ; The ip of the connecting pc (ip[1-4])
-  $data[0] = ""         ; "Character string variable array"
-  max_tcp_length = 255  ; Maximum length of data received/sent
-  ; Listen for devices that would like to connect
-  TCP_LISTEN .err, .port
-  IF .err < 0 THEN
-    PRINT "ERR IN TCP_LISTEN: ", .err
-    GOTO exit
-  END
-  ; Accept connection from the pc. Note that the sock_id param is also the err param
-  TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
-  IF sock_id1 < 0 THEN
-    PRINT "ERR IN TCP_ACCEPT: ", sock_id1
-    GOTO exit
-  END
-  ; Stop listening for more devices
-  TCP_END_LISTEN .err, .port
-  .timeout = 1
-  ; Loop 2 times and echo messages
-  FOR i = 0 TO 1    ; In AS Language 'TO' means: To and including
-    ; Receive a message
-    TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
-    IF .err < 0 THEN
-      PRINT "ERR IN TCP_RECV: ", .err
-      GOTO exit
-    ELSE
-      IF .length < 1 THEN
-        PRINT "EMPTY MESSAGE IN TCP_RECV"
-        GOTO exit
-      END
-    END
-    ; Send/echo the message
-    TCP_SEND .err, sock_id1, $data[0], .length, .timeout
-    IF .err < 0 THEN
-      PRINT "ERR IN TCP_SEND: ", .err
-      GOTO exit
-    END
-  END
-  ; Close connection
-  TCP_CLOSE .err, sock_id1
-  PRINT "Succesfully disconnected socket ", sock_id1
-  sock_id1 = -1
-  ; Bedenk of je de TCP parallel wil laten lopen op de achtergrond
-  ; Uitzoeken. Heet dit subroutine?
-exit:
-.END
-.PROGRAM IT.to.LT ()
-  ; *******************************************************************
-  ;
-  ; Program:      IT.to.LT
-  ; Comment:
-  ; Author:       User
-  ;
-  ; Date:         10/21/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT neutral = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
- ; Empty stack points
-  ;POINT JOINT = #[-138.796, 88.710, 75.869, 182.084, -12.383, -229.525]
-  POINT JOINT = #[-137.905,88.841,76.434,-0.094,13.065,-46.500]
-  POINT stack1 = JOINT + TRANS (0,0,0,0,0,0)
-  POINT stack2 = stack1 + TRANS (0,0,-6,0,0,0)
-  POINT stack3 = stack2 + TRANS (0,0,-6,0,0,0)
-  POINT stack4 = stack3 + TRANS (0,0,-6,0,0,0)
-  POINT stack5 = stack4 + TRANS (0,0,-6,0,0,0)
-  POINT stack6 = stack5 + TRANS (0,0,-6,0,0,0)
-  POINT stackh = #[-138.889, 108.610, 92.862, 181.702, -15.291, -229.220]
-  
-  POINT i1trayh = #[-90.977, 107.833, 93.730, 179.800, -13.462, -89.538]
-  POINT i1trayl = #[-90.983, 89.443, 77.945, 179.757, -10.854, -89.498]
-  
-  POINT i2trayh = i1trayh + TRANS (0, 0, -3.265, 0, 0, 0)
-  POINT i2trayl = i1trayl + TRANS (0, 0, -3.265, 0, 0, 0)
-  
-  POINT i3trayh = i1trayh + TRANS (0, 0, -9.13, 0, 0, 0)
-  POINT i3trayl = i1trayl + TRANS (0, 0, -9.13, 0, 0, 0)
-  
-  POINT i4trayh = i1trayh + TRANS (0, 0, -14.995, 0, 0, 0)
-  POINT i4trayl = i1trayl + TRANS (0, 0, -14.995, 0, 0, 0)
-  
-  POINT i5trayh = i1trayh + TRANS (0, 0, -20.86, 0, 0, 0)
-  POINT i5trayl = i1trayl + TRANS (0, 0, -20.86, 0, 0, 0)
-  
-  
-  POINT i6trayh = i1trayh + TRANS (0, 0, -26.725, 0, 0, 0)
-  POINT i6trayl = i1trayl + TRANS (0, 0, -26.725, 0, 0, 0)
-  ;print .celnr
-  ;RETURN .hoogte
-  ;NT t= #neutral TRANS(20,0,0,0,0,0)
-  ;POINT temp.pos=TRANS(#neutral)+(20,0,0,0,0,0)
-  ;SPEED 30
-  ; JMOVE neutral
-  ; TWAIT 1
-  WHILE TRUE DO
-    speed 10 always
-    JMOVE neutral
-    
-    JMOVE i6trayh
-    LMOVE i6trayl
-    TWAIT 1
-    JMOVE i6trayh
-    SPEED 10
-    JMOVE stackh
-    TWAIT 1
-    SPEED 5
-    LMOVE stack1
-    SPEED 10
-    TWAIT 1
-    LMOVE stackh
-    
-    JMOVE i5trayh
-    LMOVE i5trayl
-    TWAIT 1
-    JMOVE i5trayh
-    SPEED 10
-    JMOVE stackh
-    TWAIT 1
-    SPEED 5
-    LMOVE stack2
-    SPEED 10
-    TWAIT 1
-    LMOVE stackh 
-    
-    JMOVE i4trayh
-    LMOVE i4trayl
-    TWAIT 1
-    JMOVE i4trayh
-    SPEED 10
-    JMOVE stackh
-    TWAIT 1
-    SPEED 5
-    LMOVE stack3
-    SPEED 10
-    TWAIT 1
-    LMOVE stackh
-    
-    JMOVE i3trayh
-    LMOVE i3trayl
-    TWAIT 1
-    JMOVE i3trayh
-    SPEED 10
-    JMOVE stackh
-    TWAIT 1
-    SPEED 5
-    LMOVE stack4
-    SPEED 10
-    TWAIT 1
-    LMOVE stackh
-    
-    JMOVE i2trayh
-    LMOVE i2trayl
-    TWAIT 1
-    JMOVE i2trayh
-    SPEED 10
-    JMOVE stackh
-    TWAIT 1
-    SPEED 5
-    LMOVE stack5
-    SPEED 10
-    TWAIT 1
-    LMOVE stackh
-    
-    JMOVE i1trayh
-    LMOVE i1trayl
-    TWAIT 1
-    JMOVE i1trayh
-    SPEED 10
-    JMOVE stackh
-    TWAIT 1
-    SPEED 5
-    LMOVE stack6
-    SPEED 10
-    TWAIT 1
-    LMOVE stackh
-    
-  END  
-.END
-.PROGRAM tray.7 ()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.7
-  ; Comment:
-  ; Author:       User
-  ;
-  ; Date:         10/21/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[53.286, 69.042, 18.54, 0.001, 50.511, -306.71]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
-  POINT itc3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc5h = o7 + TRANS (0, -47.5, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc7h = o7 + TRANS (-183, -44.5, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc8h = o7 + TRANS (-274.5, -40.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc9h = o7 + TRANS (0, -96.2, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc10h = o7 + TRANS (-91, -94.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc11h = o7 + TRANS (-181.5, -91, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT itc12h = o7 + TRANS (-274.0, -89.2, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 26.979, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 20 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o7
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o7
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    LMOVE itc3l
-    TWAIT 1
-    LMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-.END
-.PROGRAM tray.8()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.8
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/21/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[74.884,70.401,22.007,0.003,48.399,-285.113]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o8 + TRANS (-91.5, 1.5, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT itc3h = o8 + TRANS (-183, 3, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc4h = o8 + TRANS (-274.5, 6.5, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc5h = o8 + TRANS (0, -48.0, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc6h = o8 + TRANS (-91, -47.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc7h = o8 + TRANS (-181, -45, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc8h = o8 + TRANS (-273.5, -42.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc9h = o8 + TRANS (0, -97.7, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc10h = o8 + TRANS (-91, -96.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc11h = o8 + TRANS (-180.5, -93.5, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT itc12h = o8 + TRANS (-274.0, -92.2, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 27.962, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o8
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o8
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc3l
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-.END
-.PROGRAM tray.9()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.9
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/22/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[94.470,77.081,37.553,0.003,39.537,-265.526]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT itc3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc4h = o9 + TRANS (-272.5, 4.0, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc5h = o9 + TRANS (-1, -49.0, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc6h = o9 + TRANS (-92, -47.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc7h = o9 + TRANS (-181, -47, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc8h = o9 + TRANS (-273.5, -45.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc9h = o9 + TRANS (-1, -97.7, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT itc10h = o9 + TRANS (-92, -96.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc11h = o9 + TRANS (-181.5, -96, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc12h = o9 + TRANS (-274.0, -94.7, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o9
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o9
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc3l
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-
-.END
-.PROGRAM tray.10()
-  ; *******************************************************************
-  ;
-  ; Program:      tray.10
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/22/2020
-  ;
-  ; *******************************************************************
-  ;
-  
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  POINT itc1l = #[117.052,83.246,54.375,0.015,28.887,-242.956]
-  POINT tussenpunt = #[50.679, 121.38, 106.54, 14.199, 15.955, -209.18]
-  POINT itc2h = o10 + TRANS (-91.5, 1, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT itc3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc4h = o10 + TRANS (-272.0, 2.5, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc5h = o10 + TRANS (-2, -49.0, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc6h = o10 + TRANS (-93, -47.5, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc7h = o10 + TRANS (-183, -47, -60, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 88.695, 0, 0, 0)
-  POINT itc8h = o10 + TRANS (-274.5, -45.2, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc9h = o10 + TRANS (-2.5, -97.7, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT itc10h = o10 + TRANS (-95, -96.2, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc11h = o10 + TRANS (-186, -94, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT itc12h = o10 + TRANS (-275, -94.7, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 50 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE o10
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE o10
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc3l
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE itc4l
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    JMOVE itc7l
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE tussenpunt
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-
-.END
-.PROGRAM INPUT.tray()
-  ; *******************************************************************
-  ;
-  ; Program:      INPUT.tray
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/22/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT start = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  POINT abovecamera = #[-31.245, 105.16, 92.962, 0.272, 14.572, 151.73]
-  
-  POINT itc1l = #[-74.430,83.112,54.728,1.319,28.038,-345.548]
-  POINT itc2h = inputtray + TRANS (-93, -2, 0, 0, 0, 0)
-  POINT itc2l = itc2h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc3h = inputtray + TRANS (-186, -1.5, 0, 0, 0, 0)
-  POINT itc3l = itc3h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc4h = inputtray + TRANS (-279, -1.3, 0, 0, 0, 0)
-  POINT itc4l = itc4h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc5h = inputtray + TRANS (0, -50.5, 0, 0, 0, 0)
-  POINT itc5l = itc5h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc6h = inputtray + TRANS (-93, -50, 0, 0, 0, 0)
-  POINT itc6l = itc6h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc7h = inputtray + TRANS (-186, -50, 0, 0, 0, 0)
-  POINT itc7l = itc7h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc8h = inputtray + TRANS (-279, -50, 0, 0, 0, 0)
-  POINT itc8l = itc8h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc9h = inputtray + TRANS (0, -99.3, 0, 0, 0, 0)
-  POINT itc9l = itc9h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc10h = inputtray + TRANS (-93, -99, 0, 0, 0, 0)
-  POINT itc10l = itc10h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc11h = inputtray + TRANS (-186, -98.2, 0, 0, 0, 0)
-  POINT itc11l = itc11h + TRANS (0, 0, 97.333, 0, 0, 0)
-  POINT itc12h = inputtray + TRANS (-279, -98, 0, 0, 0, 0)
-  POINT itc12l = itc12h + TRANS (0, 0, 97.333, 0, 0, 0)
-  ;POINT ITC2H= #[-471.789,203.702,271.063,104.663,0.715,-14.620]
-  ;POINT ITC2H= *(-471.789,   112.702,   271.063,   104.663,     0.715,   -14.620)
-  ;POINT ITC2L= *(-471.789,   112.702,   327.774,   104.663,     0.715,  -14.620)
-  FOR .i = 1 TO 3
-    SPEED 20 ALWAYS
-    PRINT "Frits is een sletje"
-    JMOVE start
-    TWAIT 1
-    JMOVE inputtray
-    TWAIT 1
-    LMOVE itc1l
-    TWAIT 1
-    LMOVE inputtray
-    TWAIT 1
-    JMOVE itc2h
-    TWAIT 1
-    LMOVE itc2l
-    TWAIT 1
-    LMOVE itc2h
-    TWAIT 1
-    JMOVE itc3h
-    TWAIT 1
-    LMOVE itc3l
-    TWAIT 1
-    LMOVE itc3h
-    TWAIT 1
-    JMOVE itc4h
-    TWAIT 1
-    LMOVE itc4l
-    TWAIT 1
-    LMOVE itc4h
-    TWAIT 1
-    JMOVE itc5h
-    TWAIT 1
-    LMOVE itc5l
-    TWAIT 1
-    LMOVE itc5h
-    TWAIT 1
-    JMOVE itc6h
-    TWAIT 1
-    LMOVE itc6l
-    TWAIT 1
-    LMOVE itc6h
-    TWAIT 1
-    JMOVE itc7h
-    TWAIT 1
-    LMOVE itc7l
-    TWAIT 1
-    LMOVE itc7h
-    TWAIT 1
-    JMOVE itc8h
-    TWAIT 1
-    LMOVE itc8l
-    TWAIT 1
-    LMOVE itc8h
-    TWAIT 1
-    JMOVE itc9h
-    TWAIT 1
-    LMOVE itc9l
-    TWAIT 1
-    LMOVE itc9h
-    TWAIT 1
-    JMOVE itc10h
-    TWAIT 1
-    LMOVE itc10l
-    TWAIT 1
-    LMOVE itc10h
-    TWAIT 1
-    JMOVE itc11h
-    TWAIT 1
-    LMOVE itc11l
-    TWAIT 1
-    LMOVE itc11h
-    TWAIT 1
-    JMOVE itc12h
-    TWAIT 1
-    LMOVE itc12l
-    TWAIT 1
-    LMOVE itc12h
-    TWAIT 1
-  END
-.END
 .PROGRAM send (.length) ; Sends data to the connected tcp connection
   ; *******************************************************************
   ;
@@ -3496,8 +2464,6 @@ exit:
   .timeout = 60
   max_tcp_length = 255
   
-  PRINT "Hallo"
-  
   TCP_RECV .err, sock_id1, $data[0], .length, .timeout, max_tcp_length
     IF .err < 0 THEN
       PRINT "ERR IN TCP_RECV: ", .err
@@ -3527,12 +2493,20 @@ exit:
   .timeout = 60
   ip[0] = 0
   
+  ; If a previous call did not disconnect correctly
+  IF sock_id1 > 0 THEN
+    CALL disconnect
+  END
+  
   ; Listen for devices that would like to connect
   TCP_LISTEN .err, .port
   IF .err < 0 THEN
     PRINT "ERR IN TCP_LISTEN: ", .err
     STOP
   END
+  
+  PRINT "Listening..."
+  
   ; Accept connection from the pc. Note that the sock_id param is also the err param
   TCP_ACCEPT sock_id1, .port, .timeout, ip[0]
   IF sock_id1 < 0 THEN
@@ -3558,531 +2532,17 @@ exit:
   PRINT "Succesfully disconnected socket ", sock_id1
   sock_id1 = -1
 .END
-.PROGRAM testcode()
-  ; *******************************************************************
-  ;
-  ; Program:      testcode
-  ; Comment:      
-  ; Author:       User
-  ;
-  ; Date:         10/29/2020
-  ;
-  ; *******************************************************************
-  ;
-  POINT neutral = #[2.573, 124.96, 119.47, -156.38, -5.291, -21.385]
-  
-  POINT t7c1h = o7
-  POINT t7c1l = t7c1h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
-  POINT t7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
-  POINT t7c2l = t7c2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
-  POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
-  POINT t7c3l = t7c3h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
-  POINT t7c4l = t7c4h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c5h = o7 + TRANS (0, -47.5, 0, 0, 0, 0)
-  POINT t7c5l = t7c5h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
-  POINT t7c6l = t7c6h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c7h = o7 + TRANS (-183, -44.5, 0, 0, 0, 0)
-  POINT t7c7l = t7c7h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c8h = o7 + TRANS (-274.5, -40.2, 0, 0, 0, 0)
-  POINT t7c8l = t7c8h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c9h = o7 + TRANS (0, -96.2, 0, 0, 0, 0)
-  POINT t7c9l = t7c9h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c10h = o7 + TRANS (-91, -94.2, 0, 0, 0, 0)
-  POINT t7c10l = t7c10h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c11h = o7 + TRANS (-181.5, -91, 0, 0, 0, 0)
-  POINT t7c11l = t7c11h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c12h = o7 + TRANS (-274.0, -89.2, 0, 0, 0, 0)
-  POINT t7c12l = t7c12h + TRANS (0, 0, 26.979, 0, 0, 0)
-  
-  ;POINT t8trayh =
-  ;POINT t8trayl =
-  POINT t8c1h = o8
-  POINT t8c1l = t8c1h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c2h = o8 + TRANS (-90.5, 3.5, 0, 0, 0, 0)
-  POINT t8c2l = t8c2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c3h = o8 + TRANS (-181, 5, 0, 0, 0, 0)
-  POINT t8c3l = t8c3h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c4h = o8 + TRANS (-273.5, 8.5, 0, 0, 0, 0)
-  POINT t8c4l = t8c4h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c5h = o8 + TRANS (0, -46.0, 0, 0, 0, 0)
-  POINT t8c5l = t8c5h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c6h = o8 + TRANS (-90, -45.5, 0, 0, 0, 0)
-  POINT t8c6l = t8c6h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c7h = o8 + TRANS (-180, -43, 0, 0, 0, 0)
-  POINT t8c7l = t8c7h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c8h = o8 + TRANS (-272.5, -40.2, 0, 0, 0, 0)
-  POINT t8c8l = t8c8h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c9h = o8 + TRANS (0, -95.7, 0, 0, 0, 0)
-  POINT t8c9l = t8c9h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c10h = o8 + TRANS (-90, -94.2, 0, 0, 0, 0)
-  POINT t8c10l = t8c10h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c11h = o8 + TRANS (-179.5, -91.5, 0, 0, 0, 0)
-  POINT t8c11l = t8c11h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c12h = o8 + TRANS (-273.0, -90.2, 0, 0, 0, 0)
-  POINT t8c12l = t8c12h + TRANS (0, 0, 27.962, 0, 0, 0)
-  ;POINT t9trayh =
-  ;POINT t9trayl =
-  
-  POINT t9c1h = o9
-  POINT t9c1l = t9c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t9c2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
-  POINT t9c2l = t9c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t9c3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
-  POINT t9c3l = t9c3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c4h = o9 + TRANS (-272.5, 4.0, 0, 0, 0, 0)
-  POINT t9c4l = t9c4h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c5h = o9 + TRANS (-1, -49.0, 0, 0, 0, 0)
-  POINT t9c5l = t9c5h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c6h = o9 + TRANS (-92, -47.5, 0, 0, 0, 0)
-  POINT t9c6l = t9c6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c7h = o9 + TRANS (-181, -47, 0, 0, 0, 0)
-  POINT t9c7l = t9c7h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c8h = o9 + TRANS (-273.5, -45.2, 0, 0, 0, 0)
-  POINT t9c8l = t9c8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c9h = o9 + TRANS (-1, -97.7, 0, 0, 0, 0)
-  POINT t9c9l = t9c9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT t9c10h = o9 + TRANS (-92, -96.2, 0, 0, 0, 0)
-  POINT t9c10l = t9c10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c11h = o9 + TRANS (-181.5, -96, 0, 0, 0, 0)
-  POINT t9c11l = t9c11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c12h = o9 + TRANS (-274.0, -94.7, 0, 0, 0, 0)
-  POINT t9c12l = t9c12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  
-  ;POINT t10trayh =
-  ;POINT t10trayl =
-  POINT t10c1h = o10
-  POINT t10c1l = t10c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t10c2h = o10 + TRANS (-91.5, 1, 0, 0, 0, 0)
-  POINT t10c2l = t10c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t10c3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
-  POINT t10c3l = t10c3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c4h = o10 + TRANS (-272.0, 2.5, 0, 0, 0, 0)
-  POINT t10c4l = t10c4h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c5h = o10 + TRANS (-2, -49.0, 0, 0, 0, 0)
-  POINT t10c5l = t10c5h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c6h = o10 + TRANS (-93, -47.5, 0, 0, 0, 0)
-  POINT t10c6l = t10c6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c7h = o10 + TRANS (-183, -47, -60, 0, 0, 0)
-  POINT t10c7l = t10c7h + TRANS (0, 0, 88.695, 0, 0, 0)
-  POINT t10c8h = o10 + TRANS (-274.5, -45.2, 0, 0, 0, 0)
-  POINT t10c8l = t10c8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c9h = o10 + TRANS (-2.5, -97.7, 0, 0, 0, 0)
-  POINT t10c9l = t10c9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT t10c10h = o10 + TRANS (-95, -96.2, 0, 0, 0, 0)
-  POINT t10c10l = t10c10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c11h = o10 + TRANS (-186, -94, 0, 0, 0, 0)
-  POINT t10c11l = t10c11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c12h = o10 + TRANS (-275, -94.7, 0, 0, 0, 0)
-  POINT t10c12l = t10c12h + TRANS (0, 0, 28.695, 0, 0, 0)
-  
-  SPEED 20 ALWAYS
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c1h
-    ;TWAIT 1
-    ;LMOVE t7c1l
-    ;TWAIT 1
-    ;LMOVE t7c1h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c2h
-    ;TWAIT 1
-    ;LMOVE t7c2l
-    ;TWAIT 1
-    ;LMOVE t7c2h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c3h
-    ;TWAIT 1
-    ;LMOVE t7c3l
-    ;TWAIT 1
-    ;LMOVE t7c3h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c4h
-    ;TWAIT 1
-    ;JMOVE t7c4l
-    ;TWAIT 1
-    ;JMOVE t7c4h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c5h
-    ;TWAIT 1
-    ;LMOVE t7c5l
-    ;TWAIT 1
-    ;LMOVE t7c5h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c6h
-    ;TWAIT 1
-    ;LMOVE t7c6l
-    ;TWAIT 1
-    ;LMOVE t7c6h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c7h
-    ;TWAIT 1
-    ;LMOVE t7c7l
-    ;TWAIT 1
-    ;LMOVE t7c7h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c8h
-    ;TWAIT 1
-    ;LMOVE t7c8l
-    ;TWAIT 1
-    ;LMOVE t7c8h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c9h
-    ;TWAIT 1
-    ;LMOVE t7c9l
-    ;TWAIT 1
-    ;LMOVE t7c9h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c10h
-    ;TWAIT 1
-    ;LMOVE t7c10l
-    ;TWAIT 1
-    ;LMOVE t7c10h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c11h
-    ;TWAIT 1
-    ;LMOVE t7c11l
-    ;TWAIT 1
-    ;LMOVE t7c11h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t7c12h
-    ;TWAIT 1
-    ;LMOVE t7c12l
-    ;TWAIT 1
-    ;LMOVE t7c12h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;JMOVE t8c1h
-    ;TWAIT 1
-    ;LMOVE t8c1l
-    ;TWAIT 1
-    ;LMOVE t8c1h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c2h
-    ;TWAIT 1
-    ;LMOVE t8c2l
-    ;TWAIT 1
-    ;LMOVE t8c2h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c3h
-    ;TWAIT 1
-    ;LMOVE t8c3l
-    ;TWAIT 1
-    ;LMOVE t8c3h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c4h
-    ;TWAIT 1
-    ;JMOVE t8c4l
-    ;TWAIT 1
-    ;JMOVE t8c4h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c5h
-    ;TWAIT 1
-    ;LMOVE t8c5l
-    ;TWAIT 1
-    ;LMOVE t8c5h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c6h
-    ;TWAIT 1
-    ;LMOVE t8c6l
-    ;TWAIT 1
-    ;LMOVE t8c6h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c7h
-    ;TWAIT 1
-    ;LMOVE t8c7l
-    ;TWAIT 1
-    ;LMOVE t8c7h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c8h
-    ;TWAIT 1
-    ;LMOVE t8c8l
-    ;TWAIT 1
-    ;LMOVE t8c8h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c9h
-    ;TWAIT 1
-    ;LMOVE t8c9l
-    ;TWAIT 1
-    ;LMOVE t8c9h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c10h
-    ;TWAIT 1
-    ;LMOVE t8c10l
-    ;TWAIT 1
-    ;LMOVE t8c10h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c11h
-    ;TWAIT 1
-    ;LMOVE t8c11l
-    ;TWAIT 1
-    ;LMOVE t8c11h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t8c12h
-    ;TWAIT 1
-    ;LMOVE t8c12l
-    ;TWAIT 1
-    ;LMOVE t8c12h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;
-    ;JMOVE t9c1h
-    ;TWAIT 1
-    ;LMOVE t9c1l
-    ;TWAIT 1
-    ;LMOVE t9c1h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c2h
-    ;TWAIT 1
-    ;LMOVE t9c2l
-    ;TWAIT 1
-    ;LMOVE t9c2h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c3h
-    ;TWAIT 1
-    ;LMOVE t9c3l
-    ;TWAIT 1
-    ;LMOVE t9c3h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c4h
-    ;TWAIT 1
-    ;JMOVE t9c4l
-    ;TWAIT 1
-    ;JMOVE t9c4h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c5h
-    ;TWAIT 1
-    ;LMOVE t9c5l
-    ;TWAIT 1
-    ;LMOVE t9c5h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c6h
-    ;TWAIT 1
-    ;LMOVE t9c6l
-    ;TWAIT 1
-    ;LMOVE t9c6h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c7h
-    ;TWAIT 1
-    ;LMOVE t9c7l
-    ;TWAIT 1
-    ;LMOVE t9c7h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c8h
-    ;TWAIT 1
-    ;LMOVE t9c8l
-    ;TWAIT 1
-    ;LMOVE t9c8h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c9h
-    ;TWAIT 1
-    ;LMOVE t9c9l
-    ;TWAIT 1
-    ;LMOVE t9c9h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c10h
-    ;TWAIT 1
-    ;LMOVE t9c10l
-    ;TWAIT 1
-    ;LMOVE t9c10h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c11h
-    ;TWAIT 1
-    ;LMOVE t9c11l
-    ;TWAIT 1
-    ;LMOVE t9c11h
-    ;TWAIT 1
-    ;JMOVE neutral
-    ;TWAIT 1
-    ;JMOVE t9c12h
-    ;TWAIT 1
-    ;LMOVE t9c12l
-    ;TWAIT 1
-    ;LMOVE t9c12h
-    ;TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    
-    JMOVE t10c1h
-    TWAIT 1
-    LMOVE t10c1l
-    TWAIT 1
-    LMOVE t10c1h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c2h
-    TWAIT 1
-    LMOVE t10c2l
-    TWAIT 1
-    LMOVE t10c2h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c3h
-    TWAIT 1
-    LMOVE t10c3l
-    TWAIT 1
-    LMOVE t10c3h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c4h
-    TWAIT 1
-    JMOVE t10c4l
-    TWAIT 1
-    JMOVE t10c4h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c5h
-    TWAIT 1
-    LMOVE t10c5l
-    TWAIT 1
-    LMOVE t10c5h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c6h
-    TWAIT 1
-    LMOVE t10c6l
-    TWAIT 1
-    LMOVE t10c6h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c7h
-    TWAIT 1
-    JMOVE t10c7l
-    TWAIT 1
-    JMOVE t10c7h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c8h
-    TWAIT 1
-    LMOVE t10c8l
-    TWAIT 1
-    LMOVE t10c8h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c9h
-    TWAIT 1
-    LMOVE t10c9l
-    TWAIT 1
-    LMOVE t10c9h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c10h
-    TWAIT 1
-    LMOVE t10c10l
-    TWAIT 1
-    LMOVE t10c10h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c11h
-    TWAIT 1
-    LMOVE t10c11l
-    TWAIT 1
-    LMOVE t10c11h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-    JMOVE t10c12h
-    TWAIT 1
-    LMOVE t10c12l
-    TWAIT 1
-    LMOVE t10c12h
-    TWAIT 1
-    JMOVE neutral
-    TWAIT 1
-
-
-   
-.END
-.PROGRAM autostart.pc () ; Resets connection boolean with Cognex Camera
+.PROGRAM autostart.pc () ; Initializes socket id to -2
   ; *******************************************************************
   ;
   ; Program:      autostart.pc
-  ; Comment:      The variable sock_id1 holds a positive value when the Cognex camera is connected. This autostart resets the boolean so that a new connection with the camera can be made.
+  ; Comment:      The variable sock_id1 holds a positive value when a socket is connected.
   ; Author:       User
   ;
   ; Date:         9/30/2020
   ;
   ; *******************************************************************
   ;
-  SIGNAL -2254, -2245
   sock_id1 = -2
   $data[0] = ""
 .END
@@ -4103,37 +2563,16 @@ exit:
 	; 
 	; 29.10.2020 10:59:36
 	; 
+	; 30.10.2020 11:48:43
+	; 
 	; @@@ INSPECTION @@@
 	; @@@ CONNECTION @@@
 	; Robot
 	; 192.168.0.1
 	; 23
 	; @@@ PROGRAM @@@
-	; 0:KAWABOT
-	; .i 
-	; 0:testmeee
-	; .traynr 
-	; .celnr 
-	; .hoogte 
 	; 0:Eindcode
 	; .length 
-	; 0:robotcalibrate
-	; 0:solarsorter
-	; .err 
-	; .port 
-	; .timeout 
-	; .length 
-	; 0:IT.to.LT
-	; 0:tray.7
-	; .i 
-	; 0:tray.8
-	; .i 
-	; 0:tray.9
-	; .i 
-	; 0:tray.10
-	; .i 
-	; 0:INPUT.tray
-	; .i 
 	; 0:send
 	; .length 
 	; .err 
@@ -4148,7 +2587,6 @@ exit:
 	; .timeout 
 	; 0:disconnect
 	; .err 
-	; 0:testcode
 	; 0:autostart.pc
 	; @@@ TRANS @@@
 	; @@@ JOINTS @@@
