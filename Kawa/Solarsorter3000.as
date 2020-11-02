@@ -1049,7 +1049,7 @@ DCOLHJID9         0
   ;POINT t8trayl =
   POINT t8c1h = o8
   POINT t8c1l = t8c1h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c2h = o8 + TRANS (-90.5, 3.5, 0, 0, 0, 0)
+  POINT t8c2h = o8 + TRANS (-90.5, 2.5, 0, 0, 0, 0)
   POINT t8c2l = t8c2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
   POINT t8c3h = o8 + TRANS (-181, 5, 0, 0, 0, 0)
   POINT t8c3l = t8c3h + TRANS (0, 0, 27.962, 0, 0, 0)
@@ -1078,7 +1078,7 @@ DCOLHJID9         0
   POINT t9c1l = t9c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t9c2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
   POINT t9c2l = t9c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t9c3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
+  POINT t9c3h = o9 + TRANS (-180, 2, 0, 0, 0, 0)
   POINT t9c3l = t9c3h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t9c4h = o9 + TRANS (-272.5, 4.0, 0, 0, 0, 0)
   POINT t9c4l = t9c4h + TRANS (0, 0, 28.695, 0, 0, 0)
@@ -1107,7 +1107,7 @@ DCOLHJID9         0
   POINT t10c2l = t10c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t10c3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
   POINT t10c3l = t10c3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c4h = o10 + TRANS (-272.0, 2.5, 0, 0, 0, 0)
+  POINT t10c4h = o10 + TRANS (-273.0, 2.5, 0, 0, 0, 0)
   POINT t10c4l = t10c4h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t10c5h = o10 + TRANS (-2, -49.0, 0, 0, 0, 0)
   POINT t10c5l = t10c5h + TRANS (0, 0, 28.695, 0, 0, 0)
@@ -1184,7 +1184,8 @@ DCOLHJID9         0
             LMOVE i1trayl
             JMOVE i1trayl
             CALL send (.length)
-            TWAIT 0.2
+            TWAIT 0.5
+            SPEED 25
             LMOVE i1trayh
             GOTO beginloop
           END
@@ -1303,7 +1304,8 @@ DCOLHJID9         0
             LMOVE i2trayl
             JMOVE i2trayl
             CALL send (.length)
-            TWAIT 0.2
+            TWAIT 0.5
+            SPEED 25
             LMOVE i2trayh
             GOTO beginloop
           END
@@ -1422,7 +1424,8 @@ DCOLHJID9         0
             LMOVE i3trayl
             JMOVE i3trayl
             CALL send (.length)
-            TWAIT 0.2
+            TWAIT 0.5
+            SPEED 25
             LMOVE i3trayh
             GOTO beginloop
           END
@@ -1541,7 +1544,8 @@ DCOLHJID9         0
             LMOVE i4trayl
             JMOVE i4trayl
             CALL send (.length)
-            TWAIT 0.2
+            TWAIT 0.5
+            SPEED 25
             LMOVE i4trayh
             GOTO beginloop
           END
@@ -1660,7 +1664,8 @@ DCOLHJID9         0
             LMOVE i5trayl
             JMOVE i5trayl
             CALL send (.length)
-            TWAIT 0.2
+            TWAIT 0.5
+            SPEED 25
             LMOVE i5trayh
             GOTO beginloop
           END
@@ -1779,7 +1784,8 @@ DCOLHJID9         0
             LMOVE i6trayl
             JMOVE i6trayl
             CALL send (.length)
-            TWAIT 0.2
+            TWAIT 0.5
+            SPEED 25
             LMOVE i6trayh
             GOTO beginloop
           END
@@ -2046,11 +2052,11 @@ DCOLHJID9         0
           END
           IF $number2 == "03" THEN
             JMOVE t8c3h
-            LMOVE t8c3l
+            JMOVE t8c3l
             JMOVE t8c3l
             CALL send (.length)
             TWAIT 0.2
-            LMOVE t8c3h
+            JMOVE t8c3h
             GOTO beginloop
           END
           IF $number2 == "04" THEN
@@ -2320,11 +2326,11 @@ DCOLHJID9         0
           END
           IF $number2 == "07" THEN
             JMOVE t10c7h
-            LMOVE t10c7l
+            JMOVE t10c7l
             JMOVE t10c7l
             CALL send (.length)
             TWAIT 0.2
-            LMOVE t10c7h
+            JMOVE t10c7h
             GOTO beginloop
           END
           IF $number2 == "08" THEN
@@ -2564,6 +2570,8 @@ DCOLHJID9         0
 	; 29.10.2020 10:59:36
 	; 
 	; 30.10.2020 11:48:43
+	; 
+	; 02.11.2020 11:11:24
 	; 
 	; @@@ INSPECTION @@@
 	; @@@ CONNECTION @@@

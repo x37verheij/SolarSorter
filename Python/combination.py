@@ -192,6 +192,7 @@ def handleError(device):
         elif device == qrCamera: HMImsg.connQRcam = 0
         elif device == invoerCamera: HMImsg.connINcam = 0
         if device is not None: send(plc, HMImsg.toString())
+        time.sleep(1)
         disconnect(plc)
     exit(-1)
 
@@ -381,7 +382,33 @@ while counter.inputHeight:
     receive(invoerCamera, 0)            # Acknowledge
     locs = locateCells(retrievePhoto()) # Use FTP to retrieve the photo and locate all cells
 
-    # Instruct the robot to go to cell i in the input tray "I" and also provide the height
+    # If there are no cells in this tray, move it to the empty tray stack
+    if locs == []:
+        refresh()
+        send(robot, robotMsg("I", counter.inputHeight, 0))
+        counter.inputHeight -= 1        # Robot picks up the input tray
+        receive(robot)                  # Robot has reached its destination
+
+        HMImsg.fromString(receive(plc)) # Don't overwrite with cached data. No refresh, since halt (e.g.) corrupts robot movement
+        HMImsg.air = 1
+        send(plc, HMImsg.toString())    # Instruct the PLC to enable the vacuum generator
+        time.sleep(0.1)                 # Give the PLC time to process
+
+        refresh()
+        counter.emptyHeight += 1        # Robot places tray on the stack at the new height
+        send(robot, robotMsg("S", counter.emptyHeight, 0))
+        receive(robot)                  # Robot has reached its destination
+
+        HMImsg.fromString(receive(plc)) # Don't overwrite with cached data. No refresh, since halt (e.g.) corrupts robot movement
+        HMImsg.air = 0
+        send(plc, HMImsg.toString())    # Instruct the PLC to disable the vacuum generator
+        time.sleep(0.1)                 # Give the PLC time to process
+
+        refresh()
+        send(robot, "neutral")          # Instruct the robot return to its neutral position
+        receive(robot)                  # Robot has reached its neutral position
+
+    # Pick up all of the cells on the locations found in the photo
     for i in locs:
         refresh()
         send(robot, robotMsg("I", counter.inputHeight, i))
@@ -489,31 +516,6 @@ while counter.inputHeight:
             HMImsg.outputTray = grade
             send(plc, HMImsg.toString())    # Instruct the HMI to execute the tray replacement procedure
             time.sleep(0.1)                 # Give the PLC time to process
-
-    # If input tray has no cells left, move the tray to the empty tray stack
-    refresh()
-    send(robot, robotMsg("I", counter.inputHeight, 0))
-    counter.inputHeight -= 1        # Robot picks up the input tray
-    receive(robot)                  # Robot has reached its destination
-
-    HMImsg.fromString(receive(plc)) # Don't overwrite with cached data. No refresh, since halt (e.g.) corrupts robot movement
-    HMImsg.air = 1
-    send(plc, HMImsg.toString())    # Instruct the PLC to enable the vacuum generator
-    time.sleep(0.1)                 # Give the PLC time to process
-
-    refresh()
-    counter.emptyHeight += 1        # Robot places tray on the stack at the new height
-    send(robot, robotMsg("S", counter.emptyHeight, 0))
-    receive(robot)                  # Robot has reached its destination
-
-    HMImsg.fromString(receive(plc)) # Don't overwrite with cached data. No refresh, since halt (e.g.) corrupts robot movement
-    HMImsg.air = 0
-    send(plc, HMImsg.toString())    # Instruct the PLC to disable the vacuum generator
-    time.sleep(0.1)                 # Give the PLC time to process
-
-    refresh()
-    send(robot, "neutral")          # Instruct the robot return to its neutral position
-    receive(robot)                  # Robot has reached its neutral position
 
 # Program finished
 HMImsg.status = 4
