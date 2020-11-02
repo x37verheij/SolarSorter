@@ -1185,7 +1185,7 @@ DCOLHJID9         0
             JMOVE i1trayl
             CALL send (.length)
             TWAIT 0.5
-            SPEED 25
+            SPEED 5
             LMOVE i1trayh
             GOTO beginloop
           END
@@ -1305,7 +1305,7 @@ DCOLHJID9         0
             JMOVE i2trayl
             CALL send (.length)
             TWAIT 0.5
-            SPEED 25
+            SPEED 5
             LMOVE i2trayh
             GOTO beginloop
           END
@@ -1425,7 +1425,7 @@ DCOLHJID9         0
             JMOVE i3trayl
             CALL send (.length)
             TWAIT 0.5
-            SPEED 25
+            SPEED 5
             LMOVE i3trayh
             GOTO beginloop
           END
@@ -1545,7 +1545,7 @@ DCOLHJID9         0
             JMOVE i4trayl
             CALL send (.length)
             TWAIT 0.5
-            SPEED 25
+            SPEED 5
             LMOVE i4trayh
             GOTO beginloop
           END
@@ -1665,7 +1665,7 @@ DCOLHJID9         0
             JMOVE i5trayl
             CALL send (.length)
             TWAIT 0.5
-            SPEED 25
+            SPEED 5
             LMOVE i5trayh
             GOTO beginloop
           END
@@ -1785,7 +1785,7 @@ DCOLHJID9         0
             JMOVE i6trayl
             CALL send (.length)
             TWAIT 0.5
-            SPEED 25
+            SPEED 5
             LMOVE i6trayh
             GOTO beginloop
           END
@@ -2673,7 +2673,7 @@ my_point_3 269.446075 113.295494 301.626801 -29.140289 1.133580 -32.966244
 neutraal 161.289337 443.138855 308.109009 70.000000 79.600006 -90.000031
 neutral -366.201935 -0.000016 286.587952 90.000023 0.000000 0.000000
 nextcorner 50.833244 202.423431 353.032593 89.163498 92.192833 -92.546989
-o10 432.467987 -224.389999 300.302002 177.343994 0.017000 -177.337997
+o10 432.467987 -225.389999 300.302002 177.343994 0.017000 -177.337997
 o7 434.475006 323.622009 300.278992 -137.809998 0.010000 137.811996
 o8 521.169006 140.449997 300.243011 -144.985001 0.007000 144.992004
 o9 519.176025 -43.743999 300.027008 -175.785004 0.011000 175.791000
