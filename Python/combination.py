@@ -151,7 +151,7 @@ def locateCells(img):
     for i in range(12):
         org = cuts[i]
         img = cv2.cvtColor(org, cv2.COLOR_BGR2GRAY)                         # Grayscale
-        img = cv2.threshold(img, 64, 255, cv2.THRESH_BINARY)[1]             # BW
+        img = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)[1]            # BW
         img = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel, iterations=2)   # Close holes
         if cv2.countNonZero(img) < 15000:   # If there are less than 15000 pixels in this cut
             photos.put(org)                 # Temporarily store this image, until we know its grade
@@ -380,6 +380,7 @@ while counter.inputHeight:
     refresh()                           # Revalidate all tcp connections
     send(invoerCamera, "sw8\r\n")       # Trigger a photo
     receive(invoerCamera, 0)            # Acknowledge
+    time.sleep(0.3)
     locs = locateCells(retrievePhoto()) # Use FTP to retrieve the photo and locate all cells
 
     # If there are no cells in this tray, move it to the empty tray stack
