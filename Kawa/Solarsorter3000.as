@@ -857,30 +857,30 @@ DCOLHJID9         0
   ; Input tray points
   POINT i1trayh = #[-90.977, 107.833, 93.730, 179.800, -13.462, -89.538]
   POINT i1trayl = #[-90.983, 89.443, 77.945, 179.757, -10.854, -89.498]
-  POINT i1c1h = inputtray
-  POINT i1c1l = i1c1h + TRANS (0, 0, 97.597, 0, 0, 0, 0)
-  POINT i1c2h = inputtray + TRANS (-93, 1.5, 0, 0, 0, 0)
-  POINT i1c2l = i1c2h + TRANS (0, 0, 97.597, 0, 0, 0, 0)
-  POINT i1c3h = inputtray + TRANS (-185, 2, 0, 0, 0, 0)
-  POINT i1c3l = i1c3h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c4h = inputtray + TRANS (-277.5, 3.0, 0, 0, 0, 0)
-  POINT i1c4l = i1c4h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c5h = inputtray + TRANS (-1.5, -47.0, 0, 0, 0, 0)
-  POINT i1c5l = i1c5h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c6h = inputtray + TRANS (-93.5, -46.5, 0, 0, 0, 0)
-  POINT i1c6l = i1c6h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c7h = inputtray + TRANS (-185, -46, 0, 0, 0, 0)
-  POINT i1c7l = i1c7h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c8h = inputtray + TRANS (-278.5, -43.2, 0, 0, 0, 0)
-  POINT i1c8l = i1c8h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c9h = inputtray + TRANS (-1, -96.2, 0, 0, 0, 0)
-  POINT i1c9l = i1c9h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c10h = inputtray + TRANS (-94, -95.2, 0, 0, 0, 0)
-  POINT i1c10l = i1c10h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c11h = inputtray + TRANS (-185, -95, 0, 0, 0, 0)
-  POINT i1c11l = i1c11h + TRANS (0, 0, 97.597, 0, 0, 0)
-  POINT i1c12h = inputtray + TRANS (-280.0, -93.7, 0, 0, 0, 0)
-  POINT i1c12l = i1c12h + TRANS (0, 0, 97.597, 0, 0, 0)
+  POINT i1c1h = inputtray + TRANS (0, -3, 0, 0, 0, 0)
+  POINT i1c1l = i1c1h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c2h = inputtray + TRANS (-93, -2, 0, 0, 0, 0)
+  POINT i1c2l = i1c2h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c3h = inputtray + TRANS (-186, -1.5, 0, 0, 0, 0)
+  POINT i1c3l = i1c3h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c4h = inputtray + TRANS (-279, -1.0, 0, 0, 0, 0)
+  POINT i1c4l = i1c4h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c5h = inputtray + TRANS (0, -50.5, 0, 0, 0, 0)
+  POINT i1c5l = i1c5h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c6h = inputtray + TRANS (-93, -50, 0, 0, 0, 0)
+  POINT i1c6l = i1c6h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c7h = inputtray + TRANS (-186, -50, 0, 0, 0, 0)
+  POINT i1c7l = i1c7h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c8h = inputtray + TRANS (-279, -49, 0, 0, 0, 0)
+  POINT i1c8l = i1c8h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c9h = inputtray + TRANS (0, -99.3, 0, 0, 0, 0)
+  POINT i1c9l = i1c9h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c10h = inputtray + TRANS (-93, -99, 0, 0, 0, 0)
+  POINT i1c10l = i1c10h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c11h = inputtray + TRANS (-186, -98.2, 0, 0, 0, 0)
+  POINT i1c11l = i1c11h + TRANS (0, 0, 97.333, 0, 0, 0)
+  POINT i1c12h = inputtray + TRANS (-279, -97, 0, 0, 0, 0)
+  POINT i1c12l = i1c12h + TRANS (0, 0, 97.333, 0, 0, 0)
   
   POINT i2trayh = i1trayh + TRANS (0, 0, -3.265, 0, 0, 0)
   POINT i2trayl = i1trayl + TRANS (0, 0, -3.265, 0, 0, 0)
@@ -1024,7 +1024,7 @@ DCOLHJID9         0
   POINT t7c1l = t7c1h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
   POINT t7c2h = o7 + TRANS (-91.5, 2, 0, 0, 0, 0)
   POINT t7c2l = t7c2h + TRANS (0, 0, 26.979, 0, 0, 0, 0)
-  POINT t7c3h = o7 + TRANS (-183, 4, 0, 0, 0, 0)
+  POINT t7c3h = o7 + TRANS (-183, 3, 0, 0, 0, 0)
   POINT t7c3l = t7c3h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c4h = o7 + TRANS (-274.5, 5.8, 0, 0, 0, 0)
   POINT t7c4l = t7c4h + TRANS (0, 0, 25.979, 0, 0, 0) ; Solve for E1128
@@ -1032,30 +1032,29 @@ DCOLHJID9         0
   POINT t7c5l = t7c5h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c6h = o7 + TRANS (-91.5, -46.5, 0, 0, 0, 0)
   POINT t7c6l = t7c6h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c7h = o7 + TRANS (-183, -44.5, 0, 0, 0, 0)
+  POINT t7c7h = o7 + TRANS (-183, -45.5, 0, 0, 0, 0)
   POINT t7c7l = t7c7h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c8h = o7 + TRANS (-274.5, -40.2, 0, 0, 0, 0)
   POINT t7c8l = t7c8h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c9h = o7 + TRANS (0, -96.2, 0, 0, 0, 0)
   POINT t7c9l = t7c9h + TRANS (0, 0, 26.979, 0, 0, 0)
-  POINT t7c10h = o7 + TRANS (-91, -94.2, 0, 0, 0, 0)
+  POINT t7c10h = o7 + TRANS (-91, -95.2, 0, 0, 0, 0)
   POINT t7c10l = t7c10h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c11h = o7 + TRANS (-181.5, -91, 0, 0, 0, 0)
   POINT t7c11l = t7c11h + TRANS (0, 0, 26.979, 0, 0, 0)
   POINT t7c12h = o7 + TRANS (-274.0, -89.2, 0, 0, 0, 0)
   POINT t7c12l = t7c12h + TRANS (0, 0, 26.979, 0, 0, 0)
-  
   ;POINT t8trayh =
   ;POINT t8trayl =
   POINT t8c1h = o8
   POINT t8c1l = t8c1h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c2h = o8 + TRANS (-90.5, 2.5, 0, 0, 0, 0)
+  POINT t8c2h = o8 + TRANS (-90.5, 3.5, 0, 0, 0, 0)
   POINT t8c2l = t8c2h + TRANS (0, 0, 27.962, 0, 0, 0, 0)
-  POINT t8c3h = o8 + TRANS (-181, 5, 0, 0, 0, 0)
+  POINT t8c3h = o8 + TRANS (-181, 5.5, 0, 0, 0, 0)
   POINT t8c3l = t8c3h + TRANS (0, 0, 27.962, 0, 0, 0)
   POINT t8c4h = o8 + TRANS (-273.5, 8.5, 0, 0, 0, 0)
   POINT t8c4l = t8c4h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c5h = o8 + TRANS (0, -46.0, 0, 0, 0, 0)
+  POINT t8c5h = o8 + TRANS (0, -47.0, 0, 0, 0, 0)
   POINT t8c5l = t8c5h + TRANS (0, 0, 27.962, 0, 0, 0)
   POINT t8c6h = o8 + TRANS (-90, -45.5, 0, 0, 0, 0)
   POINT t8c6l = t8c6h + TRANS (0, 0, 27.962, 0, 0, 0)
@@ -1063,7 +1062,7 @@ DCOLHJID9         0
   POINT t8c7l = t8c7h + TRANS (0, 0, 27.962, 0, 0, 0)
   POINT t8c8h = o8 + TRANS (-272.5, -40.2, 0, 0, 0, 0)
   POINT t8c8l = t8c8h + TRANS (0, 0, 27.962, 0, 0, 0)
-  POINT t8c9h = o8 + TRANS (0, -95.7, 0, 0, 0, 0)
+  POINT t8c9h = o8 + TRANS (0, -96, 0, 0, 0, 0)
   POINT t8c9l = t8c9h + TRANS (0, 0, 27.962, 0, 0, 0)
   POINT t8c10h = o8 + TRANS (-90, -94.2, 0, 0, 0, 0)
   POINT t8c10l = t8c10h + TRANS (0, 0, 27.962, 0, 0, 0)
@@ -1078,7 +1077,7 @@ DCOLHJID9         0
   POINT t9c1l = t9c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
   POINT t9c2h = o9 + TRANS (-91.5, 1, 0, 0, 0, 0)
   POINT t9c2l = t9c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t9c3h = o9 + TRANS (-180, 2, 0, 0, 0, 0)
+  POINT t9c3h = o9 + TRANS (-181, 2, 0, 0, 0, 0)
   POINT t9c3l = t9c3h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t9c4h = o9 + TRANS (-272.5, 4.0, 0, 0, 0, 0)
   POINT t9c4l = t9c4h + TRANS (0, 0, 28.695, 0, 0, 0)
@@ -1090,40 +1089,40 @@ DCOLHJID9         0
   POINT t9c7l = t9c7h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t9c8h = o9 + TRANS (-273.5, -45.2, 0, 0, 0, 0)
   POINT t9c8l = t9c8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c9h = o9 + TRANS (-1, -97.7, 0, 0, 0, 0)
+  POINT t9c9h = o9 + TRANS (-2, -97.7, 0, 0, 0, 0)
   POINT t9c9l = t9c9h + TRANS (0, 0, 29.936, 0, 0, 0)
-  POINT t9c10h = o9 + TRANS (-92, -96.2, 0, 0, 0, 0)
+  POINT t9c10h = o9 + TRANS (-92.5, -96.2, 0, 0, 0, 0)
   POINT t9c10l = t9c10h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t9c11h = o9 + TRANS (-181.5, -96, 0, 0, 0, 0)
   POINT t9c11l = t9c11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t9c12h = o9 + TRANS (-274.0, -94.7, 0, 0, 0, 0)
+  POINT t9c12h = o9 + TRANS (-274.0, -95.2, 0, 0, 0, 0)
   POINT t9c12l = t9c12h + TRANS (0, 0, 28.695, 0, 0, 0)
   
   ;POINT t10trayh =
   ;POINT t10trayl =
   POINT t10c1h = o10
   POINT t10c1l = t10c1h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t10c2h = o10 + TRANS (-91.5, 1, 0, 0, 0, 0)
+  POINT t10c2h = o10 + TRANS (-92, 1, 0, 0, 0, 0)
   POINT t10c2l = t10c2h + TRANS (0, 0, 28.695, 0, 0, 0, 0)
-  POINT t10c3h = o10 + TRANS (-181, 1.0, 0, 0, 0, 0)
+  POINT t10c3h = o10 + TRANS (-181.5, 1.0, 0, 0, 0, 0)
   POINT t10c3l = t10c3h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c4h = o10 + TRANS (-273.0, 2.5, 0, 0, 0, 0)
+  POINT t10c4h = o10 + TRANS (-272.5, 2.5, 0, 0, 0, 0)
   POINT t10c4l = t10c4h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t10c5h = o10 + TRANS (-2, -49.0, 0, 0, 0, 0)
   POINT t10c5l = t10c5h + TRANS (0, 0, 28.695, 0, 0, 0)
   POINT t10c6h = o10 + TRANS (-93, -47.5, 0, 0, 0, 0)
   POINT t10c6l = t10c6h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c7h = o10 + TRANS (-183, -47, -60, 0, 0, 0)
+  POINT t10c7h = o10 + TRANS (-184.5, -46.5, -60, 0, 0, 0)
   POINT t10c7l = t10c7h + TRANS (0, 0, 88.695, 0, 0, 0)
-  POINT t10c8h = o10 + TRANS (-274.5, -45.2, 0, 0, 0, 0)
+  POINT t10c8h = o10 + TRANS (-276, -45.7, 0, 0, 0, 0)
   POINT t10c8l = t10c8h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c9h = o10 + TRANS (-2.5, -97.7, 0, 0, 0, 0)
+  POINT t10c9h = o10 + TRANS (-3, -97.9, 0, 0, 0, 0)
   POINT t10c9l = t10c9h + TRANS (0, 0, 29.936, 0, 0, 0)
   POINT t10c10h = o10 + TRANS (-95, -96.2, 0, 0, 0, 0)
   POINT t10c10l = t10c10h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c11h = o10 + TRANS (-186, -94, 0, 0, 0, 0)
+  POINT t10c11h = o10 + TRANS (-186.5, -94.5, 0, 0, 0, 0)
   POINT t10c11l = t10c11h + TRANS (0, 0, 28.695, 0, 0, 0)
-  POINT t10c12h = o10 + TRANS (-275, -94.7, 0, 0, 0, 0)
+  POINT t10c12h = o10 + TRANS (-276, -94.7, 0, 0, 0, 0)
   POINT t10c12l = t10c12h + TRANS (0, 0, 28.695, 0, 0, 0)
   
   ; Program calls setup once, then (receives, acts and sends) in an infinite loop
@@ -2673,10 +2672,10 @@ my_point_3 269.446075 113.295494 301.626801 -29.140289 1.133580 -32.966244
 neutraal 161.289337 443.138855 308.109009 70.000000 79.600006 -90.000031
 neutral -366.201935 -0.000016 286.587952 90.000023 0.000000 0.000000
 nextcorner 50.833244 202.423431 353.032593 89.163498 92.192833 -92.546989
-o10 432.467987 -225.389999 300.302002 177.343994 0.017000 -177.337997
-o7 434.475006 323.622009 300.278992 -137.809998 0.010000 137.811996
-o8 521.169006 140.449997 300.243011 -144.985001 0.007000 144.992004
-o9 519.176025 -43.743999 300.027008 -175.785004 0.011000 175.791000
+o10 432.467987 -227.989999 300.302002 177.343994 0.017000 -177.337997
+o7 434.475006 320.622009 300.278992 -137.809998 0.010000 137.811996
+o8 521.169006 135.449997 300.243011 -144.985001 0.007000 144.992004
+o9 519.176025 -46.743999 300.027008 -175.785004 0.011000 175.791000
 p 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 point1 553.342834 18.502590 16.124340 75.785179 100.034477 -175.478073
 point2 462.644012 162.343033 345.587372 87.514938 87.965881 124.545349
