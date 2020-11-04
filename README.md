@@ -19,10 +19,10 @@ In that, the PLC will control the following subdevices:
 - Red Klaxon Sonos Alarm/buzzer
 
 The group consists of four students:
-- David (linkedin)
-- Dylan (linkedin)
-- Frits (linkedin)
-- Lex (linkedin)
+- David (link)
+- Dylan (link)
+- Frits (link)
+- Lex (link)
 
-Webpage robotics minor: https://www.robotminor.nl/<br>
-Final demo video (1 min): *Expected nov 2020*
+Final result: https://www.robotminor.nl/gtm-advanced-structures-grading-solar-cells/
+This includes a video of 1 minute.
